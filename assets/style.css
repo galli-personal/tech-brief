@@ -42,6 +42,21 @@ section.anz h2 { border-color: var(--anz); }
 .item a.headline:hover { text-decoration: underline; }
 .item p { margin: 6px 0 0; color: var(--text); font-size: 0.95rem; }
 .item .src { color: var(--muted); font-size: 0.8rem; margin-top: 6px; }
+/* Exec summary (second link — inline expandable) */
+.item details.exec { margin-top: 8px; }
+.item details.exec > summary {
+  color: var(--accent); font-size: 0.85rem; font-weight: 600; cursor: pointer;
+  list-style: none; display: inline-flex; align-items: center; gap: 5px; user-select: none;
+}
+.item details.exec > summary::-webkit-details-marker { display: none; }
+.item details.exec > summary::before { content: "▸"; font-size: 0.75rem; transition: transform 0.15s ease; }
+.item details.exec[open] > summary::before { transform: rotate(90deg); }
+.item details.exec > summary:hover { text-decoration: underline; }
+.item details.exec .exec-body {
+  margin-top: 8px; padding: 11px 13px; background: var(--bg);
+  border: 1px solid var(--border); border-radius: 8px;
+  font-size: 0.9rem; line-height: 1.5; color: var(--text);
+}
 footer.page { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 16px; color: var(--muted); font-size: 0.82rem; }
 /* Archive index */
 ul.archive { list-style: none; padding: 0; }

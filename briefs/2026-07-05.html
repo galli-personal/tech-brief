@@ -20,21 +20,25 @@
       <a class="headline" href="https://venturebeat.com/orchestration/enterprises-lost-claude-fable-5-for-a-few-weeks-new-data-shows-two-thirds-had-already-built-their-hedge" target="_blank" rel="noopener">Enterprises had already hedged against the Claude Fable 5 outage</a>
       <p>When Fable 5 went dark for weeks, two-thirds of enterprises had fallback model routing ready. Only 1 in 10 can auto-catch a failing AI system in production, and 79% have already been burned by an agent going rogue — reliability and governance are the 2026 theme.</p>
       <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The real story isn't the outage — it's that resilience is now table stakes. Two-thirds of enterprises had multi-model fallback routing in place <em>before</em> they needed it, yet only ~10% can automatically detect a failing AI system in production and 79% have already had an agent misbehave. <strong>Takeaway:</strong> if you run AI in production, invest in model-agnostic routing and runtime observability now — single-vendor dependence has become a board-level risk, not a technical footnote.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think" target="_blank" rel="noopener">Google retires the classic search box after 25 years</a>
       <p>First redesign of one of computing's most recognisable interfaces, shifting toward an AI-native experience.</p>
       <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Redesigning a 25-year-old interface signals Google conceding that "type keywords, get blue links" is over, in favour of AI-native conversational answers. <strong>Implications:</strong> continued erosion of organic click-through to publishers, and content/SEO strategy needs to pivot toward <em>being cited by AI answers</em> rather than ranked in a results list. If your business depends on Google referral traffic, model the downside now.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://venturebeat.com/orchestration/new-alibaba-ai-framework-skips-loading-every-tool-cutting-agent-token-use-99" target="_blank" rel="noopener">Alibaba framework cuts agent token use ~99%</a>
       <p>By not loading every tool up front, it fixes the "too many tools" routing problem that chokes agents — and slashes the token bill.</p>
       <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Agent cost <em>and</em> reliability both degrade when every tool is stuffed into context. Alibaba's approach loads tools on demand, cutting token spend dramatically while improving routing accuracy. <strong>Why it matters:</strong> this directly attacks the two things that make production agents expensive and flaky at scale. If you're building agents, it's a concrete architectural pattern worth piloting.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding" target="_blank" rel="noopener">Z.ai launches ZCode to take on Cursor, Claude Code and Copilot</a>
       <p>An AI coding environment for GLM-5.2 with bring-your-own-key support across macOS, Windows and Linux.</p>
       <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The AI coding-tool market is crowding fast. ZCode targets GLM-5.2 with bring-your-own-key across all major OSes, competing head-on with Cursor, Claude Code and Copilot. <strong>For buyers:</strong> expect pricing pressure and more model choice — keep tooling decisions flexible and avoid locking in before the shakeout settles.</div></details>
     </div>
   </section>
 
@@ -44,21 +48,25 @@
       <a class="headline" href="https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html" target="_blank" rel="noopener">US government entity paid ~$1M in a data-theft extortion</a>
       <p>Group "Kairos" never encrypted anything — pure steal-and-threaten-to-leak. Trail points to Union County, Ohio. Signals the shift away from classic ransomware toward pure extortion.</p>
       <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Attackers skipped encryption entirely — pure data theft and leak-threat. This lowers the technical bar and means <em>backups won't save you</em>; only preventing exfiltration does. <strong>Action:</strong> public-sector and any data-holding org should prioritise DLP, egress/anomaly monitoring and network segmentation over relying on ransomware recovery playbooks.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html" target="_blank" rel="noopener">North Korean "PolinRider" campaign publishes 108 malicious packages</a>
       <p>Spanning npm, Packagist, Go and Chrome — ongoing supply-chain risk if you pull dependencies.</p>
       <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A sustained state-sponsored supply-chain campaign across npm, Packagist, Go and Chrome. Any org pulling open-source dependencies is in scope. <strong>Action:</strong> enforce dependency pinning, route installs through a vetted internal registry/proxy, and add software-composition-analysis scanning to CI. This is ongoing, not a one-off — treat it as a standing control, not an incident.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://thehackernews.com/" target="_blank" rel="noopener">FatFs filesystem flaws (7 CVEs) hit millions of embedded devices</a>
       <p>runZero disclosed vulnerabilities in a filesystem library bundled into cameras, drones, industrial controllers and crypto wallets. "Any physical access = jailbreak."</p>
       <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">One filesystem library embedded in millions of devices means a single library's flaws cascade across entire device classes — cameras, drones, industrial controllers, crypto wallets. "Physical access = jailbreak." <strong>For OT/IoT fleet owners:</strong> inventory affected devices, and treat physical security as a core part of the threat model, not an afterthought.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://cybersecuritynews.com/" target="_blank" rel="noopener">Apache ActiveMQ: urgent patch for three DoS flaws</a>
       <p>Messaging infrastructure exposed to denial-of-service; users advised to update deployments urgently.</p>
       <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Three DoS flaws in widely-used messaging middleware. Not data theft, but an <em>availability</em> risk to anything relying on ActiveMQ queues. <strong>Action:</strong> patch urgently; if patching is delayed, restrict network exposure of broker ports and put them behind internal-only access.</div></details>
     </div>
   </section>
 
@@ -68,11 +76,13 @@
       <a class="headline" href="https://www.itnews.com.au/news/unsw-faces-a-95-percent-cut-to-its-m365-storage-by-october-626797" target="_blank" rel="noopener">Microsoft M365 storage crunch: UNSW facing 95% cut by October</a>
       <p>Microsoft tightening tenant storage caps. Worth watching if you manage M365 tenants — capacity planning and add-on storage costs incoming.</p>
       <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Microsoft is tightening tenant storage caps and UNSW is the visible casualty facing a 95% cut. <strong>For MSPs and IT managers:</strong> this converts previously "free" capacity into a real line-item cost. Audit tenant storage now, forecast the overage, and budget for add-on storage or archival tiering before the caps bite in October.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://www.itnews.com.au/news/google-disrupts-netnut-proxy-network-627120" target="_blank" rel="noopener">Google disrupts the NetNut proxy network</a>
       <p>Action against infrastructure abused for malicious traffic.</p>
       <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A takedown of infrastructure abused to route malicious/abusive traffic — a positive signal, but proxy networks regenerate quickly. <strong>Don't over-rely on takedowns:</strong> keep threat-intel feeds and IP-reputation controls current, since the abusive capacity typically reappears under new infrastructure within weeks.</div></details>
     </div>
   </section>
 
@@ -82,21 +92,24 @@
       <a class="headline" href="https://www.itnews.com.au/news/oaic-ordered-to-turn-over-amex-privacy-determination-in-full-627112" target="_blank" rel="noopener">OAIC ordered to hand over its Amex privacy determination in full</a>
       <p>A privacy-enforcement precedent from Australia's regulator.</p>
       <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An Australian transparency/privacy precedent — the regulator itself compelled to disclose a determination in full. <strong>Why it matters:</strong> it signals more visibility into how privacy rulings are reasoned, which is useful reference material for any org navigating Australian privacy compliance or anticipating how the OAIC weighs enforcement.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://www.itnews.com.au/news/amazon-to-start-initial-leo-internet-service-this-year-627119" target="_blank" rel="noopener">Amazon Leo satellite internet starting initial service this year</a>
       <p>Competition for Starlink in the region (formerly Project Kuiper).</p>
       <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Amazon's Starlink competitor (formerly Project Kuiper) begins initial service this year. <strong>For ANZ:</strong> more low-earth-orbit capacity means competitive pressure on rural/remote connectivity pricing, and a credible second option for resilient backup/failover links where terrestrial connectivity is thin.</div></details>
     </div>
     <div class="item">
       <a class="headline" href="https://www.itnews.com.au/news/kfc-australia-operator-collins-foods-eyes-ai-for-margin-improvements-627106" target="_blank" rel="noopener">Collins Foods (KFC Australia) turns to AI for margin improvement</a>
       <p>Enterprise AI adoption in ANZ hospitality/retail.</p>
       <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A mainstream ANZ hospitality operator turning to AI for margin improvement is a marker that enterprise AI adoption has moved past the tech sector into retail/food. <strong>Use it as a benchmark:</strong> watch for concrete ROI cases — they're useful ammunition if you're building the internal business case for AI investment outside a tech-native org.</div></details>
     </div>
   </section>
 
   <footer class="page">
-    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting.
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
   </footer>
 </div>
 </body>
