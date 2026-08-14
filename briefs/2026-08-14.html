@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 14 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Friday, 14 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/nvidias-switchyard-router-reshuffles-ai-models-mid-task-cutting-task-costs-to-a-third-in-its-own-tests" target="_blank" rel="noopener">Nvidia's Switchyard router reshuffles AI models mid-task, cutting task costs to a third</a>
+      <p>Nemotron 3.5 Lightning pairs with the open-source NeMo Switchyard library to route each step of an agent workflow to the cheapest model that can handle it, in Nvidia's own tests.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Always-on AI agents force a tradeoff: send everything to a frontier model and costs spiral, or build brittle custom routing logic that breaks every time a workflow changes. Nvidia's answer bundles a 30B open-weight model built for high-volume agent tasks with an open-source router that dynamically reassigns each step. <strong>Takeaway:</strong> if you're running production agents on a single frontier model by default, mid-task model routing is now a packaged, open-source option worth piloting before you scale spend further.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices" target="_blank" rel="noopener">DeepSeek Harness launches as open-source rival to Claude Code, alongside V4-Pro</a>
+      <p>DeepSeek is moving beyond the model layer into the tooling developers use to run agents, shipping an open-source coding-agent harness alongside its updated flagship model.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">DeepSeek is no longer just competing on model quality — it's now offering an open-source alternative to the integrated coding-agent environments (Claude Code, Cursor) that lock developers into a specific vendor's workflow. <strong>Why it matters:</strong> combined with higher API pricing on V4-Pro, this looks like a play for developer mindshare rather than pure cost competition. Worth watching whether open-source harnesses erode the value of proprietary coding-agent UX over the next few quarters.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/security/aws-continuum-integrates-with-openai-codex-and-anthropic-claude-code-in-major-ai-security-push" target="_blank" rel="noopener">AWS Continuum integrates with OpenAI Codex and Anthropic Claude Code in major AI security push</a>
+      <p>Announced at Black Hat USA 2026, AWS is threading its code-vulnerability scanning platform directly into rival AI coding tools rather than competing on the model layer.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AWS is betting that owning the security layer around AI-generated code matters more than owning the model itself, embedding Continuum into the coding agents built by its two biggest AI rivals. <strong>For engineering leaders:</strong> this makes vulnerability scanning a default part of the AI-assisted coding workflow rather than a bolt-on step — a meaningful shift for teams still treating AI-written code as needing extra manual review.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now" target="_blank" rel="noopener">Meta returns to open source with Muse Glimmer, an Apache 2.0 30B-parameter model for agents</a>
+      <p>A dense multimodal transformer with a ~1.8B-parameter vision encoder, 100+ language support and a 131K+ token context window, released under a permissive license.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Meta re-entering open source with a genuinely permissive Apache 2.0 license (rather than its more restrictive Llama terms) signals renewed competitive pressure on the open-weight tier. <strong>For builders:</strong> a fully open, agent-optimized multimodal model at 30B parameters is a credible self-hostable option — worth benchmarking against your current open-weight stack before your next model refresh.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/inside-the-google-executive-moves-that-led-to-its-big-ai-reshuffle-628130" target="_blank" rel="noopener">Inside the Google executive moves that led to its big AI reshuffle</a>
+      <p>Reuters reports Sergey Brin has been privately pushing Google DeepMind to move faster on Gemini as Anthropic and OpenAI repeatedly leapfrog it on frontier capability.</p>
+      <div class="src">Source: iTnews (Reuters)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A co-founder personally intervening to accelerate a flagship product is a strong signal of internal urgency, not routine reporting. <strong>Why it matters:</strong> frontier-model leadership is now changing hands on a monthly cadence, and even the largest labs are visibly rattled by it. If your AI vendor strategy assumes today's leaderboard will hold for a year, this is a reminder to keep model-agnostic fallback options live.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html" target="_blank" rel="noopener">Microsoft patches 398 flaws including a Windows driver zero-day under active attack</a>
+      <p>CVE-2026-68820, a privilege-escalation bug in the Windows AFD.sys network driver, is already being exploited to reach SYSTEM and was the only flaw this month flagged as under active attack.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A local-privilege-escalation zero-day in a core Windows kernel driver is already weaponized in the wild — see the Lazarus item below for one confirmed campaign using it. <strong>Action:</strong> prioritise CVE-2026-68820 in this month's patch cycle over the other 397 fixes; exploitation doesn't require remote access, just an initial foothold, which makes it a favourite second-stage tool for attackers already inside a network.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.helpnetsecurity.com/2026/08/13/litellm-breach-stolen-credentials-leak/" target="_blank" rel="noopener">153GB of stolen credentials surface after LiteLLM supply-chain attack</a>
+      <p>An archive tied to a compromise of the Trivy scanner earlier this year has surfaced, exposing credentials linked to roughly 2,500 corporate domains including AWS, Samsung, Cisco and Salesforce.</p>
+      <div class="src">Source: Help Net Security</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the long tail of a supply-chain compromise finally landing — credentials stolen months ago via a poisoned security tool are only now public, at scale. <strong>Action:</strong> if your org used Trivy or LiteLLM in CI/CD pipelines this year, rotate cloud, AI-provider and CI/CD secrets now rather than waiting for a breach notification; the exposure window has already closed but the credentials are live.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html" target="_blank" rel="noopener">Attackers exploit VMware vCenter vulnerability to gain persistent remote access</a>
+      <p>CVE-2026-59310, a critical directory-traversal flaw in Broadcom VMware vCenter, is under active exploitation, with one researcher tracking 361 victim IPs across 47 countries.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">vCenter sits at the top of most virtualization estates, so a directory-traversal RCE there is a direct path to the entire hypervisor layer. <strong>Action:</strong> confirm patch status immediately if you run vCenter — the scale of already-compromised IPs (361 across 47 countries) means this isn't a theoretical risk window, it's an active mass-exploitation event.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html" target="_blank" rel="noopener">Lazarus exploits Windows zero-day to gain SYSTEM access and deploy backdoor</a>
+      <p>North Korea's Lazarus group used CVE-2026-68820 (now patched) in an Operation Dream Job campaign targeting defense-sector professionals via fake recruiter outreach on LinkedIn.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A state-sponsored group had a working zero-day exploit chained to a years-old social-engineering playbook, targeting defense and aerospace specifically. <strong>Action:</strong> defense-adjacent organisations should brief technical staff on Operation Dream Job's recruiter-DM pattern — the social-engineering vector is unpatchable and reused for years precisely because it keeps working.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.theregister.com/cyber-crime/2026/08/13/mystery-attacker-spent-a-year-raiding-salesforce-and-servicenow-portals/5287368" target="_blank" rel="noopener">Mystery attacker spent a year raiding Salesforce and ServiceNow portals</a>
+      <p>An unidentified actor quietly accessed customer-portal instances for an extended period without deploying ransomware or triggering typical breach alarms, following earlier high-profile Salesforce guest-access abuse by ShinyHunters.</p>
+      <div class="src">Source: The Register</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A year-long, low-noise intrusion into SaaS customer portals is the pattern that's hardest for security teams to catch — no encryption, no ransom note, just quiet data access. <strong>Action:</strong> audit guest/portal access configurations on Salesforce and ServiceNow instances specifically; this is the second major incident this year tied to over-permissive guest access on these platforms.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://therecord.media/china-hackers-ransomware-microsoft" target="_blank" rel="noopener">China-linked hackers turn N-able N-central into a ransomware launchpad, Microsoft warns</a>
+      <p>Storm-1175 began deploying new ransomware strain "StormEncryptor" on August 2 by exploiting CVE-2026-18577 in N-central, an RMM console used by thousands of MSPs to manage client endpoints.</p>
+      <div class="src">Source: The Record</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A single compromised RMM server can cascade ransomware across every client an MSP manages through it — this is the exact single-point-of-failure risk the channel has warned about for years, now playing out with a state-linked actor. <strong>Action:</strong> any MSP running N-central must confirm Hotfix 2 (superseding Hotfix 1) is applied; if you're a client of an MSP, ask directly whether their RMM stack has been patched.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.channelinsider.com/security/connectwise-sentinelone-msp-cybersecurity-strategy/" target="_blank" rel="noopener">ConnectWise and SentinelOne unveil joint MSP cybersecurity strategy</a>
+      <p>Announced at Black Hat USA 2026, the partnership deepens Managed EDR integration with AI-driven security and automation aimed at helping MSPs scale threat detection and response.</p>
+      <div class="src">Source: ChannelInsider</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Vendor consolidation around AI-driven detection is accelerating in the MSP channel, arriving in the same week as the N-central ransomware story above — a pointed reminder of why MSPs are under pressure to upgrade tooling. <strong>For MSP leaders:</strong> evaluate whether your current EDR/RMM stack has a comparable AI-automation roadmap, or whether you're at risk of falling behind competitors who partner early with platforms like this.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://blog.qualys.com/vulnerabilities-threat-research/patch-tuesday/2026/08/11/microsoft-patch-tuesday-august-2026-security-update-review" target="_blank" rel="noopener">August Patch Tuesday: Microsoft addresses 421 vulnerabilities across its product line</a>
+      <p>62 critical and 357 important-severity fixes span Windows HTTP.sys, Hyper-V, NTFS, Exchange Server, Dynamics Business Central, GitHub Copilot and Visual Studio Code — one of the largest monthly patch batches of the year.</p>
+      <div class="src">Source: Qualys</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The sheer breadth of this month's patch batch — spanning core infrastructure (Hyper-V, NTFS) through to developer tooling (Copilot, VS Code) — means patch-management teams can't rely on a single triage pass. <strong>Action:</strong> for managed IT and enterprise ops, sequence patch rollout by exposure (internet-facing services and the actively-exploited AFD.sys driver flaw first) rather than attempting to clear all 421 in one maintenance window.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/woolworths-to-move-workloads-to-run-at-the-edge-628149" target="_blank" rel="noopener">Woolworths to move workloads to run at the edge</a>
+      <p>The supermarket giant is repositioning core applications closer to the network edge after finding a single cloud or connectivity failure could knock out 50 percent of replenishment capability.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A concrete, quantified blast-radius figure — 50 percent of replenishment capability tied to one connectivity failure — is a rare public admission of centralised-cloud fragility from a major retailer. <strong>For ANZ IT leaders:</strong> if a single point of failure in your architecture maps to a business-critical function at this scale, this is useful ammunition for an edge-resilience business case, not just a Woolworths-specific story.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/suncorp-drives-ai-more-deeply-into-insurance-processes-628106" target="_blank" rel="noopener">Suncorp drives AI more deeply into insurance processes</a>
+      <p>Suncorp is restructuring digital oversight, creating a new chief executive, customer, brand and digital role to accelerate AI use in the "manufacturing" and distribution of insurance products.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Restructuring an executive role specifically around AI-driven product manufacturing signals Suncorp treating AI as core operating strategy, not a bolted-on efficiency project. <strong>For ANZ financial services:</strong> a Big Four-adjacent insurer reshaping leadership structure around AI is a useful benchmark when building the internal case for similar organisational change.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nabs-long-time-technology-executive-patrick-wright-to-retire-628069" target="_blank" rel="noopener">NAB's long-time technology executive Patrick Wright to retire</a>
+      <p>NAB becomes the last of Australia's Big Four banks to undergo a technology leadership change, after Wright's nine-plus years as group executive for technology and enterprise operations.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">All four major Australian banks have now turned over their top technology leadership within a relatively short window — a generational shift in who's setting technology strategy across the country's largest financial institutions. <strong>Why it matters:</strong> expect continuity risk on multi-year tech programs at NAB in the short term, and watch for a successor's priorities to reshape vendor and cloud relationships over the next 12 months.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/afp-assessing-report-in-connection-with-perth-cable-faults-628061" target="_blank" rel="noopener">AFP assessing report in connection with Perth undersea cable faults</a>
+      <p>The Australian Federal Police is assessing a potential crime report after SUBCO found faults on two Indigo cable systems near Perth, in protection zones, consistent with ship-related damage.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two faults occurring near each other and around the same time, inside a designated protection zone, is enough to warrant a federal police assessment rather than routine maintenance. <strong>For connectivity-dependent ANZ businesses:</strong> subsea cable faults near Perth are a reminder that Australia's international bandwidth runs through a small number of physical choke points — worth checking whether your provider has documented failover paths if this escalates.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
