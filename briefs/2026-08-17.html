@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 17 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Monday, 17 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/" target="_blank" rel="noopener">SpaceX officially closes its $60B Cursor acquisition</a>
+      <p>The AI coding startup is now part of SpaceX, gaining access to "the largest fleet of GPUs in the world" alongside SpaceX's earlier acquisition of xAI.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">SpaceX now owns two major AI assets — xAI and Cursor — giving it a vertically integrated stack from compute infrastructure to developer tooling. <strong>Why it matters:</strong> a rocket company is now a top-tier AI infrastructure and coding-tools player. If your engineering org relies on Cursor, watch for roadmap shifts as it's folded into a much larger, differently-motivated parent, and factor platform-continuity risk into any renewal decisions.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://finance.biggo.com/news/7e9f1d12-cf40-4852-a49a-ed69b6925090" target="_blank" rel="noopener">OpenAI and Anthropic slash prices as Chinese rivals reshape AI economics</a>
+      <p>OpenAI cut GPT-5.6 Luna API prices 80%, undercutting DeepSeek; Anthropic held headline pricing but repositioned its lineup. Meanwhile DeepSeek itself has been raising prices amid IPO prep.</p>
+      <div class="src">Source: BigGo Finance</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Model pricing is no longer a stable input for budgeting — mid-tier tokens dropped 80% in weeks while a "cheap" Chinese competitor raised its own prices in the same window. <strong>For buyers:</strong> avoid hard-coding a single vendor's per-token cost into multi-year business cases; build in re-pricing checkpoints and keep architecture portable across model providers so you can capture cuts and dodge hikes as this volatility continues.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.tradingview.com/news/reuters.com,2026:newsml_L1N44B0F2:0-china-s-z-ai-says-new-model-nears-anthropic-s-mythos-5-in-cyber-defence-tests/" target="_blank" rel="noopener">China's Z.ai says its new model nears Anthropic's restricted Mythos 5 in cyber-defence tests</a>
+      <p>Open-source GLM-5.3 scored 84.5% on the CyberGym vulnerability-finding benchmark versus Mythos 5's 83.8%, though it lagged well behind in turning findings into working exploits (54.4% vs 78%).</p>
+      <div class="src">Source: Reuters (via TradingView)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A freely-available open-source model is now roughly on par with a closed, access-restricted frontier model at <em>finding</em> vulnerabilities, even if it's weaker at weaponising them. <strong>Why it matters:</strong> the gap between "who gets advanced AI-assisted code auditing" and "who doesn't" is closing fast, which cuts both ways — better tools for defenders' code review, but also lowers the bar for attackers probing your codebase. Expect AI-assisted SAST/vulnerability scanning to become table stakes in AppSec programs this year.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vengeful-researcher-drops-shieldbreak-windows-zero-day-on-patch-wednesday-628140" target="_blank" rel="noopener">"ShieldBreak" Windows Defender zero-day dropped with no patch available</a>
+      <p>Researcher "Nightmare Eclipse" released a privilege-escalation exploit to SYSTEM on Windows 11 and Server 2025 that bypasses Microsoft's July patch for a similar flaw. Independent researchers have confirmed it works.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A working, unpatched SYSTEM-level privilege-escalation exploit for Windows Defender is public, released amid a dispute between the researcher and Microsoft over disclosure practices. <strong>Action:</strong> there's no patch yet, so compensating controls matter — tighten endpoint monitoring for anomalous Defender/SYSTEM process behaviour and prioritise this in your vulnerability watchlist until Microsoft ships a fix.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html" target="_blank" rel="noopener">SAP Commerce Cloud critical flaw (CVSS 10.0) exploited days after patch</a>
+      <p>CVE-2026-58231 is under active exploitation just three days after SAP shipped a fix — a textbook patch-gap attack window.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A maximum-severity flaw in e-commerce infrastructure went from patch to active exploitation in 72 hours. <strong>Action:</strong> if you run SAP Commerce Cloud, patch now — don't wait for a scheduled maintenance window. This is another data point that patch-gap windows are shrinking industry-wide; emergency-patch SLAs for critical CVEs need to be measured in days, not weeks.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html" target="_blank" rel="noopener">macOS Screen Sharing flaw exploited to install cryptominers on exposed Macs</a>
+      <p>CVE-2026-65400 lets network-based attackers bypass authentication on internet-exposed Macs with Screen Sharing enabled, deploying Monero miners.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Any Mac with Screen Sharing exposed to the internet is at risk of an authentication bypass right now. <strong>Action:</strong> audit for internet-facing Screen Sharing / Remote Management on macOS fleets, disable where not strictly required, and patch immediately — cryptomining payloads are often just the visible symptom of a broader access-for-sale compromise.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/hackers-spend-nearly-7-million-on.html" target="_blank" rel="noopener">Hackers spend ~$7M on expired domains to hijack traffic to scams and malware</a>
+      <p>Threat actors are systematically buying up expired domains to inherit their existing traffic and reputation — roughly one in five daily domain registrations is now a "dropcatch" domain.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Domain reputation is being gamed at industrial scale — a domain with clean history and inbound links can flip to malicious ownership overnight. <strong>Action:</strong> don't treat domain age/reputation alone as a trust signal in email or web filtering; if your org lets old subdomains or partner links lapse, monitor for re-registration rather than assuming they're permanently dead.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/woolworths-to-move-workloads-to-run-at-the-edge-628149" target="_blank" rel="noopener">Woolworths shifts critical workloads to the edge to shrink cloud-outage "blast radius"</a>
+      <p>Store replenishment systems are moving out of centralised cloud, after Woolworths found a cloud outage could disable up to 50% of replenishment capability.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major retailer explicitly quantified its cloud-dependency risk — 50% of a critical business function exposed to a single outage — and is re-architecting around it. <strong>For IT leaders:</strong> "blast radius" is becoming a standard criterion alongside cost and performance when deciding cloud vs. edge placement. Worth reviewing which of your own critical workloads have no fallback if a central cloud region goes dark.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html" target="_blank" rel="noopener">Microsoft patches 398 flaws including a wormable DNS RCE and an exploited kernel zero-day</a>
+      <p>August Patch Tuesday includes CVE-2026-62878 (wormable Windows DNS Server RCE) and CVE-2026-68820, an afd.sys zero-day already used by Lazarus in Operation Dream Job.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">One of the largest Patch Tuesdays of the year includes a potentially wormable, zero-click DNS Server RCE and a kernel driver zero-day already weaponised by a nation-state actor. <strong>Action for MSPs/IT teams:</strong> prioritise internet-facing DNS servers and afd.sys-affected systems for emergency patching this week — wormable flaws are exactly the class of bug that turns into a mass-exploitation event if patching lags.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/university-of-sydney-finds-permanent-cido-628137" target="_blank" rel="noopener">University of Sydney appoints permanent Chief Information and Digital Officer</a>
+      <p>Josh Roberts, who led the Digital Sydney program, takes over from interim CIDO Kerry Holling effective 21 September.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large, complex enterprise IT environment gets permanent leadership after an interim period — worth noting for anyone tracking higher-ed digital transformation programs in the region, as strategy and vendor relationships often shift (or solidify) once an interim tag comes off.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/iag-sets-hefty-ai-budget-for-next-financial-year-628135" target="_blank" rel="noopener">IAG sets ~$200M AI budget, partners with OpenAI on disaster claims handling</a>
+      <p>Over 60% of IAG staff already use AI regularly; the insurer is now leaning on OpenAI to speed claims processing during severe weather events.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major ANZ insurer is putting real budget weight behind AI, with a concrete use case (disaster claims surge handling) rather than a vague innovation mandate. <strong>Benchmark value:</strong> useful ammunition if you're building an internal AI business case in insurance/financial services — tie spend to a specific operational bottleneck rather than general "AI adoption."</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.reseller.co.nz/article/4209424/industry-led-strategy-calls-for-nz-to-become-trusted-sustainable-data-centre-and-ai-hub.html" target="_blank" rel="noopener">Industry strategy calls for NZ to become a trusted data centre and AI hub</a>
+      <p>DataCentres New Zealand's plan pushes for coordinated investment in secure domestic data centre capacity, positioning NZ to attract international AI infrastructure investment alongside its renewable-energy advantage.</p>
+      <div class="src">Source: Reseller News (NZ)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">NZ industry is explicitly courting AI-infrastructure investment on the back of cheap renewable power — a deliberate national positioning play as hyperscalers hunt for energy-secure sites. <strong>For ANZ IT/infra leaders:</strong> watch for new local data centre capacity and pricing options over the next 1-2 years if this coordination effort gains traction; could reduce reliance on Australian or offshore hosting for data-residency-sensitive workloads.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nabs-long-time-technology-executive-patrick-wright-to-retire-628069" target="_blank" rel="noopener">NAB's long-serving technology executive Patrick Wright to retire</a>
+      <p>Wright departs 30 September after nine-plus years; Pete Steel (ex-CBA) takes over as the Big Four banks' technology leadership ranks continue to reshuffle.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another data point in the ongoing churn at the top of Australian banking technology leadership, following moves across the other majors. <strong>Why it matters:</strong> multi-year technology and vendor strategies at NAB may see renewed scrutiny under new leadership — relevant context for any partner or supplier with existing NAB technology relationships.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/komatsu-australia-to-move-4000-users-to-zero-trust-cloud-security-628041" target="_blank" rel="noopener">Komatsu Australia moves 4,000 users to zero-trust cloud security</a>
+      <p>Rolling out Zscaler, the mining-equipment giant cites AI-powered attackers that "scan your environment at machine speed" as a driver, alongside a shift from capex to opex security spending.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large ANZ industrial operator is explicitly citing AI-accelerated attack speed as the reason to move off perimeter-based security now, not on the usual multi-year cycle. <strong>For security leaders:</strong> the capex-to-opex framing is also worth noting when building the business case for zero-trust migration — it's increasingly being sold and budgeted as a subscription security service rather than a one-off infrastructure project.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
