@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 19 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 19 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/" target="_blank" rel="noopener">OpenAI launches ChatGPT for Teens</a>
+      <p>A dedicated 13-17 experience with stronger content restrictions, no romantic/sexual roleplay, parental controls and a new Study Mode. Under-18s are auto-enrolled via age prediction.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">OpenAI is formalising teen safety years after teens were already using ChatGPT unsupervised — auto-enrolment via age-prediction is the notable mechanism, not just the guardrails themselves. <strong>Why it matters:</strong> this sets the template regulators and parents will expect from every consumer AI product; any org shipping a chatbot with a teen or general-audience user base should benchmark its own age-assurance and content-safety posture against this now, ahead of likely regulatory pressure.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.engadget.com/2238891/apple-appears-to-have-leaked-its-camera-equipped-airpods/" target="_blank" rel="noopener">Apple appears to have leaked its camera-equipped AirPods</a>
+      <p>A demo video buried in the macOS 26.7 release candidate shows AirPods with a built-in camera feeding Siri's Visual Intelligence — identifying and saving objects a wearer looks at.</p>
+      <div class="src">Source: Engadget</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Apple is pushing AI out of the phone and onto the body — always-available visual context is the next input surface after voice. <strong>Why it matters:</strong> expect a fast follow from competitors on camera-equipped wearables, plus fresh privacy/bystander-consent scrutiny once always-on cameras move from glasses to earbuds worn by hundreds of millions of people.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.nbcnews.com/business/media/bytedance-signs-ai-copyright-pact-hollywood-motion-picture-association-rcna592977" target="_blank" rel="noopener">ByteDance signs first-of-its-kind AI copyright pact with Hollywood's MPA</a>
+      <p>Agreement covers ByteDance's Seedance video and Seedream image generators, following an MPA cease-and-desist after Seedance 2.0 let users generate unauthorised Brad Pitt/Tom Cruise content.</p>
+      <div class="src">Source: NBC News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The first negotiated IP-protection framework between a major studio lobby and a generative-video vendor, rather than pure litigation. <strong>Why it matters:</strong> it's a template other AI video/image vendors will likely be pressured to adopt — legal and content teams at any org using generative video tools should watch for similar rights-holder agreements shaping what these tools can output.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/" target="_blank" rel="noopener">AI chip startup Etched doubles valuation to $21B in a month</a>
+      <p>$700M raise led by Jane Street — also Etched's first customer, now running its first inference rack — with over $1B in signed customer contracts across AI firms and cloud providers.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Capital is chasing inference economics, not just training FLOPs — Etched's pitch is cheaper, faster serving of already-trained models. <strong>Why it matters:</strong> a doubling in one month signals real customer demand (not just hype) for alternatives to Nvidia on the inference side; buyers running large-scale AI workloads should track whether specialised inference silicon can meaningfully cut their serving costs later this year.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/google-buys-spirit-airlines-data-for-ai-training-for-just-usd10-million-purchase-includes-hundreds-of-millions-of-emails-microsoft-teams-chats-billions-of-flight-pricing-records-and-anonymized-passenger-records" target="_blank" rel="noopener">Google pays $10M for bankrupt Spirit Airlines' data to train AI</a>
+      <p>Deal covers ~100M emails, 500M Teams chats and billions of pricing/employee records, anonymised by a third party before transfer; still awaiting bankruptcy-court approval.</p>
+      <div class="src">Source: Tom's Hardware</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Corporate bankruptcy estates are becoming a cheap, court-sanctioned source of training data — internal comms and business records, not just public web text. <strong>Why it matters:</strong> if your organisation ever enters administration or a data-asset sale, assume internal communications and employee records are a marketable asset; this is a live preview of how "anonymised" corporate data ends up feeding foundation models.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html" target="_blank" rel="noopener">CISA flags actively exploited Ray framework flaw</a>
+      <p>The RCE defect in the popular AI/ML compute framework enables browser-based remote code execution via DNS rebinding, and is now on CISA's Known Exploited Vulnerabilities list.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Ray runs the distributed compute behind a huge share of ML training/serving pipelines, and this is being actively exploited, not just theoretical. <strong>Action:</strong> any team running Ray clusters should patch immediately and confirm dashboard/API ports aren't exposed to untrusted networks — DNS rebinding attacks specifically target services that assume "localhost-only" is safe.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html" target="_blank" rel="noopener">Attackers exploit MLflow SSRF flaw for credential theft; FUXA also under active attack</a>
+      <p>Two critical, actively-exploited flaws — one in the MLflow ML platform enabling credential theft via SSRF, one in the FUXA SCADA/HMI tool.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two more MLOps/OT tools joining the actively-exploited list in the same week as Ray — attackers are systematically working through the AI infrastructure and industrial-control stack. <strong>Action:</strong> patch MLflow and FUXA now; treat both ML-platform tooling and SCADA/HMI systems as high-priority attack surface, not back-office infrastructure.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html" target="_blank" rel="noopener">Critical GitLab GraphQL flaw lets unauthenticated attackers modify or delete public projects</a>
+      <p>CVE-2026-19478, CVSS 9.4 — GitLab has released patches; self-managed instances that haven't updated remain exposed.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No authentication required to tamper with or destroy public repositories — a direct hit on source-code integrity and availability. <strong>Action:</strong> self-managed GitLab admins should patch immediately; this is squarely in "patch today, not this sprint" territory given the CVSS score and unauthenticated attack path.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/one-attacker-has-scraped-both.html" target="_blank" rel="noopener">Single attacker has been scraping Salesforce and ServiceNow customer portals since March 2025</a>
+      <p>Automated, sustained harvesting of customer data from two of the most widely used enterprise SaaS platforms, running undetected for well over a year.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A single actor going undetected for 18+ months across two major SaaS platforms says more about weak anomaly detection on the customer-portal side than about the attacker's sophistication. <strong>Action:</strong> if you expose Salesforce/ServiceNow customer portals, review authentication rate-limiting and bot/scraping detection — "it's just a login page" is not a low-risk assumption anymore.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html" target="_blank" rel="noopener">16 typosquatted RubyGems packages caught stealing browser and crypto-wallet credentials</a>
+      <p>Malicious gems mimicking popular package names harvest browser-stored credentials, wallet files and seed phrases.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Yet another supply-chain typosquatting wave, this time targeting the Ruby ecosystem specifically for crypto and credential theft. <strong>Action:</strong> pin gem versions, verify package names character-by-character in CI, and route installs through a vetted internal mirror — this is the same standing control every language ecosystem now needs, not a Ruby-specific fix.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.infoworld.com/article/4210864/github-restores-services-after-nearly-8-hour-outage-disrupts-actions-apis-prs-and-copilot.html" target="_blank" rel="noopener">GitHub restores service after nearly 8-hour outage hits Actions, APIs, PRs and Copilot</a>
+      <p>Outage began 1:40pm UTC Aug 17, peaked at ~20% error rates on web/API and ~50% on archive/raw downloads; SAML/OIDC auth also affected, locking some enterprise users out entirely.</p>
+      <div class="src">Source: InfoWorld</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An 8-hour outage that touched CI/CD, code review and enterprise SSO simultaneously is a full-stack dev workflow outage, not a minor hiccup. <strong>Action:</strong> if your CI/CD or release process has a hard dependency on GitHub Actions with no fallback, this is a concrete argument for a documented manual-deploy runbook and SSO break-glass access for exactly this scenario.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.cnbc.com/2026/08/13/workday-skyrockets-25percent-before-trading-halted-on-report-of-silver-lake-takeover.html" target="_blank" rel="noopener">Workday in takeover talks with Silver Lake in deal that could top $43B</a>
+      <p>Shares jumped ~18-25% on the report; talks reportedly span months and follow Aneel Bhusri's return as CEO in February 2026 amid a prolonged stock slide.</p>
+      <div class="src">Source: CNBC</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">One of the largest HR/ERP SaaS vendors going private would be among the biggest software buyouts ever, and would reset the ownership and roadmap pressure on every enterprise running Workday. <strong>Action:</strong> Workday customers should watch for roadmap or pricing signals if a deal firms up — take-private deals often mean a multi-year strategy reset once new ownership beds in.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thenextweb.com/news/oracle-august-2026-layoffs-ai-capex" target="_blank" rel="noopener">Oracle plans fresh August layoffs as its AI capex spree bites</a>
+      <p>FY2026 capex hit $55.7B (up from $21.2B), leaving a ~$23.7B cash shortfall funded by ~$43B in new debt, even as OCI revenue grew 77% YoY.</p>
+      <div class="src">Source: TheNextWeb</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Oracle is converting payroll into AI-datacenter capex at a pace that's outrunning its cash generation, while publicly citing "AI adoption" as a reason for the cuts. <strong>Why it matters:</strong> it's a preview of the tradeoff other hyperscaler-adjacent vendors face — heavy AI infrastructure bets funded by debt and headcount reduction — worth watching if you rely on Oracle's roadmap or support responsiveness.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/westpac-at-work-on-a-new-agentic-ecosystem-628175" target="_blank" rel="noopener">Westpac building a new agentic AI ecosystem</a>
+      <p>One of Australia's big-four banks is developing an internal platform for deploying AI agents across the business.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major regulated bank building its own agentic platform rather than buying off-the-shelf signals confidence that governance/compliance controls can be built in-house for AI agents in a heavily-audited environment. <strong>For ANZ enterprises:</strong> watch how Westpac handles agent governance and audit trails — it's a useful reference point for any regulated org considering agentic AI deployment.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/komatsu-australia-reduces-reliance-on-telstra-locked-sims-in-security-push-628163" target="_blank" rel="noopener">Komatsu Australia cuts reliance on Telstra-locked SIMs in security push</a>
+      <p>The mining-equipment giant is trialling a new mobile connectivity consumption model to reduce single-carrier lock-in.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large industrial operator deliberately de-risking single-carrier dependency for IoT/fleet connectivity is a concrete data point on telecom resilience planning. <strong>For ANZ IT/OT teams:</strong> if your fleet, mining or logistics operations depend on carrier-locked SIMs, this is a live example worth benchmarking against for your own carrier-diversification and failover planning.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/anglicare-transforms-its-it-service-management-628170" target="_blank" rel="noopener">Anglicare overhauls IT service management on ServiceNow</a>
+      <p>The "Service Ignite" project now resolves two-thirds of incidents on first assignment and proactively catches 40% of incidents (via SolarWinds/New Relic) before users report them.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Concrete, measured ITSM outcomes — first-time resolution and proactive incident detection — from a non-tech-native Australian aged-care/community provider. <strong>Use it as a benchmark:</strong> the 40% proactive-detection figure is a useful target if you're building the business case for observability investment in your own ITSM modernisation.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
