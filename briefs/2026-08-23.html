@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 23 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Sunday, 23 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/nvidia-finds-that-simple-linear-math-can-replace-costly-ai-model-handoffs" target="_blank" rel="noopener">Nvidia finds simple linear math can replace costly AI model handoffs</a>
+      <p>A lightweight linear transform moves KV-cache state between differently-sized models 2.7–25x faster than recomputing from scratch, while keeping up to 98% accuracy.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Multi-model pipelines (small model triage → large model deep-dive) usually pay a heavy recompute tax every time work hands off between models. Nvidia's result shows a cheap linear projection can carry state across that handoff almost losslessly. <strong>Why it matters:</strong> if it holds up outside the lab, it removes one of the biggest cost penalties for model-routing architectures — directly relevant to anyone running tiered/agentic inference to control spend.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat" target="_blank" rel="noopener">Slack Code brings AI coding agents into group chat</a>
+      <p>Claude Code, Devin and GitHub Copilot now run inside dedicated Slack channels where teams watch, review and ship together.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Slack's bet is that once agents make code cheap to write, the bottleneck shifts to human review and judgment — so it's moving agent output into the same channel where that judgment already happens. <strong>For engineering leaders:</strong> expect more vendors to fold coding agents into collaboration tools rather than IDEs; worth watching whether shared-channel review actually catches more issues than solo PR review, or just moves the noise.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/one-in-five-enterprises-cant-stop-a-runaway-ai-agents-spending-in-real-time" target="_blank" rel="noopener">One in five enterprises can't stop a runaway AI agent's spending in real time</a>
+      <p>85% of enterprises now run two or more AI orchestration platforms, but a fifth still have no kill switch for an agent burning through budget.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Multi-platform orchestration is being adopted for visibility and control, yet basic cost-circuit-breakers are still missing at a fifth of enterprises. <strong>Action:</strong> if you're scaling agentic AI, treat real-time spend caps and kill switches as a launch-blocking requirement, not a nice-to-have added after the first runaway bill.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html" target="_blank" rel="noopener">TikTok agrees to $400M settlement over child privacy violations</a>
+      <p>DOJ/FTC action over unlawful collection of under-13 user data — one of the largest COPPA recoveries ever, $300M paid immediately.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A $400M penalty for letting children under 13 create accounts and collecting their data without proper consent is a record-setting COPPA outcome. <strong>For anyone running consumer platforms:</strong> age-verification and data-minimisation for minors is no longer a paperwork exercise — regulators are now pricing violations at nine figures, and "we improved things after the complaint" clearly wasn't enough to avoid the penalty.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/android-car-malware-spreads-through.html" target="_blank" rel="noopener">First-ever malware found on a car head unit, spread via update channel</a>
+      <p>Kaspersky attributes the DoFun-firmware infection to the MoYu Group (of BADBOX fame); it hijacks a legitimate APK-update app to run ad fraud and proxy botnets.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the first documented malware infection chain built specifically for a car's Android head unit, abusing the device's own legitimate update mechanism. <strong>Why it matters:</strong> connected-vehicle software supply chains are now a proven attack surface, not a hypothetical one. Fleet operators and automakers embedding third-party Android firmware should be auditing update-channel trust and signing, the same way they'd audit any other supply chain.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html" target="_blank" rel="noopener">Suspected Russian hackers abuse OAuth and hotel/airport Wi-Fi to phish targets</a>
+      <p>Three clusters (UNC6293, UNC7005, UNC5976) target academics, defence and government figures across Europe/US using OAuth abuse, WhatsApp device-linking and DNS poisoning at public Wi-Fi.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">These campaigns don't rely on novel malware so much as abusing legitimate auth flows (OAuth consent, WhatsApp linking) and public-network trust — harder to signature, easier to fall for. <strong>Action for high-profile-traveller orgs</strong> (government, defence, academia, think tanks): brief staff specifically on OAuth-consent phishing and device-linking prompts, and treat hotel/airport Wi-Fi as hostile-by-default when travelling.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/researchers-chain-tesla-charger-bug-into-a-four-vendor-ev-worm-628346" target="_blank" rel="noopener">Researchers chain a Tesla charger bug into a four-vendor EV "worm"</a>
+      <p>At Black Hat, a signed-integer bug in the Tesla Wall Connector was chained via Wi-Fi/Bluetooth into an Alpine infotainment unit, an Autel MaxiCharger and a ChargePoint Home Flex. Tesla patched in late 2025.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A single charger firmware bug was turned into a self-propagating chain across four unrelated vendors' hardware — a real demonstration that EV charging infrastructure has the same cross-device worm risk as any other embedded ecosystem. The flaw is already patched and no internet-wide exploitation was shown. <strong>For fleet/charging-network operators:</strong> confirm firmware patch levels across every charger brand in your network, not just the one the headline names — the risk is cross-vendor by design.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/wesfarmers-health-moving-up-to-sap-s-4hana-628284" target="_blank" rel="noopener">Wesfarmers Health moves up to SAP S/4HANA</a>
+      <p>Migration from SAP ECC to S/4HANA on RISE, aiming to unify systems across brands acquired since 2022 (InstantScripts, SILK Laser, Pharmacy 4 Less).</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large, acquisition-heavy division consolidating onto one ERP is a familiar pattern as 2027 ECC end-of-mainstream-support approaches. <strong>For enterprise IT/MSP planners:</strong> use this as a live reference case for RISE migration sequencing when advising clients with multiple bolted-on acquisitions — the hard part is rarely the platform, it's reconciling divergent processes from each acquired business.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/servals-super-agent-catalyst-creates-roving-background-agents-to-identify-and-fix-it-issues-before-theyre-ticketed" target="_blank" rel="noopener">Serval's "Catalyst" agent fixes IT issues before they're ticketed</a>
+      <p>Background agents continuously scan connected systems, spot recurring helpdesk patterns, and propose or apply fixes ahead of a ticket being filed.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Rather than triaging tickets faster, Catalyst tries to eliminate the repetitive ones before they're raised, by mining ticket history for patterns and pre-building the fix workflow. <strong>For MSPs and internal IT/helpdesk teams:</strong> this is the direction L1/L2 support automation is heading — worth piloting against your highest-volume recurring ticket categories rather than general-purpose helpdesk chatbots.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.scoop.co.nz/stories/PA2608/S00199/new-zealand-institute-for-advanced-technology-launches-in-auckland.htm" target="_blank" rel="noopener">New Zealand Institute for Advanced Technology launches in Auckland</a>
+      <p>NZ's fourth Public Research Organisation, based at GridAKL, targeting AI, quantum tech and advanced materials — already committed NZ$71M over seven years to a magnetics/materials platform at Victoria University of Wellington.</p>
+      <div class="src">Source: Scoop</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A new, well-funded national research body focused on commercialising AI, quantum and advanced-materials research is a signal NZ is trying to convert research strength into exportable IP rather than losing it offshore. <strong>Why it matters for local tech/enterprise:</strong> it's a new potential partner or funding conduit for NZ deep-tech startups and a marker of where government innovation money is flowing next.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
