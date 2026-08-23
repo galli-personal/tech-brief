@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 24 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Monday, 24 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone" target="_blank" rel="noopener">Enterprises limit AI agent autonomy as Gartner predicts 40% of projects scrapped by 2027</a>
+      <p>Gartner forecasts over 40% of agentic AI projects will be canceled by 2027 due to cost overruns and governance gaps, not technical failure — so the enterprises succeeding are deliberately narrowing what agents can do alone and adding human checkpoints.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The industry's early "maximize autonomy" instinct is reversing. Leading enterprises are winning by constraining agents to narrow, well-defined tasks with human checkpoints at critical decisions, rather than betting on full autonomy. <strong>Takeaway:</strong> if you're scoping an agentic AI project, treat tight guardrails and audit trails as the differentiator, not a brake — Gartner's 40% cancellation rate is landing on teams that skipped this step.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/one-in-five-enterprises-cant-stop-a-runaway-ai-agents-spending-in-real-time" target="_blank" rel="noopener">One in five enterprises can't stop a runaway AI agent's spending in real time</a>
+      <p>85% of enterprises now run two or more AI orchestration platforms and 64% run three, deliberately avoiding single-vendor lock-in — but a fifth still lack real-time controls to halt an agent's spending once it starts running away.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Multi-platform orchestration is now the norm, driven by security and control concerns rather than best-of-breed feature chasing. But tooling has outpaced governance: 82% of "agents" in production are still basic single-step automations, and real-time spend controls remain a gap for 1 in 5 orgs. <strong>Action:</strong> before scaling agent deployments, confirm you have a kill switch and spend caps enforced at the platform level, not just policy on paper.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/nvidia-finds-that-simple-linear-math-can-replace-costly-ai-model-handoffs" target="_blank" rel="noopener">Nvidia's linear-math trick cuts AI model-handoff costs up to 25x</a>
+      <p>A new cross-model KV-cache transfer technique lets systems switch between differently-sized AI models mid-task using simple linear math instead of expensive recomputation, cutting handoff latency 2.7x–25x while keeping up to 98% accuracy.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Model-switching overhead is a real cost center in long agentic sessions that route between cheap and expensive models. Nvidia's approach removes the need for costly retraining or full recomputation at each handoff. <strong>Why it matters:</strong> this is a concrete, low-effort optimization pattern for anyone running multi-model pipelines — worth evaluating if inference cost is a line item you're trying to shrink.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/glm-5-3-hits-the-api-at-1-4-4-4-per-million-tokens" target="_blank" rel="noopener">GLM-5.3 hits the API at $1.40/$4.40 per million tokens, ties for top open-weights model</a>
+      <p>Z.ai's GLM-5.3 is now generally available via API, tying Moonshot's Kimi K3 as the top-performing open-weights model on independent benchmarks — at a fraction of frontier-model pricing.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Open-weights models are now credibly competing at the frontier on benchmarks while undercutting closed-model pricing significantly. <strong>For buyers:</strong> this widens the field for cost-sensitive workloads — worth a bake-off against your current model if token spend is material, but validate against your own eval set since benchmark parity doesn't guarantee task parity.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html" target="_blank" rel="noopener">GitLab flaw (CVSS 9.4) under active exploitation within days of disclosure</a>
+      <p>An unauthenticated code-injection bug lets attackers modify or delete public GitLab projects and rewrite their data. Researchers reproduced it within minutes of disclosure, and exploitation attempts are already hitting honeypots.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Time-to-exploit is now measured in minutes, not weeks, for high-severity GitLab bugs. <strong>Action:</strong> patch self-hosted GitLab instances immediately rather than waiting for a scheduled maintenance window — unauthenticated, no user interaction required means internet-facing instances are exposed right now.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html" target="_blank" rel="noopener">Microsoft patches maximum-severity Entra ID flaw (CVSS 10.0)</a>
+      <p>CVE-2026-69836, a deserialization bug enabling remote code execution, has been fixed. Microsoft says it wasn't exploited in the wild and customers don't need to take action — the fix was applied server-side.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A maximum-severity flaw in the identity backbone most enterprises depend on — but this one is a rare good-news story: server-side fix, no observed exploitation, no customer action required. Still worth confirming with your identity team that Entra ID auth logs show nothing anomalous from the disclosure window, given how central Entra ID is to lateral movement in other breaches.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html" target="_blank" rel="noopener">Rust supply-chain attack plants build-time malware in crates with 245M downloads</a>
+      <p>A compromised maintainer account published malicious versions of three popular crates (arrayref, internment, append-only-vec) with a typosquatted dependency whose build script executed a remote payload during compilation. Removed within ~90 minutes; no confirmed exploitation.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Build-time execution means the malicious code runs the moment you compile, not when you run the binary — CI pipelines are just as exposed as developer laptops. <strong>Action:</strong> pin crate versions and audit build scripts (build.rs) in your dependency tree; a fast takedown here doesn't mean the pattern won't recur with a slower response next time.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html" target="_blank" rel="noopener">Cisco patches nine Crosswork and Secure Workload flaws, five at CVSS 10.0</a>
+      <p>Found during Cisco's internal testing, not known to be exploited yet — but five of the nine flaws score the maximum CVSS 10.0. Part of a broader internal security review producing multiple hardening releases.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Not yet exploited is not the same as low-risk — CVSS 10.0 flaws in network/workload management platforms are prime targets once technical details circulate. <strong>Action:</strong> prioritize patching Crosswork and Secure Workload deployments this week, before proof-of-concept exploits inevitably surface.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html" target="_blank" rel="noopener">TikTok agrees to $400M settlement over child-privacy violations</a>
+      <p>ByteDance will pay $300M immediately plus $100M contingent on vacating a prior consent decree, resolving DoJ/FTC allegations that TikTok let underage users create accounts and unlawfully collected their data — one of the largest COPPA recoveries ever.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A record COPPA enforcement signals regulators are willing to extract nine-figure penalties for child-data violations, not just issue warnings. <strong>For any org handling data from users who might be minors:</strong> age-verification and data-minimization controls are no longer optional compliance theater — this is what happens when they're absent.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/asd-warns-of-australian-attacks-on-n-able-n-central-rmm-628282" target="_blank" rel="noopener">ASD warns of active Australian attacks on N-able N-central RMM</a>
+      <p>A critical authentication flaw in the widely-used MSP remote monitoring and management platform grants "god mode" admin access without credentials. Two hotfixes are out; ASD says exploitation is already underway against Australian targets.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">RMM platforms are the highest-value target in the MSP stack — compromise one and you potentially compromise every downstream client. <strong>Action:</strong> any MSP running N-central must apply both hotfixes immediately and review console access logs for the disclosure window, not just patch and move on.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.scansource.com/about/press-releases/2026/scansource-to-acquire-microage" target="_blank" rel="noopener">ScanSource to acquire MicroAge for $220.5M in services push</a>
+      <p>The all-cash deal adds MicroAge's ~2,400 customers and cloud, cybersecurity, data center and managed-IT capabilities to ScanSource, expected to close by end of September and be accretive within the first year.</p>
+      <div class="src">Source: ScanSource</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another distributor-turned-services-integrator move as the line between distribution and MSP blurs further. <strong>For channel partners:</strong> expect continued consolidation pressure — scale in managed services and security is becoming table stakes for distributors competing for the same customer relationships MSPs hold.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://securityaffairs.com/197490/hacking/u-s-cisa-adds-apple-macos-microsoft-sharepoint-broadcom-vmware-vcenter-and-microsoft-ike-flaws-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank" rel="noopener">CISA adds actively exploited macOS, SharePoint, vCenter and Windows IKE flaws to must-patch list</a>
+      <p>Four actively-exploited vulnerabilities (CVSS 9.1+) hit SharePoint authentication, VMware vCenter, Windows IKE, and macOS Screen Sharing. Federal agencies had a two-day patch deadline; everyone else should treat it the same way.</p>
+      <div class="src">Source: Security Affairs</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">These four span the core enterprise stack most MSPs manage — identity/collaboration (SharePoint), virtualization (vCenter), networking (IKE) and endpoints (macOS). <strong>Action:</strong> run these four CVEs through your patch management/RMM tooling today and confirm remediation status per client, since active exploitation means the compliance deadline is really a security deadline.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/superloop-turning-ai-savings-into-security-and-compliance-boost-628319" target="_blank" rel="noopener">Superloop redirects AI cost savings into security and compliance</a>
+      <p>The telco's AI support agents now handle 34% of customer interactions, avoiding 400,000 calls — but CEO Paul Tyler says opex reduction gains are "flattening out," so savings are being reinvested in security and compliance instead.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A useful data point for anyone building an AI-driven support business case: the initial cost-reduction curve is steep, then flattens — and the mature move is reinvesting freed-up budget into security/compliance rather than chasing diminishing opex gains. Use this as a benchmark when setting expectations for your own AI support ROI trajectory.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/fed-gov-pays-to-access-at-least-six-ai-suites-628266" target="_blank" rel="noopener">Australian federal government pays for at least six AI suites, M365 Copilot leads with ~29,000 licenses</a>
+      <p>Across 67 responding entities, Microsoft 365 Copilot dominates federal AI adoption — especially at DFAT and Health — while Google's Gemini and Anthropic's Claude see smaller trial deployments at agencies like the DTA.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Multi-vendor AI adoption inside government mirrors the enterprise pattern seen globally — no single-vendor lock-in, Copilot as the default but real trial diversity underneath. <strong>For ANZ vendors and MSPs serving government:</strong> expect procurement to stay fragmented across at least these three platforms rather than consolidating soon.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/wesfarmers-health-moving-up-to-sap-s-4hana-628284" target="_blank" rel="noopener">Wesfarmers Health begins SAP S/4HANA upgrade to unify acquired brands</a>
+      <p>The healthcare division is moving from SAP ECC to S/4HANA on RISE, part of a multi-year roadmap to unify systems across brands acquired since 2022 (API, InstantScripts, SILK Laser, Pharmacy 4 Less) and enable AI capabilities.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A textbook case of ERP consolidation following an acquisition spree — technical debt from four separate brand stacks finally being paid down. Relevant if you're advising on post-M&amp;A IT integration: budgeting the multi-year unification cost up front is cheaper than running parallel systems indefinitely.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/seven-west-media-drops-teradata-in-intelligence-layer-modernisation-628200" target="_blank" rel="noopener">Seven West Media replaces decade-old Teradata stack with Snowflake, Databricks and Salesforce</a>
+      <p>A 12-week migration moved 6,200 database objects, delivering a nine-fold increase in daily data processing speed — laying the groundwork for AI-driven audience insights as the broadcaster competes with global streamers.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A concrete data point on legacy-platform migration speed and payoff: 12 weeks, 6,200 objects, 9x throughput. Useful benchmark if you're scoping a similar data-warehouse modernization — and a reminder that "AI readiness" often starts with unglamorous data-layer replatforming, not model selection.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vocus-names-chief-ai-officer-628299" target="_blank" rel="noopener">Vocus names Ben Chan chief AI officer, poached from Quantium</a>
+      <p>Chan will oversee company-wide AI strategy and a centre of excellence while also serving as managing director of consumer — following Telstra, Optus and NBN Co in creating dedicated AI leadership roles.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">All major ANZ telcos now have a dedicated AI executive — this is no longer a differentiator, it's baseline organizational structure for the sector. If your org competes with or sells into these telcos, expect AI-strategy maturity (and RFP sophistication) to rise accordingly.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
