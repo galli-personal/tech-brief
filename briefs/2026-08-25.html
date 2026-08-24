@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 25 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Tuesday, 25 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted" target="_blank" rel="noopener">Anthropic's Claude Tag now reads full Slack threads before jumping in</a>
+      <p>Full-context reading makes the Slack agent roughly 30% better at judging when to speak up unprompted — part of Anthropic's push toward "multiplayer AI" that operates across teams, not just one user at a time.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Anthropic is pitching agents that live inside team tools and act without being asked, powered by MCP connectivity and better models. <strong>Watch for:</strong> context usage becoming a billable line item as these always-on agents scale across an org — budget accordingly if you're deploying Claude Tag broadly.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/ibms-next-gen-mainframe-chip-is-the-first-to-run-arm-and-z-workloads-on-the-same-cores" target="_blank" rel="noopener">IBM's next mainframe chip runs Arm and Z workloads on the same cores</a>
+      <p>An 11-core, 2nm processor switches between IBM's own instruction set and Arm's in nanoseconds, letting mainframes run Arm-native Linux and AI frameworks alongside z/OS. Ships around 2028 with Spyre AI accelerators built in.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The mainframe's biggest weakness has been isolation from the broader, 22-million-developer Arm/Linux ecosystem — this chip closes that gap natively rather than through emulation. <strong>For enterprises still running z/OS:</strong> it's a multi-year bet, but it signals IBM is positioning mainframes as AI-capable infrastructure rather than legacy iron to migrate away from.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nvidia-customers-notified-about-ai-related-price-hikes-628364" target="_blank" rel="noopener">Nvidia warns customers of 15%+ price hikes on AI server chips</a>
+      <p>Rising memory chip costs are pushing up prices on servers built around Nvidia's Vera Rubin and Grace Blackwell platforms, starting with systems shipped in early 2026.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Memory pricing, not GPU silicon, is the constraint now — a reminder that AI infrastructure costs are exposed to the broader semiconductor supply chain, not just Nvidia's own roadmap. <strong>Action:</strong> if you're budgeting AI infrastructure spend for next year, build in headroom for double-digit hardware cost inflation rather than assuming flat pricing.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.forbes.com/sites/janakirammsv/2026/08/19/agent2agent-joins-the-agentic-ai-foundation-alongside-mcp/" target="_blank" rel="noopener">Google hands its A2A protocol to the Agentic AI Foundation, joining MCP</a>
+      <p>Google's Agent2Agent protocol now sits alongside Anthropic's Model Context Protocol under neutral Linux Foundation governance — the AAIF has grown from 49 to 250+ members, including AWS, Microsoft, OpenAI and Google itself.</p>
+      <div class="src">Source: Forbes</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The two protocols solve different layers — A2A for agent-to-agent handoffs, MCP for agent-to-tool/data access — and having both under one neutral foundation lowers the risk of a vendor-locked standards war. <strong>For builders:</strong> it's now safe to invest engineering time in both protocols rather than betting on one horse.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html" target="_blank" rel="noopener">Critical Keycloak flaw lets attackers reset any password, no login needed</a>
+      <p>CVE-2026-18963 (CVSS 9.1) breaks the email-verification step in the reset-credentials flow. Patched in Keycloak 26.7.2; Red Hat builds need 26.4.15+ or 26.6.6+.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Identity infrastructure is the highest-leverage target there is — a flaw here means every downstream app trusting Keycloak is exposed. <strong>Action:</strong> patch immediately, or disable "Forgot password" across all realms as an interim mitigation if you can't patch today.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/the-outsized-shadow-why-5-of-ai-users.html" target="_blank" rel="noopener">Report: the top 5% of enterprise AI users are your biggest security risk</a>
+      <p>Akamai's 2026 Enterprise AI Usage Risk Report finds the heaviest AI users interact with models 12x more than the bottom half of the workforce — and are quietly wiring unvetted AI tools and agents into core business processes.</p>
+      <div class="src">Source: The Hacker News (Akamai research)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Shadow AI risk isn't evenly spread — it's concentrated in a small group of power users who've outpaced governance. <strong>Action:</strong> target monitoring and guardrails at your heaviest AI users specifically, rather than spreading a thin blanket policy across the whole workforce.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/researchers-chain-tesla-charger-bug-into-a-four-vendor-ev-worm-628346" target="_blank" rel="noopener">Researchers chain a Tesla charger bug into a four-vendor EV worm</a>
+      <p>A now-patched signed-integer flaw in Tesla Wall Connector firmware was used in a lab demo to show self-spreading compromise across chargers from multiple manufacturers, with no operator interaction needed.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The flaw itself is already fixed, but the demo matters more than the CVE — it proves EV charging infrastructure can support worm-style propagation across vendors, not just single-device exploits. <strong>For fleet/charging network operators:</strong> treat charger firmware like any other network-attached device — segment it, and don't assume one vendor's patch protects you from a cross-vendor chain.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html" target="_blank" rel="noopener">Russian hacking groups abuse Google OAuth and WhatsApp linking to hijack accounts</a>
+      <p>Three groups — UNC6293, UNC5976 and UNC7005 — are targeting academics, diplomats and defense officials across Europe and the US, including a "CaptiveCrunch" tactic that hijacks hotel and airport Wi-Fi portals to phish credentials.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">These campaigns abuse legitimate auth flows rather than exploiting bugs, which makes them harder to catch with traditional vulnerability scanning. <strong>Action:</strong> if staff travel and use public Wi-Fi, reinforce VPN-first habits and flag unexpected OAuth/device-linking prompts as a phishing red flag in training.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-august" target="_blank" rel="noopener">Microsoft adds a 5% cost-of-capital uplift to annual CSP subscriptions</a>
+      <p>From renewals on or after 1 October 2026, monthly-billed annual-term CSP software subscriptions get a 5% uplift. No Partner Center changes required — partners just need to tell customers before their next renewal.</p>
+      <div class="src">Source: Microsoft Partner Center</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">It's a quiet margin squeeze rather than a headline price rise, but it compounds across every annual-term seat an MSP resells. <strong>Action:</strong> get ahead of customer conversations now — a surprise 5% line item at renewal is a trust problem, a pre-flagged one is just a pricing update.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.scansource.com/about/press-releases/2026/scansource-to-acquire-microage" target="_blank" rel="noopener">ScanSource to acquire IT integrator MicroAge for $220.5M</a>
+      <p>The all-cash deal adds MicroAge's 2,400 clients and deepens ScanSource's cloud, cybersecurity, data-centre and AI services bench. Expected to close by 30 September 2026.</p>
+      <div class="src">Source: ScanSource</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Distribution players buying services integrators, not just other distributors, is the clearest sign yet that channel margin has shifted from box-moving to managed and professional services. <strong>For competing MSPs:</strong> expect ScanSource-backed rivals to get more aggressive on services bundling — differentiate on outcomes, not just product access.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://exclaimer.com/company/press-releases/exclaimer-launches-msp-connect-to-remove-billing-and-management-friction-for-msps/" target="_blank" rel="noopener">Exclaimer launches MSP Connect with consumption-based billing</a>
+      <p>A new partner program for managing email-signature services across multiple customer tenants, with usage-based billing and a self-service portal. Partners already drive around 30% of Exclaimer's annual recurring revenue.</p>
+      <div class="src">Source: Exclaimer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Consumption billing removes a recurring MSP headache — reconciling per-seat licensing against actual customer usage across dozens of tenants. <strong>Worth a look:</strong> if you resell a tool with clunky multi-tenant billing, this is the direction the market's moving — expect other SaaS vendors serving MSPs to follow.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vocus-gets-to-work-on-route-for-sydney-melbourne-fibre-628382" target="_blank" rel="noopener">Vocus appoints UGL to build its $500m Sydney–Melbourne fibre route</a>
+      <p>The ducted-fibre Australian Digital Infrastructure Platform will support up to 3,456 fibre pairs and finish by 2029, giving Vocus room to add capacity later without further civil works.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A second major inter-capital fibre route improves resilience against the cable cuts that periodically disrupt Sydney–Melbourne connectivity, and the ducted design future-proofs capacity growth. <strong>For enterprises with east-coast DR/failover links:</strong> keep an eye on this as a genuine third path once it lands in 2029.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/asd-warns-of-australian-attacks-on-n-able-n-central-rmm-628282" target="_blank" rel="noopener">ASD warns of active attacks on N-able N-central in Australia</a>
+      <p>The Australian Signals Directorate flagged a critical authentication bypass in the RMM platform granting attackers admin access with no credentials — squarely hitting MSPs and their downstream client networks. N-able has shipped hotfixes.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">RMM platforms are a favourite target precisely because compromising one gives an attacker a foothold into every client network the MSP manages. <strong>If you run or use N-central:</strong> patch immediately, and treat this as a reason to review how much implicit trust your RMM tooling holds across client environments generally.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/feds-and-telcos-tell-customers-000-camp-on-delays-can-last-up-to-a-minute-628363" target="_blank" rel="noopener">Feds and telcos warn triple-zero calls can face up to a minute of delay</a>
+      <p>A public-awareness campaign explains the "camp-on" process phones use to find an available network for emergency calls — a direct response to the inquiry into Optus's September 2025 000 outage. A Temporary Disaster Roaming system is also being finalised ahead of disaster season.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is remediation-by-disclosure rather than a technical fix — telcos are managing expectations around a known limitation instead of eliminating the delay. <strong>For anyone running critical or emergency-adjacent services in Australia:</strong> it's a reminder that "the network will find a way" carries a real time cost that's now officially acknowledged, not assumed.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/services-australias-cido-heads-to-rba-628375" target="_blank" rel="noopener">Services Australia's CIDO Charles McHardie departs for the RBA</a>
+      <p>McHardie leaves after four-plus years leading welfare payments infrastructure and the government's largest tech workforce, taking the CIO role at the Reserve Bank from 19 October. Claire Roennfeldt steps in as interim CIDO.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Losing the leader of the country's largest government tech workforce mid-transformation is a continuity risk worth watching, not just a personnel note. <strong>For agencies or vendors engaged with Services Australia:</strong> expect near-term programme decisions to slow slightly during the interim leadership period — flag any milestones that might need re-confirming.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
