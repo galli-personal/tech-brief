@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 26 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 26 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs" target="_blank" rel="noopener">Perplexity and Nvidia launch a fully local AI agent with zero token costs</a>
+      <p>"Portable Computer" bundles models, inference and agent tools into one app that runs entirely on local hardware like Nvidia's DGX Spark or RTX GPUs — no cloud bill.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">By pushing the whole agent stack onto local hardware, Perplexity and Nvidia eliminate the per-token cloud cost that dominates enterprise AI budgets today. <strong>Why it matters:</strong> for document-heavy or data-sensitive workloads, a capable local agent removes both the cost variable and the data-residency concern in one move. <strong>Watch for:</strong> whether output quality holds up against cloud-hosted frontier models before shifting production workloads off the cloud.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/ibms-next-gen-mainframe-chip-is-the-first-to-run-arm-and-z-workloads-on-the-same-cores" target="_blank" rel="noopener">IBM's next mainframe chip runs Arm and Z workloads on the same cores</a>
+      <p>A 2nm, 11-core dual-architecture processor switches between IBM's Z instruction set and Arm64 Linux in nanoseconds — legacy banking code and modern AI frameworks, side by side. Expected around 2028.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Mainframe shops have spent decades bolting modern stacks onto legacy Z systems via middleware. Native dual-ISA cores collapse that gap, letting AI frameworks run alongside core banking/financial workloads on the same silicon. <strong>For enterprises on Z:</strong> this is a multi-year roadmap item, not an immediate purchase decision — but it changes the long-term case for keeping mainframe workloads in place rather than migrating off.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model" target="_blank" rel="noopener">Thomson Reuters launches its own proprietary LLM, "Thomson"</a>
+      <p>Built from an open-source base with a $40M compute-and-talent investment, trained on Westlaw, Practical Law and Reuters content. First job: powering document review in CoCounsel Legal.</p>
+      <div class="src">Source: Thomson Reuters</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large enterprise with deep proprietary data chose to build and own its model rather than fine-tune a vendor's, at a fraction of frontier-model training cost. <strong>Why it matters:</strong> this is a template other data-rich verticals (legal, financial, healthcare) will study — if you sit on decades of unique domain content, a smaller owned model may beat renting a general-purpose one on both cost and control.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://openai.com/index/chatgpt-ads-expands-across-europe/" target="_blank" rel="noopener">OpenAI expands ChatGPT ads to 31 European markets</a>
+      <p>Six months after the US pilot, ads roll out on Free and Go plans across Europe with a two-tier GDPR structure: contextual ads by default, personalised targeting opt-in only.</p>
+      <div class="src">Source: OpenAI</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">OpenAI is building a genuine ad business, not just experimenting — Europe's GDPR-compliant rollout shows the model is designed to scale globally under real regulatory constraints. <strong>For marketers:</strong> a major new ad-buying surface is opening; agency-only access for now means early movers get first pick before self-serve arrives. <strong>For everyone else:</strong> expect free-tier chatbot experiences to look more like search engines with sponsored results.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html" target="_blank" rel="noopener">Maximum-severity Oracle WebLogic flaw actively exploited, added to CISA KEV</a>
+      <p>CVE-2026-21962 (CVSS 10.0) lets unauthenticated attackers compromise Oracle HTTP Server and WebLogic Proxy Plug-in. Patched since January, but exploitation is ongoing — federal agencies must remediate by 27 August.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A perfect-score, unauthenticated vulnerability that's been patchable for seven months is only now being exploited at scale — the usual pattern of attackers working through backlogs of unpatched internet-facing systems. <strong>Action:</strong> if you run Oracle HTTP Server or WebLogic anywhere internet-facing, treat this as a same-week patch, not a scheduled maintenance item.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html" target="_blank" rel="noopener">Mirage2FA phishing-as-a-service surge hits 4,500 US and EU companies</a>
+      <p>The Telegram-run PhaaS platform lets victims complete MFA normally, then steals the resulting session cookie — bypassing MFA entirely. Roughly 48% of targeted addresses were compromised.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Session-cookie theft after successful MFA renders "we have MFA enabled" a false sense of security — password resets and re-authentication alone don't kick the attacker out. <strong>Action:</strong> deploy conditional access with session/token binding and continuous access evaluation, and treat anomalous session reuse as a detection priority, not just failed-login alerts.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html" target="_blank" rel="noopener">24 npm packages abuse unpkg mirrors as free phishing infrastructure</a>
+      <p>Packages aren't meant to infect developers who install them — they exploit npm's CDN mirrors to host fake Cloudflare CAPTCHA pages that redirect into ClickFix-style malware chains, all served from a trusted domain.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Attackers are using package registries as free, trusted-domain hosting rather than as an infection vector — a cheaper and stealthier abuse of open-source infrastructure than classic supply-chain poisoning. <strong>Action:</strong> web/email filtering that trusts unpkg.com and similar CDN mirrors by domain reputation alone needs re-evaluating; content-level inspection matters more than domain allow-listing here.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html" target="_blank" rel="noopener">Zimbra SNMP flaw under active exploitation despite July patch</a>
+      <p>CVE-2026-73570 (CVSS 8.9) lets unauthenticated attackers run commands via crafted SMTP requests when Zimbra's optional SNMP package is enabled. Added to CISA's KEV catalogue.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another case of a month-old patch not translating into patched fleets. Mail servers are high-value targets — full compromise typically means mailbox access, lateral movement, and BEC risk. <strong>Action:</strong> confirm Zimbra is on 10.1.20+, and if zimbra-snmp isn't in active use, disable it rather than just patching — reducing optional attack surface is cheaper than chasing the next SNMP-path CVE.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/allianz-tech-transformation-exposed-as-offshoring-drive-628291" target="_blank" rel="noopener">Allianz's tech "transformation" exposed as an offshoring drive</a>
+      <p>A Fair Work Commission decision reveals Allianz's Speed2Value initiative, marketed as innovation, cut the Australian tech division's headcount from 515 to 329 since 2023, with work shifted to India-based contractor HCLTech.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Innovation branding and cost-driven offshoring aren't mutually exclusive, and this case shows how a tribunal ruling can strip the marketing layer off a transformation program. <strong>For enterprise IT leaders:</strong> workforce framing matters — programs sold internally as "modernisation" invite scrutiny (and litigation risk) if the substance is headcount reduction. Expect more of this disclosure pattern as industrial tribunals become a de facto transparency mechanism.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://telecomreseller.com/2026/08/19/msp-consolidation-moves-into-texas/" target="_blank" rel="noopener">MSP consolidation moves into Texas as Nexus completes 12th acquisition</a>
+      <p>Nexus acquired Austin-based Loyal IT, adding managed IT, cybersecurity, compliance, cloud and infrastructure capabilities as it pushes to become a top-10 US MSP/MSSP.</p>
+      <div class="src">Source: Telecom Reseller</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">MSP roll-up consolidation shows no sign of slowing — scale is increasingly the competitive moat in a market where cybersecurity and cloud capability requirements keep rising. <strong>For buyers of MSP services:</strong> ask any mid-size provider about their own M&A exposure; a provider's tooling, contracts and account teams can all change hands with limited notice under private-equity-backed roll-up strategies.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://sg.finance.yahoo.com/news/managed-security-services-market-surges-141500326.html" target="_blank" rel="noopener">Managed security services market forecast to hit $66.83B by 2030</a>
+      <p>MarketsandMarkets projects growth from $39.47B (2025) at an 11.1% CAGR, driven by cyber threats, complex environments and a persistent security talent shortage.</p>
+      <div class="src">Source: Yahoo Finance / MarketsandMarkets</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The driver isn't novel — talent shortages and threat complexity have pushed this trend for years — but the growth rate confirms managed security is becoming the default delivery model rather than an alternative to in-house SOCs. <strong>For CISOs:</strong> budget conversations should increasingly separate "build vs. buy" by function (monitoring, response, compliance) rather than treating MSSP adoption as all-or-nothing.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nsw-mandates-facial-recognition-in-gaming-reform-package-628406" target="_blank" rel="noopener">NSW mandates facial recognition in pubs and clubs gaming reform</a>
+      <p>All NSW venues with gaming machines must deploy facial recognition tied to a problem-gambling exclusion register by 2028. Vendors can self-certify under a code requiring Australian data storage and 256-bit encryption.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A state government mandating biometric identification at point of entry, with vendor self-certification rather than independent audit, sets a precedent worth watching for other jurisdictions and other biometric-gated policy areas. <strong>For vendors and venues:</strong> data residency and encryption requirements are concrete compliance line items now — start vendor due diligence well before the 2028 deadline rather than at it.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/asd-warns-australian-teamcity-servers-under-attack-628400" target="_blank" rel="noopener">ASD warns Australian TeamCity servers under active attack</a>
+      <p>CVE-2026-63077, a 9.8-severity authentication bypass in JetBrains' TeamCity CI/CD platform, is being actively exploited locally. Patched in late July; now on CISA's KEV list too.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">CI/CD platforms are a high-value target because compromising the build pipeline can mean compromising every downstream artifact it produces. <strong>Action for Australian orgs running TeamCity:</strong> confirm patch status immediately — ASD naming a local active-exploitation campaign (rather than a generic global advisory) signals this is being actively hunted against Australian infrastructure specifically, not just a theoretical risk.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/aemo-predicts-seven-fold-rise-in-data-centre-power-use-over-next-decade-628396" target="_blank" rel="noopener">AEMO predicts seven-fold rise in data centre power use over the next decade</a>
+      <p>Consumption is forecast to grow from 5TWh to ~34TWh, driven by AI and cloud demand — though AEMO notes over 40% of proposed data centre projects since 2025 have stalled or dropped out.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The headline growth number gets attention, but the real signal is the 40%+ attrition rate on proposed projects — grid connection, not capital, is becoming the binding constraint on Australian data centre expansion. <strong>For anyone planning AU data centre capacity:</strong> treat energy market connection timelines as a critical-path item alongside land and construction, not an afterthought.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vocus-gets-to-work-on-route-for-sydney-melbourne-fibre-628382" target="_blank" rel="noopener">Vocus begins route planning for $500M Sydney-Melbourne fibre link</a>
+      <p>UGL appointed as construction partner for the ducted "Australian Digital Infrastructure Platform," supporting up to 3,456 fibre pairs. Due 2029, aimed at AI data centre capacity demand.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A ducted design that allows future capacity expansion without re-digging is a deliberate bet that AI-driven bandwidth demand on the east-coast corridor keeps growing well past 2029. <strong>For telcos and data centre operators:</strong> this adds a credible new capacity option on Australia's busiest domestic route — worth tracking as a hedge against reliance on existing carriers when negotiating long-term connectivity contracts.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
