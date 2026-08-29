@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 30 August 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Sunday, 30 August 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.nbcnews.com/business/business-news/anthropic-pentagon-blacklist-claude-judge-rcna594825" target="_blank" rel="noopener">Federal judge blocks Pentagon's blacklist of Anthropic, calling it "illegal and baseless"</a>
+      <p>A San Francisco judge ruled the Defense Department violated the First Amendment by branding Anthropic a "supply chain risk" in retaliation for refusing to let Claude be used for mass surveillance or autonomous weapons. The government is expected to appeal.</p>
+      <div class="src">Source: NBC News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A court has now put a legal price on a government client retaliating against a vendor for enforcing its own usage policy. Judge Rita Lin's ruling that "the empty invocation of national security is not a blank check to punish and retaliate against government critics" is a strong precedent for AI vendors who hold safety lines against powerful customers. <strong>Takeaway:</strong> if your org sells into government, this case is worth watching on appeal — it bears on how much latitude vendors have to say no to specific use cases without contract retaliation.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://finance.yahoo.com/technology/ai/articles/nvidia-pauses-ai-cloud-revenue-120700044.html" target="_blank" rel="noopener">Nvidia pauses AI cloud revenue-sharing deals over antitrust concerns</a>
+      <p>Days after posting record data-center revenue, Nvidia quietly froze a financing program that gave small AI cloud firms chip credit in exchange for a cut of their revenue, after staff flagged the arrangement's control provisions as an antitrust risk.</p>
+      <div class="src">Source: Yahoo Finance</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Nvidia built a financing structure that let it collect revenue share and dictate customer-vetting rules for smaller AI clouds it was bankrolling — then pulled back once its own people warned it looked like anticompetitive control dressed up as vendor financing. <strong>Why it matters:</strong> if you're a smaller cloud or AI infrastructure buyer relying on vendor-backed financing, expect more caution and slower approvals industry-wide as chipmakers de-risk these deals ahead of regulator scrutiny.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.engadget.com/2245776/meta-closing-loophole-that-allowed-people-to-record-with-smart-glasses-light-covered/" target="_blank" rel="noopener">Meta closes the loophole letting people record with the capture light covered</a>
+      <p>Meta's smart glasses will now stop recording entirely if the LED indicator is covered mid-capture — the second privacy patch in two months after users found ways to defeat the bystander-notification light.</p>
+      <div class="src">Source: Engadget</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Wearable cameras keep shipping with "privacy by indicator light" designs that turn out to be trivially defeatable, and Meta is now iterating on fixes reactively rather than having solved it at launch. <strong>For organisations issuing or permitting smart glasses on premises:</strong> don't rely on the vendor's indicator light as your only bystander-privacy control — pair it with clear usage policy and physical-space signage.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://siliconangle.com/2026/08/26/z-ai-open-sources-ox-alpha-model-as-glm-5-3-flash/" target="_blank" rel="noopener">Z.ai open-sources GLM-5.3-Flash, undercutting its own flagship on price by 10x</a>
+      <p>The MIT-licensed, 320B-parameter multimodal model (18B active) beats GLM-5.2 on Z.ai's own evals while running at roughly one-tenth the cost, with a limited-time 50% launch discount through September 9.</p>
+      <div class="src">Source: SiliconANGLE</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Open-weight frontier-adjacent models keep getting cheaper and more capable faster than proprietary pricing is falling, compressing margins across the model-serving layer. <strong>For buyers:</strong> if coding or agentic workloads are cost-sensitive, GLM-5.3-Flash is worth a bake-off against your current provider before renewing at list price — the gap between "good enough" open models and premium ones keeps narrowing.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html" target="_blank" rel="noopener">Berlin refuses to pay hackers who stole data from the city's state network</a>
+      <p>Rhysida claims 5.79TB and personal data on over 12,000 individuals, demanding roughly €2.05 million in Bitcoin. Berlin's government has publicly rejected the ransom, weeks ahead of a state election on September 20.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A capital city government publicly refusing extortion, on the record, right before an election, sets a visible precedent other public bodies will be asked to match. <strong>Action:</strong> if you sit in public-sector incident response, get your organisation's ransom-refusal position and communications plan agreed <em>before</em> an incident — deciding it live, under media pressure, is how bad calls get made.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/" target="_blank" rel="noopener">McKesson discloses breach after ShinyHunters claims theft of 284 million patient records</a>
+      <p>The healthcare distribution giant confirms unauthorized access after attackers voice-phished two employees' Okta accounts, then pivoted into Salesforce and Snowflake to exfiltrate data. ShinyHunters is demanding $55.2 million; McKesson hasn't engaged.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The entry point wasn't a software vulnerability — it was a phone call to two employees that unlocked identity, then cascaded into every SaaS platform trusting that identity. <strong>Action:</strong> voice-phishing (vishing) targeting help-desk and MFA-reset flows keeps being the cheapest way into well-defended enterprises; test your own reset/verification procedures against a live social-engineering attempt, not just a tabletop exercise.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/08/three-cvss-100-servicenow-flaws-could.html" target="_blank" rel="noopener">Three CVSS 10.0 ServiceNow flaws let unauthenticated attackers run code and SQL</a>
+      <p>Patches cover code injection in the GraphQL Composite Data API, an access-control bypass in the image-upload processor, and SQL injection via dynamic ORDER BY clauses, across Xanadu through Australia releases. No known exploitation yet; self-hosted customers must patch manually.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Three perfect-10 CVSS scores in one advisory, on a platform enterprises trust with workflow automation and often expose to partners, is about as urgent as vulnerability disclosures get. <strong>Action:</strong> if you self-host ServiceNow, patch immediately rather than waiting for the next maintenance window — hosted-instance customers are already covered, but the exploit primitives here (unauthenticated code execution) are exactly what ransomware crews scan for within days of disclosure.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/atf-confirms-major-incident-after-recent-qilin-breach-claims/" target="_blank" rel="noopener">US ATF confirms "major incident" after Qilin ransomware breach claims</a>
+      <p>The firearms agency says a standalone system holding investigation-target data was breached and shut down; it wasn't connected to case management, lab, or eForms systems. Qilin listed ATF on its leak site without proof files, so its role is unconfirmed.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A federal law-enforcement agency confirming a breach of investigation-related data, even on an isolated system, is a reminder that segmentation limited the blast radius here — which is exactly why it worked. <strong>Takeaway:</strong> treat this as a case study for your own architecture: standalone/air-gapped systems for your most sensitive data categories are still one of the highest-value controls when identity and endpoint defenses fail.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.theregister.com/virtualization/2026/08/20/microsoft-ends-one-of-the-last-ways-to-buy-vmware-without-big-bundles/5290044" target="_blank" rel="noopener">Microsoft retires license-included Azure VMware Solution</a>
+      <p>New license-included AVS sales stop October 31, 2026; existing deployments must move to a Broadcom VCF bring-your-own-license arrangement by August 30, 2027 — closing one of the last ways to consume VMware on Azure without a big Broadcom bundle.</p>
+      <div class="src">Source: The Register</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the latest step in Broadcom steadily removing lightweight, pay-as-you-go paths to VMware in favor of bundled VCF licensing — and now Microsoft is the one enforcing the deadline on Azure customers. <strong>Action:</strong> if you or your clients run VMware workloads on Azure via license-included AVS, start the VCF licensing and migration conversation with Broadcom now — a one-year runway sounds long until procurement and testing eat into it.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.blocksandfiles.com/data-protection/2026/08/28/rubrik-revenues-roar-ahead/5293217" target="_blank" rel="noopener">Rubrik revenue jumps 38% as it raises its full-year outlook</a>
+      <p>Q2 FY27 revenue hit $427.3 million with subscription ARR up 33% to $1.66 billion, and the company swung to non-GAAP profitability earlier than analysts expected.</p>
+      <div class="src">Source: Blocks &amp; Files</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Data protection and cyber-resilience spend is still growing faster than most enterprise IT categories, and Rubrik hitting profitability ahead of schedule suggests the market has room for more than one big winner alongside Veeam and Cohesity. <strong>For buyers and MSPs:</strong> expect continued aggressive feature investment and competitive pricing in the backup/ransomware-recovery space as vendors fight for the same growing budget line.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.cnbc.com/2026/08/26/crowdstrike-crwd-earnings-q2-2027.html" target="_blank" rel="noopener">CrowdStrike posts record net-new ARR, lifts full-year guidance</a>
+      <p>Q2 FY27 revenue rose 26% to $1.47 billion with $332.8 million in net-new annual recurring revenue — a company record, up 51% year-on-year — prompting CrowdStrike to raise its full-year outlook.</p>
+      <div class="src">Source: CNBC</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Enterprise security budgets are still expanding even as broader IT spend growth moderates, and platform consolidation around a small number of vendors (CrowdStrike among them) keeps accelerating. <strong>For MSPs and IT buyers:</strong> if you're negotiating renewals with a dominant EDR/XDR vendor, expect less pricing flexibility while demand is this strong — build negotiating leverage around multi-year commitments or bundled modules instead.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.rnz.co.nz/news/business/1151904/one-nz-and-2degrees-launch-bid-to-share-mobile-network-infrastructure" target="_blank" rel="noopener">One NZ and 2degrees propose combining mobile network infrastructure</a>
+      <p>The rivals want to merge their radio access network gear into a jointly owned wholesale entity (working name RANCo), while keeping spectrum, core networks and retail operations separate and competitive. Subject to Commerce Commission and Overseas Investment Office approval, targeting completion in H1 2027.</p>
+      <div class="src">Source: RNZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two competing telcos sharing the most capital-intensive layer of their networks while still competing on retail and spectrum is a structure regulators have favoured elsewhere as a way to cut duplication without killing competition. <strong>Watch for:</strong> Commerce Commission's view on whether shared RAN dulls investment incentives — the ruling will shape how NZ builds out 5G/6G coverage in lower-density areas for years.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/internet-architecture-board-says-service-level-age-checks-will-fail-628463" target="_blank" rel="noopener">Internet Architecture Board says service-level age checks "will fail"</a>
+      <p>The IAB argues age verification should live on users' own devices, not with individual services or third-party age-assurance providers — an architecture pointedly at odds with the model Australia has legislated for its under-16 social media ban.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A body that has shaped internet architecture since 1979 is publicly warning that concentrating age-verification data with third-party providers creates exactly the honeypot targets regulators claim to be protecting against. <strong>For ANZ compliance teams:</strong> if you're building or buying age-assurance tooling to meet Australia's social media rules, factor in that the technical foundation itself is under credible challenge — device-based alternatives may become the safer long-term bet.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/public-sector-tech-report-2026" target="_blank" rel="noopener">iTnews Public Sector Tech Report 2026 launches, tracking AI adoption across ANZ government</a>
+      <p>The annual report, published August 27 with input from federal, state and local government technology leaders including the Digital Transformation Agency and multiple state AI offices, maps how public sector IT priorities have shifted over the past year.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">When the DTA and state-level AI office heads are all contributing to the same annual benchmark, it becomes the closest thing ANZ has to a shared public-sector technology roadmap. <strong>For vendors and MSPs selling into government:</strong> read the federal, state and local editions before your next public-sector pitch — they're a direct line into what CIOs are prioritising for budget in the coming year.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
