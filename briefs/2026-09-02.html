@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 2 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 2 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads" target="_blank" rel="noopener">Anthropic ships Claude Fable 5.1 and Mythos 5.1, cuts cached-input pricing 75%</a>
+      <p>Fable 5.1 is generally available now (API, AWS, Google Cloud, Azure) with cached input down to $0.25/M tokens from $1.00, plus new Enterprise Frontier Safeguards letting orgs keep monitoring data in their own cloud. Mythos 5.1 stays restricted to vetted cybersecurity and life-sciences organizations.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A 75% cut to cached-input pricing translates to roughly 25% lower effective cost for typical workloads and up to 45% for agentic workflows leaning on cached context — a direct incentive to restructure prompts around caching rather than just swapping models for cost savings. <strong>For enterprises already on Claude:</strong> Enterprise Frontier Safeguards (customer-managed encryption for monitoring data) is worth evaluating now if data-residency or vendor-access concerns have been a blocker to wider rollout.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/openclaw-2-0-is-here-what-it-means-for-enterprises" target="_blank" rel="noopener">OpenClaw 2.0 pitches "multiplayer" AI coding for enterprise teams</a>
+      <p>The open-source AI agent framework gets a rebuilt browser interface, multi-user collaboration, persistent cloud sessions and granular access controls — shifting agents from personal tools into shared team infrastructure.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Shared, persistent agent sessions solve a real handoff problem — the session becomes the documentation — but the new security controls (approvals, RBAC, sandboxing, auditing) are optional rather than enforced by default. <strong>Before rolling this out to teams:</strong> treat hardening as a deliberate configuration task, not something the platform does for you out of the box.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/your-files-stay-put-perplexitys-hybrid-ai-keeps-confidential-data-off-the-cloud" target="_blank" rel="noopener">Perplexity launches hybrid compute that keeps sensitive files off the cloud</a>
+      <p>New hybrid mode for Perplexity's Computer agentic platform splits tasks between cloud frontier models and local open-weight models running on Apple silicon Macs, with a "Privacy Gate" classifier routing anything flagged as sensitive to on-device processing. Live now for enterprise opt-ins and Pro/Max subscribers on macOS 15+.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Automatic local/cloud routing based on data sensitivity — rather than an all-or-nothing choice — is a practical middle ground for orgs that want agentic AI but can't send certain files off-device. <strong>Worth piloting</strong> if compliance concerns have kept teams from adopting agentic tools that touch local files; note it's currently Apple-silicon-only, so it doesn't solve the problem fleet-wide.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.hpcwire.com/off-the-wire/bull-selected-to-deliver-europes-e387-8m-lumi-ai-supercomputer-in-finland/" target="_blank" rel="noopener">EuroHPC signs €387.8M deal for LUMI-AI supercomputer, powered by AMD</a>
+      <p>Bull will build LUMI-AI at CSC's Kajaani, Finland site using AMD Instinct MI430X GPUs and 256-core EPYC CPUs, targeting 10x the AI capacity of the current LUMI system when it goes live in 2027. Waste heat feeds Kajaani's district heating network.</p>
+      <div class="src">Source: HPCwire</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A sovereign, publicly-funded AI supercomputer on AMD rather than Nvidia silicon is a concrete data point in Europe's push to reduce dependence on both US hyperscaler capacity and Nvidia's GPU dominance. <strong>For anyone tracking compute-supply diversification:</strong> this is one of the larger public commitments yet to AMD's Instinct line for frontier-scale AI infrastructure, worth watching as a signal for GPU market competition through 2027.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html" target="_blank" rel="noopener">Attackers exploit critical JFrog Artifactory flaw days after patch to mint admin tokens</a>
+      <p>CVE-2026-82329 (CVSS 9.8) lets unauthenticated attackers forge admin-level tokens via a "phantom" join key in JFrog Access on instances without an additional join key configured. Exploitation began September 1 — just days after the August 28 patch.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A near-immediate jump from disclosure to active exploitation leaves almost no patching grace period, and attackers are using admin access to enumerate users, groups and federated access topology — reconnaissance for deeper lateral movement, not just a smash-and-grab. <strong>Action:</strong> if you run self-managed Artifactory, patch internet-exposed instances now, rotate credentials, and audit logs for token minting and enumeration activity since August 28.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/iranian-hackers-pose-as-recruiters-to.html" target="_blank" rel="noopener">Iranian "Nimbus Manticore" hackers pose as recruiters to plant RATs via fake coding tests</a>
+      <p>The group invites engineers on LinkedIn to complete "technical assignments" delivered as ZIP files hosting trojanized npm packages, dropping cross-platform RATs NodeRabbit and PollCat on Windows, Linux and macOS developer machines.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Targeting developers specifically via fake hiring pipelines is an efficient way to land malware on machines with elevated repo and credential access, and cross-platform RATs mean a Mac-only security posture doesn't help. <strong>Action:</strong> brief engineering teams that "coding challenge" ZIPs from unsolicited recruiter contact are a live attack vector, and consider running take-home assessments in disposable containers/VMs by default.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/" target="_blank" rel="noopener">Critical Langflow flaw exploited to steal OpenAI and AWS keys</a>
+      <p>CVE-2026-0768, an unauthenticated remote code execution vulnerability in the Langflow AI-workflow builder, is being actively exploited to harvest credentials and cloud tokens from deployments.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AI-pipeline tooling like Langflow often sits close to production API keys and cloud credentials by design, making an RCE here disproportionately damaging compared to a similar flaw in a less-privileged tool. <strong>Action:</strong> patch exposed Langflow instances immediately and rotate any OpenAI/AWS credentials that were reachable from the affected environment.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/" target="_blank" rel="noopener">Nearly 22,000 Microsoft Exchange servers still vulnerable to mailbox hijack</a>
+      <p>A high-severity authentication bypass flaw remains unpatched on tens of thousands of internet-facing Exchange servers, allowing attackers to hijack mailboxes.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">22,000 exposed servers months into a known flaw is a patch-management failure at scale, not a novel threat — the technical fix already exists. <strong>Action:</strong> if you run on-prem Exchange, confirm patch status today; if patching is blocked, restrict external access to autodiscover/EWS endpoints as an interim mitigation.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/hackers-push-malicious-virtualizor-update-in-bgp-hijacking-attack/" target="_blank" rel="noopener">Hackers hijack BGP routes to push malicious Virtualizor VPS-panel update</a>
+      <p>Between August 28-30, an attacker falsely announced BGP routes to a Hetzner-hosted IP block used by Softaculous's Virtualizor update infrastructure, redirecting update checks to malicious servers. The vendor says only a small number of installations were affected.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">BGP hijacking to intercept legitimate software update traffic is a supply-chain attack that bypasses code-signing checks most orgs rely on, since the malicious payload arrives through the normal update channel. <strong>For hosting providers running Virtualizor:</strong> verify update integrity independently of network-layer trust, and anyone who touched Softaculous's client portal during the window should reset passwords and watch for fraud.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/microsoft/microsoft-exchange-online-outage-causes-email-failures-auth-issues/" target="_blank" rel="noopener">Microsoft 365 outage hits Exchange Online, Teams, OneDrive and more for 22+ hours</a>
+      <p>An authentication-configuration fault starting August 31 caused mail delays, search failures and auth errors across Exchange Online, OneDrive for Business, SharePoint, Teams, Purview and Defender XDR. Core Exchange mail flow recovered roughly 22 hours later.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A single core-authentication fault cascading across six separate M365 services in one outage underscores how much shared infrastructure sits behind seemingly independent products. <strong>For IT teams:</strong> a 22-hour recovery window is long enough to justify a documented manual fallback for email and file access during major cloud-identity incidents — treat this as a concrete planning input, not a one-off blip.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/adha-sticks-with-accenture-for-my-health-record-support-628595" target="_blank" rel="noopener">Australia's digital health agency renews Accenture deal at $161.6m, resets operating model</a>
+      <p>ADHA re-signed Accenture for My Health Record and API gateway infrastructure support (Aug 2026–Aug 2029, with an optional extension to 2032) after the prior arrangement had ballooned from $47m to $788m. The new model has ADHA setting priorities and coordinating delivery across multiple suppliers rather than one vendor owning the full scope.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Going from a single vendor whose contract value grew 16x unchecked to a smaller, multi-supplier, agency-coordinated model is a direct response to vendor-lock and cost-creep risk on critical infrastructure. <strong>For any org managing a long-running single-vendor IT contract:</strong> this is a concrete template — retain internal prioritization and delivery-coordination capability rather than fully outsourcing it, even when using large integrators.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/privacy-act-overhaul-to-tighten-72-hour-breach-reporting-deadline-628568" target="_blank" rel="noopener">Australia's Privacy Act overhaul sets a fixed 72-hour breach reporting deadline</a>
+      <p>The draft Privacy Amendment (Personal Data Protection) Bill 2026 replaces the vague "as soon as practicable" breach-notification standard with a hard 72-hour deadline to the Information Commissioner, aligning with SOCI and the Cyber Security Act. It also adds a limited deletion right for very large digital platforms only.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A fixed 72-hour clock replaces a standard that let organizations argue about what counted as "practicable" — removing ambiguity but also removing wiggle room for complex incident investigations. <strong>Action for any org handling Australian personal data:</strong> pressure-test your incident response runbook against a hard 72-hour notification deadline now, during consultation, rather than after the bill passes.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/expired-anti-spam-domain-bites-nzs-national-stadium-eden-park-628443" target="_blank" rel="noopener">Expired anti-spam domain exposes Eden Park's 600-company vendor network</a>
+      <p>A researcher registered a domain NZ's Eden Park stadium had left referenced in its DMARC settings since Fujitsu retired the anti-spam service in 2021, and started receiving reports mapping the stadium's infrastructure and 600 connected companies within 30 days.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A years-old, forgotten DNS reference silently handed a stranger a phishing-ready map of an organization's entire vendor and partner ecosystem — and a 2023 study found roughly a quarter of domains with external DMARC reporting addresses have this same dangling-reference problem. <strong>Action:</strong> audit DMARC/SPF DNS records for any reference to decommissioned third-party services, and add domain-expiry monitoring to routine DNS hygiene, not just certificate renewal.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nt-gov-starts-path-to-digital-drivers-licence-628579" target="_blank" rel="noopener">NT government starts path to a digital driver's licence, targeting year-end launch</a>
+      <p>The Northern Territory government has begun work on a digital driver's licence, aiming to launch by the end of 2026.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">NT joins other Australian states already running or piloting digital licences, continuing the steady state-by-state rollout of mobile government ID. <strong>For ANZ orgs doing identity verification:</strong> the patchwork of state-specific digital ID formats and verification APIs is still not unified — budget for jurisdiction-by-jurisdiction integration rather than assuming a single national standard is imminent.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
