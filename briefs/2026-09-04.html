@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 4 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Friday, 4 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/" target="_blank" rel="noopener">ChatGPT for Healthcare now pulls patient records straight from Epic</a>
+      <p>Authorized clinicians can import notes, labs and medication histories from Epic's EHR into ChatGPT, read-only, with UCSF Health piloting the rollout.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">OpenAI worked with physician partners across 4,363 ratings and 27 clinical use cases, with 99.1% of responses rated safe; the integration is strictly read-only and doesn't write back to the chart. <strong>Why it matters:</strong> this is a template for how frontier AI vendors will earn trust in regulated data environments — read-only access, clinician-in-the-loop, narrow use cases — a pattern worth studying if you're evaluating AI access to any system of record.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads" target="_blank" rel="noopener">Anthropic ships Claude Fable 5.1 and Mythos 5.1, cuts cache-read costs 75%</a>
+      <p>Fable 5.1 is generally available and ~25-45% cheaper for agentic workloads; Mythos 5.1 stays restricted to vetted organizations for cybersecurity and life-sciences work.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Same underlying model, tiered by safeguard level — Fable for general availability, Mythos gated behind trusted access. Claude Code users should also see ~60% fewer cybersecurity false positives. <strong>Takeaway:</strong> pricing keeps falling while agentic capability climbs; if you deferred an agent rollout on cost grounds, it's worth re-costing now, and the safeguard-tiering model is a preview of how vendors will gate dual-use capability going forward.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues" target="_blank" rel="noopener">Meta's Muse Spark 1.3 takes the lead on long-context and coding benchmarks</a>
+      <p>New model tops long-context retrieval and DeepSWE coding scores, though it runs about 3x more verbose than its predecessor and trails Claude Opus 5 on general agent tasks.</p>
+      <div class="src">Source: Axios</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No single model wins everywhere: Muse Spark 1.3 leads on context and coding, Opus 5 still wins on general agentic benchmarks, and Meta's cheapest tier requires letting Meta train on your data. <strong>For buyers:</strong> the "one frontier model for everything" era is over — expect to route by task, and read the fine print on any discounted API tier before opting in.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html" target="_blank" rel="noopener">Thomson Reuters court software breach exposes SSNs and sealed case data</a>
+      <p>Unauthorized access to the C-Track case-management platform hit appellate courts across 11 US states, the US Virgin Islands and Ontario; data taken between March and June wasn't discovered until June 30.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Nearly four months elapsed between exfiltration and discovery, and the exposed data includes SSNs, driver's licence numbers and sealed judicial records. <strong>Action:</strong> if you're a vendor or agency handling third-party case-management or records software, verify breach-detection dwell-time assumptions — "no operational disruption" does not mean "no exposure," and vendor-hosted cloud files need the same monitoring rigor as your own infrastructure.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" target="_blank" rel="noopener">Critical Cisco Nexus 9000 flaw (CVSS 9.8) allows unauthenticated root RCE</a>
+      <p>CVE-2026-20212 affects 10 Silicon One-based Nexus 9000 switch models via two exposed TCP ports bound to an unrestricted address.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Anyone who can reach ports 43210/43211 on an affected switch can get root code execution with no authentication — about as severe as network hardware flaws get. <strong>Action:</strong> patch immediately via Cisco's Software Checker; where patching is delayed, block the ports with an infrastructure ACL or apply the temporary Live Protect shield on NX-OS 10.6(3)/10.6(3s).</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/shai-huluds-reach-just-grew-to-469.html" target="_blank" rel="noopener">Shai-Hulud npm worm now hunts credentials in 469 locations</a>
+      <p>The self-propagating infostealer expanded from 189 to 469 credential-harvesting targets across CI/CD tooling, cloud configs and AI tool settings.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Each stolen credential becomes a bridge to the next system — dev workstation to source repo to cloud account to package registry. <strong>Action:</strong> stop storing package-publishing credentials in cleartext, move to short-lived OIDC-based trusted publishing, and rotate anything with production access. Treat this as a standing credential-hygiene programme, not a one-time cleanup.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html" target="_blank" rel="noopener">Malicious .git configs can hijack Claude Code, Codex and other AI coding agents</a>
+      <p>A technique dubbed "GitSpawn" abuses Git's core.fsmonitor setting to run attacker commands the moment an AI agent runs routine Git operations like status checks — outside the agent's sandbox.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Goose, Claude Code and Cursor have patches out; Hermes, Qwen Code, Grok Build and OpenAI Codex remain exposed as of writing. <strong>Action:</strong> if developers use AI coding agents against untrusted repos, audit with <code>git config --get core.fsmonitor</code> and disable it globally (<code>git config --global core.fsmonitor false</code>) until your agent vendor confirms a fix — this is a live gap in the AI-coding-agent supply chain, not a theoretical one.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html" target="_blank" rel="noopener">Google, Anthropic and OpenAI each ship cyber-specialized AI models with defender-access programs</a>
+      <p>Google's Gemini 3.8 Flash Cyber ships with a 650-partner "Fairwind" early-access program for defenders; OpenAI says its unreleased Astra model can independently find and exploit zero-days.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">All three labs are racing to put frontier-level vulnerability-discovery capability in defenders' hands first — Google explicitly weights its model toward fixing over exploiting, OpenAI is gating Astra behind a selective release programme after it crossed a "critical cybersecurity capability" threshold. <strong>Why it matters:</strong> AI-assisted vulnerability discovery is now a two-sided arms race; if your security team isn't evaluating one of these defender programmes, assume attackers are already testing the offensive equivalent.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.ciodive.com/news/AI-costs-bain-company-analysis/829488/" target="_blank" rel="noopener">Bain: even disciplined AI investment will push enterprise IT costs up 75% by 2035</a>
+      <p>A $10B consumer goods company's IT budget rises 75% by 2035 even with careful spending, per Bain & Co — driven by infrastructure, security, data governance and platform obsolescence.</p>
+      <div class="src">Source: CIO Dive</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Only ~25% of enterprises have successfully scaled AI, and roughly a quarter of AI spend gets wasted on discontinued pilots. Bain's advice: treat every AI project as an investment decision with real evaluation gates, not a mandate to spend. <strong>Action:</strong> increase visibility into AI spending pipelines now and reinvest efficiency gains into budget discipline — "underinvest and fall behind" is real, but so is credibility-destroying overspend.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.msspalert.com/brief/vmware-cloud-foundation-adds-top-ai-models-to-private-cloud-platform" target="_blank" rel="noopener">Broadcom brings Gemini, Qwen, GLM and other frontier models on-prem via VMware Cloud Foundation</a>
+      <p>VCF now validates models from Google, Alibaba, NEC, Z.ai and others for on-premises "model as a service" delivery, aimed at private-cloud and sovereignty-sensitive customers.</p>
+      <div class="src">Source: MSSP Alert</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This targets exactly the customers who can't or won't send data to public model APIs — regulated industries, government, sovereignty mandates. <strong>For MSPs/infra teams:</strong> on-prem model serving is moving from bespoke integration work to a validated, repeatable platform path (runtime, GPU pooling, lifecycle management). Worth evaluating if private-AI demand is showing up in your customer conversations.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html" target="_blank" rel="noopener">RMM phishing campaign spans 46 countries, weaponizing the tools MSPs run on</a>
+      <p>601 identified cases use fake tax, shipping and Adobe documents to trick victims into installing remote monitoring &amp; management software; the US takes 45% of observed activity.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Disposable infrastructure (Vercel, GitHub Pages, compromised sites) delivers 425 kit URLs across 240 hosts, 94% live for only a single day — built to outrun domain-based blocklists. <strong>For MSPs:</strong> RMM tools are core infrastructure and an increasingly favored attacker foothold; prioritize delivery-chain detection (mail-layer controls, behavioral sandboxing) over domain reputation alone, and brief clients on the tax/shipping-notice lure pattern specifically.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/acma-fines-telstra-for-sim-swapping-prevention-misses-628638" target="_blank" rel="noopener">ACMA fines Telstra $277,000 over SIM-swap fraud prevention failures</a>
+      <p>Frontline staff skipped required identity checks, enabling at least $39,500 in customer losses across 15 cases plus 13 attempted frauds; it's Telstra's second penalty for the same failure mode since a $1.551M fine in 2024.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Process existing on paper isn't the same as process followed at the counter — a repeat breach of the same control category, two years after the first fine, points to a training/enforcement gap rather than a policy gap. <strong>For ANZ telcos and any regulated org:</strong> court-enforceable undertakings signal ACMA's patience is thinning; audit whether your own fraud-prevention procedures are actually followed at the frontline, not just documented.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/telstra-sowed-seeds-for-its-july-mobile-outage-in-2020-six-years-on-they-sprouted-628636" target="_blank" rel="noopener">Telstra's triple-zero-disrupting outage traced to a 2020 hardware decision</a>
+      <p>A 2020 server chassis swap left a backup GPS timing card without a critical firmware update; when powered on for maintenance in July, its clock reset to 2006 and cascaded through the mobile network. CEO Vicki Brady took a $600k personal pay cut.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The investigation found "missed signs, alarms and stand-downs" over six years — unexamined anomalies, unimplemented monitoring, budget constraints on engineering resources. Penalties could reach tens of millions. <strong>For infrastructure/network teams:</strong> latent risk from infrastructure decisions doesn't expire — treat unresolved firmware and monitoring gaps on critical timing/dependency systems as live incidents-in-waiting, not backlog items.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/airservices-australia-wants-to-build-an-ai-front-door-628648" target="_blank" rel="noopener">Airservices Australia builds a centralized "AI front door" on AWS</a>
+      <p>A single AI broker platform will replace fragmented tool usage, starting with ~100 users and scaling to over 3,000, with multi-model routing and seven-year audit-log retention.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Rather than letting staff adopt AI tools ad hoc, Airservices is centralizing access, routing and logging behind one gateway before scaling usage — governance-first rather than adoption-first. <strong>For ANZ public sector and regulated enterprises:</strong> a unified AI gateway with long-retention audit logging is becoming the reference architecture for safe internal AI rollout; worth benchmarking against your own AI access sprawl.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
