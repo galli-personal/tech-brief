@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 7 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Monday, 7 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra" target="_blank" rel="noopener">OpenAI launches GPT-6 Astra, calls it "the AGI era"</a>
+      <p>Astra navigates browsers, spreadsheets and desktop apps directly rather than just describing steps, scoring 72.6% on OSWorld 2.0 and 98.6% on ARC-AGI-3. API pricing is $10/$50 per million input/output tokens.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The benchmark that matters isn't the AGI label — it's autonomous computer-use: a model that clicks through real software workflows instead of just describing them. <strong>Takeaway:</strong> re-evaluate any RPA or "AI assistant" roadmap against agentic computer-use models now shipping at frontier-lab scale; the automation ceiling for desktop/browser tasks just moved.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank" rel="noopener">Nvidia to acquire Hugging Face for ~US$13 billion</a>
+      <p>Nvidia's second-largest deal ever, after the $20B Groq asset purchase. Huang says Hugging Face stays an open, chip-agnostic platform for the 18M+ developers and 200K+ companies that use it.</p>
+      <div class="src">Source: NVIDIA Blog</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The dominant AI chipmaker now owns the platform much of the industry uses to discover and deploy models. Nvidia's "stays open and chip-agnostic" pledge is the line to watch — that's exactly the neutrality a dominant hardware vendor has incentive to erode over time. <strong>Takeaway:</strong> teams with heavy Hugging Face dependency should track governance commitments and keep a portable fallback path.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/meta-says-muse-spark-1-3-has-frontier-performance-but-its-best-results-come-from-a-model-developers-cant-broadly-use-yet" target="_blank" rel="noopener">Meta's Muse Spark 1.3 claims frontier performance — but not the version you can use</a>
+      <p>Meta's best benchmark results come from a "max reasoning" configuration still in safety testing, not yet broadly available to developers.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Meta is benchmarking against a configuration it can't yet ship — an increasingly common pattern as labs race to claim frontier status. <strong>Takeaway:</strong> treat headline benchmark numbers as a preview, not a purchasing decision; wait for the generally-available version's numbers before committing eval budget.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed" target="_blank" rel="noopener">Microsoft's MAI-Transcribe-2 undercuts OpenAI, Google and ElevenLabs on price</a>
+      <p>The new speech-recognition model cuts transcription costs roughly 72% versus its predecessor while beating rivals on speed.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Transcription is a commodity, high-volume workload (calls, meetings, support tickets), so a 72% price cut compounds fast. <strong>Takeaway:</strong> if your org has active transcription spend, benchmark MAI-Transcribe-2 now — a same-quarter vendor swap is a low-risk, high-margin cost win.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" target="_blank" rel="noopener">Attackers hijack MikroTik routers via unauthenticated SSH</a>
+      <p>Threat actors are exploiting internet-exposed SSH on MikroTik RouterOS to gain full admin control without credentials. Admins urged to patch and restrict exposure immediately.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Router-level compromise sits above the endpoint layer — persistent, largely invisible to standard EDR, and ideal for traffic interception or botnet recruitment. <strong>Action:</strong> audit for any MikroTik gear with SSH/Winbox exposed to the internet today and move admin access behind a VPN.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html" target="_blank" rel="noopener">Unpatched Magento/Adobe Commerce zero-day "StyleSmuggler" backdoors stores</a>
+      <p>Actively exploited zero-day affecting all current versions of Magento Open Source and Adobe Commerce, used to plant persistent backdoors.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No official patch exists yet and every current version is affected — this is a mitigate-now, patch-later situation for any e-commerce operator on the platform. <strong>Action:</strong> apply vendor-recommended WAF/virtual-patch rules immediately and check for backdoor indicators rather than waiting for the fix.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html" target="_blank" rel="noopener">JetBrains discloses Cadence breach via unpatched TeamCity, AWS credentials taken</a>
+      <p>Attackers exploited an unpatched TeamCity flaw to breach JetBrains' Cadence service, extracting customer AWS credentials and cloud secrets.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A CI/CD vendor breach that leaked customer cloud credentials extends the blast radius into every downstream AWS account Cadence touched. <strong>Action:</strong> any org using JetBrains Cadence should rotate AWS credentials and cloud secrets now, and hold CI/CD platforms to the same patch SLAs as internet-facing systems.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.helpnetsecurity.com/2026/09/04/google-chrome-zero-day-cve-2026-85046/" target="_blank" rel="noopener">Chrome patches sixth zero-day of 2026; CISA sets Sept 18 deadline</a>
+      <p>CVE-2026-85046, a V8 type-confusion flaw (CVSS 8.8), lets attackers execute sandboxed code via a malicious webpage. CISA added it to its Known Exploited Vulnerabilities catalog.</p>
+      <div class="src">Source: Help Net Security</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">V8 underlies every Chromium-based browser, so Edge, Brave, Opera and Vivaldi all inherit the flaw and need their own downstream patches — this isn't just a "update Chrome" ticket. <strong>Action:</strong> push browser updates fleet-wide today across every Chromium-based browser in use, not just Chrome.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/asus-control-center-vulnerability/" target="_blank" rel="noopener">ASUS Control Center Enterprise flaw scores a perfect 10.0 CVSS</a>
+      <p>CVE-2026-75754 chains missing authentication, SSRF, an exposed encryption key and embedded credentials, letting an unauthenticated attacker take root control of an ACC server and every device it manages. Patch to 3.1.0.9+.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">ACC is exactly the kind of centralized device-management tool MSPs run to control fleets of client PCs and servers — a maximum-severity, no-auth-required flaw in it is a single point of catastrophic compromise. <strong>Action:</strong> patch immediately; in the meantime isolate management interfaces and restrict SSH on TCP 2222.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.csoonline.com/article/4217135/crowdstrike-launches-cyber-frontier-ai-models-agentic-security-system.html" target="_blank" rel="noopener">CrowdStrike and Nvidia launch "SafeMind" agentic security system</a>
+      <p>Pairs an offense model (Red Tempest) with a defense model (Blue Solano) in a continuous attack/defend loop trained on Falcon telemetry. CrowdStrike claims 29% higher detection and 6x faster remediation.</p>
+      <div class="src">Source: CSO Online</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Vendor-claimed numbers need independent validation, but continuous automated red/blue-teaming baked into the platform is a credible direction for MSSPs stretched thin on SOC staffing. <strong>Takeaway:</strong> if you run or buy managed detection and response, ask your provider when agentic red-blue automation lands in your stack and what it changes about response SLAs.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/google-escapes-ad-tech-breakup-628649" target="_blank" rel="noopener">Google avoids forced ad-tech breakup</a>
+      <p>Google escaped a structural separation of its ad-tech business in the latest antitrust ruling, a significant win against regulatory pressure.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A breakup would have reshaped the ad-tech supply chain enterprise marketing teams depend on; avoiding it keeps the status quo — and Google's leverage in it — intact for now. <strong>Takeaway:</strong> don't plan around near-term structural relief on ad-tech pricing or self-preferencing; budget procurement and measurement strategy around continued vertical integration instead.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/coles-to-end-data-analytics-work-with-palantir-628693" target="_blank" rel="noopener">Coles to end Palantir partnership after privacy campaign</a>
+      <p>Coles will wind down its three-year Palantir data/analytics deal (rostering, store ops, supply chain across 840+ stores) after an 86,000-signature campaign over surveillance and ethics concerns; the arrangement won't run past 2027.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major ASX-listed retailer walking away from a live, embedded analytics platform under public pressure — not a security incident or contract failure — shows vendor-ethics due diligence is now a real commercial risk factor in ANZ. <strong>Takeaway:</strong> if your org has US defense/intelligence-linked vendors touching customer or workforce data, get ahead of the optics before a campaign forces the timeline.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/firmus-invests-us300m-in-subcos-apx-east-628666" target="_blank" rel="noopener">Firmus commits US$300m to SUBCO's APX East trans-Pacific cable</a>
+      <p>Australian AI infrastructure firm Firmus becomes anchor customer for SUBCO's APX East cable, securing up to 150Tbps between Australia and the US ahead of a planned Q4 2028 service date — set to be the longest continuous undersea optical cable built.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Australia's AI-infrastructure ambitions are showing up as physical capex — a dedicated, single-end-powered subsea link sized specifically for AI workload traffic to and from the US. <strong>Takeaway:</strong> expect Australia-US data transfer costs and latency to improve materially by late 2028; worth factoring into long-horizon plans for cross-border AI workloads or DR sites.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/tabcorp-appoints-new-ciso-628679" target="_blank" rel="noopener">Tabcorp appoints new CISO from Victorian state government</a>
+      <p>Wagering and gaming operator Tabcorp has recruited its new chief information security officer from Victoria's state government sector.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A gambling operator processing large transaction volumes sourcing security leadership from government rather than the private sector suggests a compliance/regulatory-hardening posture ahead of typical gaming-sector scrutiny. <strong>Takeaway:</strong> a useful benchmark for ANZ regulated-industry peers (gaming, wagering, financial services) on where to source CISO talent for compliance-heavy environments.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
