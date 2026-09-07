@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 8 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Tuesday, 8 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/companies-are-spending-millions-rewiring-how-ai-gets-used-almost-none-can-prove-its-working" target="_blank" rel="noopener">Companies are "tokenmaxxing" AI spend with almost nothing to show for it</a>
+      <p>Uber reportedly burned through its AI budget in four months with no measurable product improvement — a symptom of enterprises defaulting every task to expensive frontier models instead of routing intelligently.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Enterprises are spending millions rewiring workflows around AI but can rarely prove the spend produced results — token consumption is surging without tying back to shipped features, resolved tickets, or any other business outcome. <strong>Action:</strong> before approving the next AI budget increase, demand a metric that links spend to outcomes, and invest in model-routing so cheap tasks don't default to the priciest frontier model.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/most-pipeline-monitoring-checks-if-the-job-ran-this-one-didnt-check-if-the-numbers-were-right" target="_blank" rel="noopener">Your data pipeline can look "healthy" while every number is wrong</a>
+      <p>A case study on silent data-quality failures: an upstream field rename went undetected for 11 days because monitoring only checked that jobs completed, not that outputs were correct.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Structural monitoring (did the job run?) is not the same as semantic correctness (are the numbers right?) — and the gap between them can silently corrupt business decisions for days or weeks. <strong>Action:</strong> push schema/semantic validation to the data ingestion boundary rather than deep in the pipeline, so bad data gets caught before it reaches dashboards executives rely on.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/githubs-hydrafusion-cuts-ai-coding-costs-in-every-benchmark-it-only-matches-quality-in-one" target="_blank" rel="noopener">GitHub's HydraFusion cuts AI coding costs — but quality keeps up in only one benchmark of three</a>
+      <p>New model-routing system for Copilot cuts estimated costs 36-67% by dynamically choosing single-model, cascade, or critique execution paths, but the quality tradeoff is uneven across tasks.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Cost management for AI coding tools is moving inside the model layer itself, not just the pricing sheet — routing systems like HydraFusion promise big savings but the quality bar isn't uniformly held. <strong>Action:</strong> when evaluating routing/orchestration tools, scrutinise per-task-type benchmark breakdowns rather than headline cost-reduction numbers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/frontier-models-can-recover-up-to-65-of-facts-they-cant-directly-recall-just-by-thinking-longer" target="_blank" rel="noopener">Google Research: LLMs "know" far more than they can recall — thinking longer recovers up to 65% of it</a>
+      <p>Frontier models encode 95-98% of facts but fail to directly recall 26-34% of them; extended inference-time reasoning recovers 40-65% of that gap.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Many hallucinations are retrieval failures, not knowledge gaps — the fact is encoded but the model can't surface it on a single pass. <strong>Implication:</strong> if reasoning-time compute recovers facts a model already "knows," some spend currently going toward RAG pipelines or bigger models may be solving the wrong problem — worth testing extended-thinking modes before adding retrieval infrastructure.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html" target="_blank" rel="noopener">"PEEP" turns Chrome and Edge into post-compromise backdoors</a>
+      <p>A browser extension toolkit disguised as "Smart Bookmarks" polls a C2 server every 30 seconds over plaintext HTTP once installed, exfiltrating browsing data and executing host-level commands via a native messaging bridge.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This turns a trusted, signed browser process into an OS-level pivot point, letting attackers steal credentials and run commands while evading typical endpoint detection. <strong>Action:</strong> lock down extension install policies (block sideloading, allowlist only vetted extensions) and monitor for unusual native-messaging-host activity — this is a persistence mechanism, not just a data leak.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html" target="_blank" rel="noopener">Fake IT help-desk calls target executives for Microsoft 365 data theft</a>
+      <p>Threat group "PREY-0058" vishes executives into fake authentication pages, harvests credentials/MFA tokens, then exfiltrates from SharePoint, OneDrive, Exchange and Box via residential proxies before extorting victims.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No malware required — this exploits the trusted relationship between staff and IT support to bypass MFA entirely, targeting high-value leaders across construction, healthcare and finance. <strong>Action:</strong> add out-of-band verification for any help-desk-initiated credential or MFA reset request, and brief executives specifically — they're the named targets here, not general staff.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/bimbo-oracle-ebs-data-breach/" target="_blank" rel="noopener">Bimbo Bakeries USA confirms breach via Oracle EBS zero-day</a>
+      <p>Attackers exploited a zero-day in Oracle E-Business Suite to steal employee information from the bakery giant.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another entry in the ongoing wave of Oracle EBS zero-day exploitation hitting large enterprises this year. <strong>Action:</strong> if you run Oracle E-Business Suite, confirm current patch levels and review for indicators of compromise now — this vulnerability class has repeatedly been exploited before patches landed.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/linux-rootkit/" target="_blank" rel="noopener">New Linux rootkit deploys fileless PHP shells on F5 BIG-IP servers</a>
+      <p>A stealthy rootkit targets F5 BIG-IP Access Policy Manager servers, dropping fileless web shells for persistent access.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">BIG-IP appliances sit at the network edge handling authentication and access policy — compromise there gives attackers a foothold ahead of everything else. <strong>Action:</strong> audit internet-facing BIG-IP deployments for unusual process activity and confirm they're on current firmware; fileless techniques won't show up in standard file-integrity monitoring.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/mathspace-data-breach/" target="_blank" rel="noopener">Mathspace breach exposes data on over a million students and parents</a>
+      <p>The online maths learning platform disclosed a breach affecting students, parents and guardians.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Edtech platforms hold sensitive minor/family data at scale and are increasingly a soft target. <strong>For schools and districts:</strong> treat vendor edtech breach notifications as seriously as internal incidents — verify what student data these platforms hold and confirm your contracts require prompt breach disclosure.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html" target="_blank" rel="noopener">N-able ships fourth N-central hotfix in five weeks for a max-severity RCE</a>
+      <p>CVE-2026-86218 (CVSS 10.0) is a pre-auth remote code execution flaw in the N-central RMM platform affecting all builds below 2026.3.1.14.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">RMM platforms are the crown jewels for MSPs — a compromised N-central server is a springboard into every downstream managed endpoint across every client. <strong>Action:</strong> MSPs running N-central should patch to 2026.3.1.14+ immediately and treat this as a potential mass-client-compromise scenario, not a routine update.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/connectwise-screenconnect-remote-access-flaw/" target="_blank" rel="noopener">ConnectWise warns of file-transfer flaw in ScreenConnect remote access</a>
+      <p>Affects both cloud and on-premises ScreenConnect deployments; no permanent patch yet, admins told to disable file-transfer permissions as a mitigation.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Remote access tools are high-value targets precisely because they're built to reach client environments directly. <strong>Action:</strong> disable file-transfer permissions in ScreenConnect sessions until a permanent fix ships, and review recent session logs for anomalous transfer activity.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/switzerland-moves-away-from-microsoft-365/" target="_blank" rel="noopener">Switzerland's federal government tests open-source alternative to Microsoft 365</a>
+      <p>~3,000 employees will pilot a browser-based open-source suite (email, docs, collaboration, video) by 2027, citing "digital sovereignty and resilience."</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A national government hedging against single-vendor dependence on Microsoft is a strong signal for anyone managing tenant risk. <strong>For MSPs/IT leaders:</strong> keep at least one credible non-Microsoft path documented for core productivity workloads, even if you don't act on it — regulators and large customers are increasingly asking about vendor concentration risk.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vocus-hit-by-australia-singapore-cable-break-628720" target="_blank" rel="noopener">Vocus hit by second Australia-Singapore cable break in weeks</a>
+      <p>A break in Indonesian waters on the Australia Singapore Cable has forced traffic to reroute east via Australia's east coast and onward through Japan or the US.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A second fault on the same subsea route in weeks highlights how thin ANZ's international connectivity redundancy really is. <strong>Action:</strong> if your business depends on low-latency links to Singapore/Asia, confirm your carrier's actual physical route diversity rather than assuming multiple providers means multiple cables.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/people-first-bank-progresses-its-tech-stack-modernisation-628718" target="_blank" rel="noopener">People First Bank progresses tech stack modernisation</a>
+      <p>The bank is moving to a Fiserv core banking system with Backbase-powered digital channels, targeting completion by late 2027.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A mid-sized ANZ mutual bank running a multi-year core banking replacement comparable in ambition to major-bank programs (Westpac cited as the reference point). <strong>Useful as a benchmark:</strong> if you're scoping a core system replacement, this is a live case study on vendor selection (Fiserv/Backbase) and realistic multi-year timelines worth tracking.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/airservices-australia-wants-to-build-an-ai-front-door-628648" target="_blank" rel="noopener">Airservices Australia plans a centralised "AI front door" on AWS</a>
+      <p>A governed AI broker platform using Amazon Bedrock as the model gateway, starting with ~100 users and scaling to 3,000+, with mandatory seven-year audit trails.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Replacing fragmented point-solution AI access with one governed gateway — plus a seven-year audit trail requirement — shows how seriously regulated ANZ agencies are treating AI governance. <strong>For any org with scattered AI tool adoption:</strong> this is a concrete pattern (single broker, mandatory logging) worth copying before shadow-AI usage becomes unmanageable.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/acma-fines-telstra-for-sim-swapping-prevention-misses-628638" target="_blank" rel="noopener">ACMA fines Telstra $277,000 over SIM-swap prevention failures</a>
+      <p>Telstra failed required identity-authentication steps, resulting in over $39,500 in documented customer losses across 15 accounts in 2025, plus 13 attempted incidents.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A regulator penalty tied directly to skipped identity-verification steps, not a technical vulnerability — a process failure. <strong>For telcos and any org handling account-recovery flows:</strong> audit whether your documented identity-verification procedure is actually being followed at the front line, since that's precisely where this fine originated.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
