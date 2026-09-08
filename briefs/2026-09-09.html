@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 9 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 9 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/welcome-to-the-agi-era-openai-launches-gpt-6-astra" target="_blank" rel="noopener">'Welcome to the AGI era': OpenAI launches GPT-6 Astra</a>
+      <p>OpenAI's new frontier model operates computers like a person would — navigating browsers, spreadsheets, websites and desktop apps via voice rather than custom API integrations. OpenAI is framing it as the start of the AGI era.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A model that operates arbitrary software the way a human does — no custom integration required — collapses the cost of automating a workflow from "build an API integration" to "point it at the screen." <strong>Implication:</strong> it also removes the API layer that made agent actions auditable. If you're piloting computer-use agents, invest in session recording and access scoping before autonomy, not after.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/nvidia-acquires-hugging-face-after-stripe-nabs-openrouter-heres-what-open-source-ai-builders-should-do" target="_blank" rel="noopener">Nvidia buys Hugging Face, Stripe buys OpenRouter: $21B AI infrastructure consolidation</a>
+      <p>Nvidia's $12.93B acquisition of Hugging Face and Stripe's ~$8B purchase of OpenRouter hand control of two of the biggest chokepoints between model builders and users to two acquirers, despite promises to stay neutral.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The value has shifted from the models themselves to the distribution layer around them — model hubs and routers are now strategic assets, not neutral utilities. <strong>For open-source AI builders:</strong> treat single-platform dependence on model hosting or routing as vendor lock-in risk. Mirror critical weights/configs to a second host and keep routing logic portable.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/" target="_blank" rel="noopener">AI compute firm Nscale seeks $3.5B pre-IPO financing, ~$2B from Nvidia</a>
+      <p>British AI infrastructure company is raising ahead of a possible IPO this month, with contracted revenue backlog swelling to ~$103B on the back of a $45B Anthropic compute deal signed August 26.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A two-year-old compute provider chasing a $30B valuation cap on the strength of one $45B customer contract is a concentration bet, not a diversified business. <strong>Watch for:</strong> the durability of that Anthropic commitment — a $103B "backlog" is signed leases, not booked revenue, and hyperscaler-scale capex is exactly where 2026's forecast outages and overbuild risk concentrate.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed" target="_blank" rel="noopener">Microsoft's MAI-Transcribe-2 undercuts OpenAI, Google and ElevenLabs on price and speed</a>
+      <p>New speech model prices at $0.10/hour — a 72% cut in five months — transcribes 60 languages, ranks #2 on accuracy benchmarks, and runs up to 10x faster than rivals.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Transcription is becoming a commodity line item rather than a budget consideration, and Microsoft is using proprietary in-house models to reduce reliance on its $13B OpenAI stake. <strong>For buyers:</strong> if your product embeds a transcription vendor, re-check pricing now — a 72% drop in five months means last quarter's cost comparison is already stale.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/microsoft-patch-tuesday-update-september-2026/" target="_blank" rel="noopener">Microsoft Patch Tuesday: 973 vulnerabilities fixed, including 2 actively exploited zero-days</a>
+      <p>September's release spans Windows, Office, SQL Server, Exchange, SharePoint, Azure and developer tools — one of the largest Patch Tuesdays of the year.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two zero-days are already being exploited, so this isn't a routine cycle — attackers have a head start. <strong>Action:</strong> prioritise the zero-day and Exchange/SharePoint fixes first (see the related Australia/NZ Exchange item below), then work through the rest of the 973 on your normal cadence.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html" target="_blank" rel="noopener">Adobe patches Magento "StyleSmuggler" zero-day exploited since Sept 4</a>
+      <p>Maximum-severity PHP injection flaw (CVE-2026-75650) in Adobe Commerce/Magento was used to deploy Rust-based Linux backdoors and PHP web shells before a patch existed.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Active exploitation predates the patch by days, and Adobe is telling admins to rotate encryption keys — not just patch — because backdoors may already be planted. <strong>Action:</strong> any e-commerce site on Commerce/Magento should apply patch VULN-39341 immediately, rotate keys, and hunt for existing web shells rather than assuming patching alone remediates.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/claude-mythos-ai/" target="_blank" rel="noopener">AI model autonomously completes a full cyber attack chain in Booz Allen benchmark</a>
+      <p>Testing 18 AI models as autonomous attackers against a production-grade network, one model went from initial access to domain admin without step-by-step human direction — a first in this kind of controlled benchmark.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This was a benchmark, not a live attack — but it shows the technical ceiling for autonomous offense has moved. <strong>Action:</strong> defenders should assume attack chains can now compress from days to hours once an AI-driven actor gets a foothold; prioritise fast patching, identity protection and segmentation that interrupt a chain early, since there may be less time to catch lateral movement manually.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/chatgpt-flaw-let-planted-prompt-send.html" target="_blank" rel="noopener">ChatGPT flaw let a planted prompt silently exfiltrate Gmail and chat data</a>
+      <p>Researchers showed hidden instructions could make ChatGPT send Gmail contents and conversation history to an attacker-controlled account without the user noticing.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another indirect prompt-injection data-exfiltration case against a connected AI assistant — a now-recurring pattern anywhere an LLM has both read access to sensitive data and an outbound channel. <strong>Action:</strong> if you've connected ChatGPT/Copilot/similar assistants to email or documents, review what output channels they can reach, and don't assume vendor sandboxing alone prevents cross-account leakage.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/chromium-type-confusion-0-day-vulnerability/" target="_blank" rel="noopener">CISA adds actively-exploited Chromium V8 zero-day to KEV catalog</a>
+      <p>CVE-2026-85046 lets attackers execute code inside the browser sandbox via a malicious page. Affects all Chromium-based browsers — Chrome, Edge, Opera.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Sandbox-escape browser zero-days are high-value because nearly every endpoint runs a Chromium browser. <strong>Action:</strong> push the browser update fleet-wide now rather than on the normal patch cycle — KEV listing means CISA has confirmed active in-the-wild exploitation.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/rogue-screenconnect-clients-spread-four.html" target="_blank" rel="noopener">Rogue ScreenConnect installs spread worm-like across networks, Huntress warns</a>
+      <p>Hijacked ScreenConnect clients self-propagate to newly-connected hosts via a four-stage VBScript chain, no further attacker action needed. ConnectWise confirms a file-transfer flaw and recommends disabling file transfer until a CVE and fix land.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">ScreenConnect is core RMM infrastructure for MSPs — a self-propagating compromise of it is a direct threat to every client network an affected MSP touches. <strong>Action:</strong> MSPs running ScreenConnect should disable file-transfer functionality now per ConnectWise's interim guidance, audit for rogue installs, and watch for the CVE/patch this week.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/multiple-ivanti-vulnerabilities/" target="_blank" rel="noopener">Ivanti patches 10 CVEs across EPMM, Neurons for ITSM and Sentry</a>
+      <p>Includes critical unauthenticated RCE via deserialization in Neurons for ITSM (CVSS 9.8) and admin-access authentication bypass in Sentry (CVSS 8.1) — all common enterprise device/service-management tools.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">These are the platforms IT teams and MSPs use to manage every other endpoint — compromise here is a force multiplier for an attacker. <strong>Action:</strong> treat the Neurons for ITSM RCE as top priority given unauthenticated exploitability; patch EPMM, Sentry and Neurons across all managed tenants this week.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/fortigate-firewalls-hacked-to-deploy-malware/" target="_blank" rel="noopener">FortiGate firewalls exploited to deploy custom PivotC2 malware, 178 devices confirmed hit</a>
+      <p>CVE-2025-25249 (CVSS 9.8) lets attackers deploy a Node.js RAT that decrypts stored VPN keys and admin credentials. Patched in FortiOS 7.6.4/7.4.9/7.2.12/7.0.18+.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Firewalls are exactly the device class MSPs manage centrally for clients — one unpatched estate means many compromised networks. <strong>Action:</strong> confirm every managed FortiOS/FortiSwitchManager deployment is on a patched build; two confirmed full-network intrusions with cloud exfiltration show this isn't just credential theft.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://licenseq.com/microsoft-licensing-update-september-2026/" target="_blank" rel="noopener">Microsoft licensing cliff: E3/E5, Copilot and Windows 365 discounts end September 30</a>
+      <p>A batch of Microsoft 365 promotions expire this month; a 5% CSP cost-of-capital uplift on monthly-billed subscriptions starts October 1. Windows 10 ESU enters Year 2 on October 13, with a cheaper "Cloud Managed" path for Intune/Autopatch-enrolled devices.</p>
+      <div class="src">Source: LicenseQ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Clients on monthly CSP billing are about to see a real cost increase, and discount-eligible renewals need to close before the 30th to lock in current pricing. <strong>Action:</strong> MSPs and IT managers should review client renewal dates now, push annual billing where possible to dodge the CSP uplift, and flag the Windows 10 ESU Cloud Managed option — real savings on Intune/Autopatch-enrolled estates.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/hundreds-of-old-vulnerable-exchange-servers-remain-in-australia-628758" target="_blank" rel="noopener">Hundreds of old, vulnerable Exchange servers remain in Australia</a>
+      <p>382 Australian and 56 NZ Exchange servers still exposed to CVE-2026-62911, a critical Pwn2Own-disclosed auth bypass with public exploit code. Affects legacy Exchange 2016/2019/Subscription Edition now needing paid Extended Security Updates.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Working exploit code plus 438 exposed servers across AU/NZ is a live, quantified attack surface, not a theoretical risk. <strong>Action:</strong> if you're running legacy on-prem Exchange in ANZ, check ESU enrollment status today — Microsoft says a successful attacker gets full mailbox takeover, and this is now public knowledge.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/late-patching-of-metabase-sqli-bug-claims-sydneys-mathspace-628745" target="_blank" rel="noopener">Late patching of Metabase SQLi bug claims Sydney's Mathspace</a>
+      <p>Mathspace didn't patch a critical Metabase flaw (disclosed Aug 7) until Aug 29 — the gap let attackers exploit SQL injection and steal data on over a million students, staff and parents/guardians across Australia and NZ.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A 22-day patch gap on a disclosed, critical vulnerability turned into a million-record breach — the failure mode was patching cadence, not sophistication of attack. <strong>Action:</strong> if you self-host Metabase or similar BI/analytics tools, treat disclosed CVEs on internet-facing instances as same-week patches, not same-month.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/vocus-hit-by-australia-singapore-cable-break-628720" target="_blank" rel="noopener">Vocus hit by Australia-Singapore Cable break, no restoration ETA</a>
+      <p>Break in Indonesian waters has traffic rerouting via the US, Japan and Hong Kong, pushing latency to 400ms on some paths — the second cable fault on this route in weeks.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A second subsea fault on the same corridor in a matter of weeks, with no repair ETA, is a resilience signal for anyone depending on Perth-Singapore connectivity. <strong>Action:</strong> if latency-sensitive services route via ASC, check current path/latency impact now, and treat single-cable dependence to Asia as a standing risk worth diversifying, not a one-off outage to wait out.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nsw-police-gets-extra-15m-for-digital-forensics-technology-628742" target="_blank" rel="noopener">NSW Police gets extra $15m for digital forensics technology</a>
+      <p>Funding targets accessing encrypted devices and platforms used in organised crime, on top of $108.8m already budgeted. New legislation will also target administrators of platforms that facilitate organised crime.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Growing state investment in encrypted-device access capability continues a trend of law enforcement closing the gap on end-to-end encrypted platforms. <strong>Relevance:</strong> useful context for any org handling data that could become subject to compelled access requests — encryption-at-rest is not a guarantee against forensic access when device-level tooling improves.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/sa-power-taps-ai-to-reduce-field-job-knockbacks-628421" target="_blank" rel="noopener">SA Power Networks taps AI to reduce field job "knockbacks"</a>
+      <p>Utility is piloting SAP's native AI (Joule) to predict on-site obstacles before crews are dispatched, alongside an internal "Ask AI" assistant already handling stakeholder requests and unstructured data.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A mainstream ANZ utility piloting AI inside its existing SAP estate — rather than a bolt-on tool — is a marker of enterprise AI adoption moving into operational/field workflows, not just back-office. <strong>Use it as a benchmark:</strong> a concrete, low-risk ROI case (avoiding wasted truck rolls) worth citing if you're building an internal AI business case in asset-heavy industries.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
