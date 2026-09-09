@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 10 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Thursday, 10 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" target="_blank" rel="noopener">NSA, CISA and FBI accuse six Chinese AI firms of industrial-scale model distillation</a>
+      <p>Joint advisory names DeepSeek, Moonshot AI, Alibaba, MiniMax, StepFun and Z.AI, alleging they pulled billions of tokens from Claude, GPT, Gemini and Grok to train their own models — likely with Beijing's knowledge.</p>
+      <div class="src">Source: CISA</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A rare joint advisory naming specific companies elevates AI model theft from a training-data debate to a formal national-security allegation. <strong>Why it matters:</strong> if distillation is confirmed as a "critical core" development strategy for these vendors, expect tighter API rate-limiting, stricter ToS enforcement, and possible export-style controls on frontier model access that could also affect legitimate downstream customers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.theregister.com/ai-and-ml/2026/09/08/google-deepmind-rises-above-the-ai-scrum-with-genome-atlas/" target="_blank" rel="noopener">Google DeepMind releases AlphaGenome Atlas, a 1-petabyte map of the human genome</a>
+      <p>Predicts the molecular effect of all 9 billion possible single-letter DNA changes; Broad Institute researchers already used it to surface a previously missed disease-linked variant.</p>
+      <div class="src">Source: The Register</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is basic-research infrastructure, not a product launch, but it compresses years of wet-lab variant characterisation into a queryable free dataset. <strong>Relevance:</strong> if your org touches genomics, diagnostics or drug discovery, this is worth evaluating now — early adopters found real findings within days of release, not months.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.techmonitor.ai/news/cognition-ai-valued-at-48bn-after-2bn-series-e-financing" target="_blank" rel="noopener">Cognition AI raises $2B Series E, valuation nearly doubles to $48B</a>
+      <p>Devin-maker's run-rate revenue jumped from $492M to ~$900M since May as large enterprises adopt its AI coding tool, in a round led by Andreessen Horowitz and Accel.</p>
+      <div class="src">Source: Tech Monitor</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A ~$900M run-rate for an agentic coding product, not a chatbot wrapper, is a concrete data point on where enterprise AI spend is actually landing. <strong>Watch for:</strong> Cognition's growth adds pricing and feature pressure on Cursor, Claude Code and Copilot — expect faster release cycles across the AI coding category as capital chases proven revenue over pure benchmark scores.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/companies-are-spending-millions-rewiring-how-ai-gets-used-almost-none-can-prove-its-working" target="_blank" rel="noopener">Companies are spending millions rewiring how AI gets used — almost none can prove it's working</a>
+      <p>Uber burned its entire 2026 AI coding budget in four months with no proven link to better products; a minority of firms like Everlaw can point to concrete, measured savings.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Most enterprises are scaling AI usage without the measurement infrastructure to know if it's paying off — Uber's budget blowout is becoming the industry's cautionary tale rather than an outlier. <strong>Action:</strong> before expanding AI tool seats or token budgets, put usage-to-outcome tracking in place first; the deployments that survive scrutiny are task-matched and measured, not blanket rollouts.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html" target="_blank" rel="noopener">Thomson Reuters court software breach exposed sealed and personal records across 12 US courts and Ontario</a>
+      <p>Attackers stole data from the C-Track case management system in March; the breach wasn't detected until June and only disclosed publicly on September 2.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A three-month dwell time before detection, then another three months before public disclosure, is the real story here — not just the sealed-records exposure. <strong>Action:</strong> if you run or rely on third-party case/records-management software, ask vendors directly about detection SLAs and breach-notification timelines now, before an incident forces the question.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html" target="_blank" rel="noopener">MikroTik patches "MikroTrick" RouterOS exploit chain under active attack, 120,000+ devices exposed</a>
+      <p>Chained SSH auth-bypass and privilege-escalation bugs (CVE-2026-67276, CVE-2026-86060) let attackers fully take over routers with internet-facing SSH and no credentials; exploitation began before the patch shipped.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">120,000+ internet-exposed devices found in a single 24-hour scan is a huge, quantified attack surface, and exploitation predates patch availability. <strong>Action:</strong> patch to RouterOS 7.25beta3/7.24.2/7.23.4/6.49.21 immediately, and check for the "-2" suffixed SSH user CERT Polska flags as a compromise indicator — don't wait for a normal patch cycle on internet-facing routers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html" target="_blank" rel="noopener">CISA adds seven actively-exploited flaws to KEV, three targeting AI infrastructure</a>
+      <p>SonicWall SMA1000, JFrog Artifactory, Sangoma Switchvox, Starlette, Kestra and LiteLLM bugs are being used to deploy reverse shells and crypto miners.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">LiteLLM and Kestra sit inside AI/ML pipelines many orgs stood up quickly this year — attackers are now following that build-out. <strong>Action:</strong> patch SonicWall, Artifactory, Switchvox and Kestra against CISA's September 5 deadline (already passed — treat as urgent), LiteLLM and Starlette by September 16, and audit any AI orchestration tooling exposed to the internet.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/" target="_blank" rel="noopener">N-able patches CVSS 10.0 N-central zero-day — third emergency fix in six weeks</a>
+      <p>CVE-2026-86218 gives unauthenticated attackers pre-auth RCE on internet-exposed N-central RMM servers — a single compromised server hands over root-level control of every client device it manages. Patched in Hotfix 4 (build 2026.3.1.14) on September 5.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the fourth emergency hotfix for N-central in five weeks, following separate auth-bypass and RCE bugs — a pattern, not a one-off. <strong>Action:</strong> any MSP running N-central should confirm it's on 2026.3.1.14 today, treat the server as potentially compromised if it was internet-exposed and unpatched before September 5, and review outbound script/session logs for signs of downstream client-network compromise.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.kaseya.com/press-release/kaseya-connect-edge-showcases-the-future-of-it-cybersecurity-and-ai/" target="_blank" rel="noopener">Kaseya adds FIPS 140-3 crypto and native Apple MDM to Datto RMM, hits CMMC Level 2 across seven platforms</a>
+      <p>FIPS-validated cryptography lands at no extra cost from October; Datto RMM also gains native iOS/iPadOS/macOS enrollment. Datto RMM, Autotask, IT Glue, Datto BCDR, SaaS Protection and SaaS Alerts are now CMMC Level 2 audit-ready.</p>
+      <div class="src">Source: Kaseya</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Bundling compliance-by-default (FIPS, CMMC) at no extra cost lowers the bar for MSPs chasing government and regulated-industry contracts without buying a separate compliance product. <strong>Action:</strong> if you're pitching defense-adjacent or regulated clients, factor this into proposals now — it closes a gap that used to require a bolt-on compliance vendor.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://themspsummit.com/press-releases/as-managed-services-market-exceeds-600-billion-msp-summit-2026-tackles-who-will-capture-the-next-wave-of-growth/" target="_blank" rel="noopener">Managed services market tops $600B as MSP Summit 2026 previews AI-driven consolidation</a>
+      <p>Omdia pegs the global managed services market above $600B, with cybersecurity the fastest-growing segment at 18% annual growth versus 14% for the broader market; the Orlando summit (Sept 28-30) will focus on AI automation and pricing pressure as differentiators erode.</p>
+      <div class="src">Source: MSP Summit</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Cybersecurity growing at 18% versus 14% for the broader managed services market confirms where MSP margin is actually shifting. <strong>Action:</strong> if your service catalogue doesn't already lead with a security offering, that's the segment eating the rest of the market's growth — worth prioritising over generic AIOps add-ons that are commoditising faster.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/uomo-bill-headed-to-the-senate-628800" target="_blank" rel="noopener">UOMO universal mobile obligation bill heads to the Senate amid carrier pushback</a>
+      <p>Telstra, Optus and TPG must cover competitive voice/text across 5 million km² under the bill, but all three say satellite-to-mobile tech won't be commercially ready before the December 2027 start date — pushing for 2030.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A legislated coverage mandate colliding with a technology timeline the carriers themselves call unrealistic sets up a compliance gap regardless of outcome. <strong>Relevance:</strong> if you operate in regional/remote Australia, don't bank on guaranteed satellite-to-mobile emergency calling before 2028 at the earliest — carrier estimates, not the legislated date, are the more reliable planning input.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/main-roads-wa-brings-real-time-visibility-to-traffic-operations-628798" target="_blank" rel="noopener">Main Roads WA consolidates 30 systems into a single real-time traffic platform on AWS</a>
+      <p>The in-house-built Real Time Operating Platform merges traffic signals, CCTV and congestion data; the agency plans to add predictive analytics and AI through 2026-27.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A state road agency building and retaining IP on its own integration platform, rather than buying a vendor suite, is a notable build-vs-buy call for critical infrastructure. <strong>Use it as a reference:</strong> if you're evaluating a similar consolidation for public-sector operational systems, this is a live case study worth tracking over the next 12 months before committing either way.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/fed-gov-targets-social-media-algorithms-628778" target="_blank" rel="noopener">Australia's "My Feed, My Way" bill would force platforms to let users turn off algorithmic feeds</a>
+      <p>Draft legislation requires social platforms to offer a non-algorithmic, friends-and-follows-only feed option; non-compliance risks penalties up to $109.2 million, enforced by eSafety.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This targets feed design directly rather than content moderation — a different regulatory lever than most prior online-safety rules. <strong>Relevance:</strong> platforms operating in Australia should start scoping the engineering cost of a genuine non-algorithmic feed mode now; $109.2M penalties make this a compliance budget line, not a "wait and see" item.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.reseller.co.nz/article/4219028/lack-dedicated-ai-leadership-roles-holding-back-transformation-datacom.html" target="_blank" rel="noopener">AI use hits 91% of NZ businesses, but only 4% say it's transformed core operations</a>
+      <p>Datacom's 2026 State of AI Index found adoption up from 87% in 2025, but the share reporting real transformation fell from 8% to 4%; 81% remain stuck in exploratory or pilot stages, and only 22% have a dedicated AI leadership role.</p>
+      <div class="src">Source: Reseller News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Adoption and transformation have decoupled — more NZ businesses are using AI tools, but fewer say it's changed how they actually operate, pointing to pilot fatigue rather than early-stage caution. <strong>Action:</strong> if your organisation is among the 81% still exploring, the data points at a leadership/ownership gap as the blocker, not technology maturity — appointing clear AI ownership is a cheaper fix than buying more tools.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
