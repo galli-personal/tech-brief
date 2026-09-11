@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 12 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Saturday, 12 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html" target="_blank" rel="noopener">Anthropic says seven China-based AI labs ran industrial-scale Claude distillation attacks</a>
+      <p>Anthropic identified and disrupted sustained, large-scale attempts by Chinese labs — including DeepSeek and Alibaba — to extract Claude's capabilities via distillation.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Anthropic is now quantifying distillation exposure with hard numbers rather than vague warnings, naming seven China-based labs running industrial-scale extraction against Claude. <strong>Why it matters:</strong> model-weight IP protection is becoming a live enforcement problem, not a theoretical one, and rival labs shipping near-parity models days later (see DeepSeek below) shows the extraction pipeline is fast. If you rely on frontier-model differentiation as a moat, plan for that moat eroding faster than expected.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/deepseek-v4-1-flash-debuts-with-0-003-1m-off-peak-cached-input-rate-and-benchmarks-eclipsing-gpt-5-6-sol-claude-opus-5" target="_blank" rel="noopener">DeepSeek-V4.1-Flash debuts with $0.003/1M off-peak pricing, benchmarks beating GPT-5.6 Sol and Claude Opus 5</a>
+      <p>A 552B-parameter MoE model with a 1M-token context window edges out Opus 5 and GPT-5.6 Sol on coding and terminal benchmarks, at a fraction of the price.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">V4.1-Flash scores 90.6 on Terminal-Bench 2.1 versus 89.1 for Opus 5 and 88.8 for GPT-5.6 Sol, while pricing cached input at $0.003/1M off-peak — an order of magnitude below Western frontier models. <strong>Takeaway:</strong> the cost-performance gap between open-weight Chinese models and closed US frontier models has effectively closed for agentic coding workloads. Re-run vendor cost comparisons now if you're running high-volume, cache-heavy agent pipelines.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/openai-solves-longstanding-math-problem-with-10-000-agent-swarm-but-cant-rule-out-benefitting-from-a-researchers-private-codex-data" target="_blank" rel="noopener">OpenAI's 10,000-agent swarm solves Navier-Stokes — but can't rule out benefiting from a researcher's private Codex data</a>
+      <p>A swarm of up to 10,000 concurrent agents produced a proposed solution to a Millennium Prize Problem in 88 hours, but OpenAI can't confirm the result is untainted by a researcher's own private Codex usage.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Massive-scale agent orchestration just cracked a 90-year-old math problem — genuinely impressive — but the immediate fallout is a credit and data-provenance dispute with the mathematicians whose private work may have leaked into training signal. <strong>Why it matters:</strong> as agent swarms increasingly consume researcher/customer interaction data as training signal, expect more disputes like this. If your org feeds proprietary work into any vendor's agent tooling, check what "anonymized" actually means in their data-use terms.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/" target="_blank" rel="noopener">Mistral raises €3B at €21B valuation — Europe's largest-ever private tech round</a>
+      <p>Samsung-led Series D nearly doubles Mistral's valuation from a year ago, with BlackRock, NVIDIA, ASML and Luxembourg's sovereign fund all participating.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Europe's biggest-ever private tech raise is explicitly framed around "sovereign AI" — a European/Asian alternative to US hyperscaler dependence, backed by strategic investors like Samsung, ASML and a national sovereign fund rather than pure financial VCs. <strong>For enterprise buyers:</strong> Mistral now has the capital and 125+ enterprise customers (Airbus, HSBC) to be a credible non-US alternative for data-sovereignty-sensitive AI procurement in regulated industries.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html" target="_blank" rel="noopener">GitLab CVSS 10 file-read flaw draws in-the-wild probes right after disclosure</a>
+      <p>A maximum-severity flaw in GitLab's repository commits API is already being actively probed within hours of public disclosure.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A CVSS 10 in a tool this widely self-hosted means the exploitation window is measured in hours, not weeks. <strong>Action:</strong> if you self-host GitLab, patch immediately and check access logs for anomalous commits-API calls in the interim — assume scanning has already reached your instance.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html" target="_blank" rel="noopener">Claude used to automate exploitation and data theft across multiple victims</a>
+      <p>Cybercriminal and state-sponsored actors are using Claude models for automated reconnaissance, exploitation and exfiltration, per Anthropic's own disclosure.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Frontier models are now a documented component of live attack chains, not just a theoretical risk — automating steps that previously required skilled human operators. <strong>Implication:</strong> defenders should expect attack velocity and scale to keep rising as AI-assisted tooling lowers the skill floor; behavioral/anomaly detection matters more than signature-based defenses going forward.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html" target="_blank" rel="noopener">Attackers chain JFrog Artifactory flaws to gain admin control and plant backdoors</a>
+      <p>Two chained vulnerabilities let attackers escalate from low-privilege tokens to full admin access on unpatched Artifactory servers.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Artifactory sits at the center of software supply chains — admin compromise there means attackers can poison build artifacts flowing downstream to every consuming application. <strong>Action:</strong> patch immediately and audit recent artifact/package publishes for tampering if you run self-hosted Artifactory; treat this as a supply-chain incident, not just an access-control bug.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html" target="_blank" rel="noopener">Trezor: ShipMonk breach exposed 67,000 more customers' data it was told had been deleted</a>
+      <p>A vendor breach at fulfillment provider ShipMonk (via a Metabase zero-day) exposed data Trezor believed had already been purged, bringing the total affected to 81,000.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Written deletion assurances from a vendor turned out to be worthless — the data was still sitting in ShipMonk's systems when attackers hit it. <strong>Action:</strong> for any vendor holding customer PII on your behalf, verify deletion claims technically (audit logs, attestations) rather than accepting written confirmation at face value, and track fourth-party risk (your vendor's vendors) explicitly in your risk register.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html" target="_blank" rel="noopener">N-able N-central pre-auth RCE (CVSS 10) exploited in the wild — direct MSP exposure</a>
+      <p>A static code injection flaw in the widely-used MSP RMM platform allows unauthenticated remote code execution; CISA gave FCEB agencies until 11 September to patch, and at least one customer instance was reportedly compromised before the fix shipped.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This isn't just another CVE — N-central is the control plane MSPs use to manage every downstream client endpoint, so a compromised instance is a foothold into an entire client base at once. Patched in 2026.3 Hotfix 4 (5 September); all on-prem builds before 2026.3.1.14 are affected. <strong>Action:</strong> MSPs running on-prem N-central should patch immediately, treat any pre-patch exposure as a potential multi-client incident, and audit for unexpected admin activity across managed endpoints.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/ai/companies-already-run-3-agent-platforms-salesforces-new-enterprise-ai-harness-wants-to-govern-all-of-them/" target="_blank" rel="noopener">Companies already run 3 agent platforms — Salesforce's new Enterprise AI Harness wants to govern all of them</a>
+      <p>Salesforce's Trusted Enterprise AI Harness targets the average enterprise's 3.1 concurrent agent platforms with a unified governance, security and model-management control plane.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Agent sprawl has become the norm faster than governance tooling matured — most enterprises are already running multiple overlapping agent platforms with no unified oversight. <strong>For IT/security leaders:</strong> if you can't currently answer "which agents have access to what, across which platforms," this category is worth evaluating now — agent governance is quickly becoming as core as IAM.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/miro-snapped-up-by-bending-spoons-628841" target="_blank" rel="noopener">Miro acquired by Bending Spoons for $1.36B</a>
+      <p>The collaborative whiteboarding platform is the latest widely-deployed SaaS tool to be bought by serial-acquirer Bending Spoons.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Bending Spoons has a pattern of acquiring popular consumer/prosumer software and aggressively re-optimizing it for margin (pricing changes, feature/support cuts). <strong>For IT managers:</strong> if Miro is embedded in your collaboration stack, watch for pricing or roadmap shifts over the next 6-12 months and have a contingency plan, as has played out with this acquirer's past deals.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/asd-warns-aussie-adobe-commerce-and-magento-stores-under-attack-628811" target="_blank" rel="noopener">ASD warns Aussie Adobe Commerce and Magento stores under attack</a>
+      <p>The "StyleSmuggler" zero-day (CVSS 10, CVE-2026-75650) is under active exploitation against Australian e-commerce stores, per the Australian Signals Directorate.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A maximum-severity, actively-exploited flaw in one of the most common ANZ e-commerce platforms, with a direct government advisory. <strong>Action:</strong> any Australian or NZ retailer running Adobe Commerce/Magento should patch immediately and check for indicators of compromise — this is a live, targeted campaign, not a theoretical risk.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/unsw-reveals-new-measures-to-deal-with-ai-cheating-628831" target="_blank" rel="noopener">UNSW reveals new measures to deal with AI cheating</a>
+      <p>UNSW is expanding ChatGPT Edu access to 80,000 users while simultaneously rolling out new AI-cheating detection and prevention strategies.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major ANZ university is betting it can simultaneously mainstream AI tool access and control academic integrity risk, rather than restricting access outright. <strong>Why it matters:</strong> the "provide sanctioned access + detect misuse" approach UNSW is testing at scale is a pattern other ANZ education and professional-services organizations wrestling with the same AI-integrity tension will likely watch closely.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/dfat-flags-multi-year-investment-in-its-technology-operations-628829" target="_blank" rel="noopener">DFAT flags "multi-year investment" in its technology operations</a>
+      <p>Australia's Department of Foreign Affairs and Trade has enlisted consultants to review and cost out infrastructure modernization.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another large federal ANZ agency signaling significant IT modernization spend ahead — consistent with the broader public-sector pattern of consolidation and infrastructure renewal under fiscal pressure. <strong>For vendors and integrators:</strong> multi-year federal IT modernization programs like this are worth tracking early, since the consulting/scoping phase is typically where vendor shortlists start forming.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.reseller.co.nz/article/4218957/2degrees-steps-in-as-mercury-winds-down-now-nz.html" target="_blank" rel="noopener">2degrees steps in as Now New Zealand winds down business operations</a>
+      <p>2degrees will take over Now NZ's business broadband, voice, mobile and cloud customers, who keep current pricing or can opt out before Now's operations close on 30 November 2026.</p>
+      <div class="src">Source: Reseller News NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Further consolidation in NZ's business telco/connectivity market, with 2degrees picking up a customer base concentrated in regional areas (Hawke's Bay, Bay of Plenty, Waikato). <strong>For NZ businesses on Now:</strong> confirm your migration path and pricing terms before 30 November, and treat this as a prompt to review broader connectivity/cloud vendor concentration risk regardless of provider.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
