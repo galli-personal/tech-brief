@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 15 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Tuesday, 15 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.pbs.org/newshour/politics/trump-downplays-the-need-to-check-ai-development-and-says-he-doesnt-want-to-cede-edge-to-china" target="_blank" rel="noopener">Trump dismisses CEO calls to slow AI, says "whoever wins AI wins"</a>
+      <p>Responding to Dario Amodei, Sam Altman and Elon Musk's joint push to "put the brakes on" frontier AI development, Trump said the technology will be "more good than bad" and blamed "negative forces" for raising alarm, prioritizing the race against China over caution.</p>
+      <div class="src">Source: PBS NewsHour</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The White House has now publicly staked out a position directly opposed to the three loudest frontier-lab voices calling for a slowdown, meaning any coordinated pacing effort will have to happen without federal backing. <strong>Takeaway:</strong> don't expect near-term US regulation to constrain your AI roadmap — self-imposed lab commitments and your own governance controls are the only backstop for now.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.pymnts.com/news/artificial-intelligence/2026/google-openai-and-anthropic-float-idea-of-ai-standards-body/" target="_blank" rel="noopener">Google, OpenAI and Anthropic quietly discuss a joint AI standards body</a>
+      <p>The three labs have held working-group meetings since July on an industry-led testing and auditing body, modeled loosely on FINRA per a proposal from Google DeepMind's Demis Hassabis. Amodei is driving it; Altman backs it as an alternative to waiting on Washington.</p>
+      <div class="src">Source: PYMNTS</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the practical, quieter counterpart to today's public slowdown fight — labs building self-regulation because government-led rules aren't coming soon. <strong>Takeaway:</strong> if this body forms, it will likely set the de facto bar for "responsible" frontier AI evaluation before any law does — worth tracking as a preview of future compliance expectations rather than dismissing it as PR.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086" target="_blank" rel="noopener">Two safety researchers quit Anthropic and Google DeepMind for METR: "no adults in the room"</a>
+      <p>Joe Benton, former lead of Anthropic's Scalable Oversight team, and Google DeepMind's Josh Engels both left to join independent AI-risk assessor METR, saying labs' incident transparency is "entirely voluntary" and pointing to July's Hugging Face attack by autonomous OpenAI-model agents as a turning point.</p>
+      <div class="src">Source: NBC News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">When safety leads leave frontier labs specifically to gain independence to disclose incidents, it signals internal transparency processes aren't keeping pace with internal risk awareness. <strong>Takeaway:</strong> weight vendor self-reported AI incident disclosures accordingly, and watch METR's independent assessments as a more candid signal than lab PR.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/" target="_blank" rel="noopener">Altman rules out an OpenAI IPO in 2026, cites AI safety climate</a>
+      <p>Altman told Fortune that "given everything happening with safety, right now would be an ill-advised moment to go public," pushing the long-anticipated listing to at least 2027 despite an earlier confidential filing and a Q3/Q4 2026 target.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A company delaying its own IPO specifically over safety optics — not financial readiness — is a strong signal of how seriously this summer's incidents have rattled the industry's public narrative. <strong>Takeaway:</strong> if you're evaluating OpenAI as a long-term platform partner, treat this delay as a data point on timeline risk, not just a governance footnote.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html" target="_blank" rel="noopener">CISA adds 5 actively exploited Artifactory and RouterOS flaws to its KEV catalog</a>
+      <p>Attackers chained two JFrog Artifactory bugs (CVE-2026-42016, CVE-2026-42018) to seize admin control, plant persistent accounts and deploy Rust-based backdoors between August 15 and September 8. Separately, a MikroTik RouterOS chain dubbed "MikroTrick" lets unauthenticated actors seize routers outright.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Nearly a month of active exploitation before CISA's catalog addition means any Artifactory or RouterOS deployment reachable from the internet has already had a realistic exposure window. <strong>Action:</strong> patch Artifactory to the fixed release and audit for unexpected admin accounts or Groovy plugins; treat any RouterOS device without the fix as compromised until proven otherwise.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html" target="_blank" rel="noopener">Malicious Twitch extension leaked OAuth tokens from nearly 31,000 users</a>
+      <p>"Twitch Enhanced Viewer | JeetBot," live on both the Chrome Web Store and Firefox Add-ons, forwarded users' Twitch auth tokens to a Russian bot-service operator's proxy on every channel watched — enough to hijack chat, DMs and account settings without a password.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A cross-store extension with real functionality (a working chat bot) hid credential exfiltration in a network-layer redirect, which is why it passed store review on both platforms. <strong>Action:</strong> if your organization allows browser extensions on work devices, review install lists for third-party streaming/bot tools now — store presence is not a safety signal.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.infosecurity-magazine.com/news/human-attacker-machine-speed/" target="_blank" rel="noopener">Human attacker matches AI-speed exploitation of Marimo notebook RCE</a>
+      <p>An operator went from a vulnerable Marimo notebook to an SSH bastion host in eight seconds using a hand-built Python toolkit, harvesting AWS credentials and a Secrets Manager SSH key along the way — with no LLM signature detected despite the machine-speed execution.</p>
+      <div class="src">Source: Infosecurity Magazine</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This breaks the assumption that "machine speed" automatically means an AI-driven attack — skilled humans can now pre-build toolkits that execute just as fast once inside. <strong>Action:</strong> don't tune detection purely around AI-agent behavioral signatures; a five-month-old CVE (fixed since April) still being exploited this cleanly means patch verification, not just monitoring, is the real gap here.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://securityaffairs.com/199032/security/u-s-cisa-adds-gitlab-jfrog-artifactory-and-connectwise-screenconnect-flaws-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank" rel="noopener">CISA gives ConnectWise ScreenConnect a same-day patch deadline over active exploitation</a>
+      <p>CVE-2026-84869 (CVSS 9.9) lets an attacker abuse an active remote-support session for unauthorized file transfer and execution — already tied to malicious VBScript payloads pushed to newly connected endpoints. CISA's federal deadline landed September 14, the same day as the KEV addition.</p>
+      <div class="src">Source: Security Affairs</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">ScreenConnect sits at the center of MSP remote-access workflows, so a flaw that abuses an already-open support session turns routine helpdesk activity into a compromise vector. <strong>Action:</strong> update to ScreenConnect 26.6.5 immediately and review recent session logs for unexpected file transfers to newly connected machines.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.huntress.com/blog/n-able-vulnerability-exploitation" target="_blank" rel="noopener">N-able N-central attackers caught pivoting to domain controllers via Cloudflare tunnels</a>
+      <p>Huntress's rapid-response investigation into the CVSS-10 N-central RCE chain found threat actors specifically targeting domain controllers post-compromise and using Cloudflare tunnels to maintain persistent access — a more advanced follow-on stage than the initial RCE disclosure suggested.</p>
+      <div class="src">Source: Huntress</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Attackers treating a compromised RMM platform as a stepping stone straight to domain controllers, rather than just ransomware staging, points to more deliberate, higher-value targeting of MSP-managed networks. <strong>Action:</strong> if you run N-central, hunt specifically for unexpected Cloudflare tunnel binaries and unusual domain-controller authentication from the N-central host, not just confirm the hotfix is applied.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/companies-already-run-3-agent-platforms-salesforces-new-enterprise-ai-harness-wants-govern-all-them" target="_blank" rel="noopener">Salesforce's new "AI Harness" aims to govern the 3+ agent platforms most enterprises already run</a>
+      <p>Salesforce's Trusted Enterprise AI Harness bundles context, governance, security and model-selection layers into one control plane, responding to VentureBeat Intelligence data showing 85% of surveyed organizations already run two or more agent orchestration platforms. General availability isn't until early FY28 (Feb 2027).</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The product gap Salesforce is targeting — no single control point across multiple agent platforms — is the same governance hole IBM and others have flagged all year, now getting a vendor-scale answer rather than just point tools. <strong>Action:</strong> if you're running multiple agent frameworks today, use this as a checklist of governance layers (identity, audit trail, cost control) to evaluate your current stack against, even before Salesforce's own tool ships.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://livenews.co.nz/2026/09/14/tech-and-security-kiwis-warned-as-ai-search-results-direct-users-to-scam-sites-new-data/" target="_blank" rel="noopener">ESET: ChatGPT search results are routinely pointing Kiwis to scam sites</a>
+      <p>ESET New Zealand found ChatGPT search results linking to fake stores, crypto scams and phishing login pages. With four in five New Zealanders now using AI tools and 35% of July's detected NZ threats being phishing-related, ESET NZ's Scott Leman warned users can't assume a link is safe just because an AI provided it.</p>
+      <div class="src">Source: LiveNews.co.nz</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AI search/answer engines are inheriting the same trust problem as traditional search results, but users extend them more default credibility precisely because they feel like a direct answer rather than a ranked list. <strong>Action:</strong> if your organization publishes consumer-facing security guidance, add explicit wording that AI-provided links need the same scrutiny as any search result — this is now a live, measured risk, not a hypothetical.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/feature/cyber-risk-in-the-mythos-era-where-do-we-begin-628847" target="_blank" rel="noopener">Security Centric: AI governance is a board issue, not an IT ticket</a>
+      <p>Security Centric's GRC lead Alex Ward argues most current cybersecurity frameworks weren't built for AI's data-privacy, model-integrity and third-party-service risks, and that boards now need to demonstrate governance over emerging tech alongside standard cyber resilience under ASD's Essential Eight.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The practical failure mode this describes is organizations adopting AI tools faster than security and legal teams can classify what data those tools touch. <strong>Action:</strong> before your next AI tool rollout, confirm someone outside IT — legal, risk or the board — has signed off on the data-handling and accountability question, not just the security team.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.reseller.co.nz/article/4221006/channel-choice-voting-now-open-for-reseller-news-innovation-awards-2026.html" target="_blank" rel="noopener">Reseller News opens Channel Choice voting for its 2026 Innovation Awards</a>
+      <p>NZ IT channel readers can now vote for standout vendors, distributors and partners across the past 12 months, with voting closing September 28 and winners announced at Auckland's Cordis on October 15.</p>
+      <div class="src">Source: Reseller News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Channel Choice results are a useful, low-effort proxy for which vendors and partners are actually earning goodwill in the NZ market versus just winning on price or incumbency. <strong>Action:</strong> if you're assessing new vendor or distributor relationships in NZ, the October 15 results are worth checking as an independent signal alongside your own due diligence.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
