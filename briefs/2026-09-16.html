@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 16 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 16 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing" target="_blank" rel="noopener">Amodei calls for a deliberate AI slowdown, Altman and Hassabis cosign</a>
+      <p>In an essay titled "We Must Pace the Frontier," Anthropic's CEO warns swarms of rogue agents could take over the internet within six months and proposes independent evaluators embedded in labs plus global coordination on safety.</p>
+      <div class="src">Source: Axios</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This isn't a call to halt training — it's a call to slow the <em>rate</em> of capability gains so alignment work and third-party verification can keep pace. That it was cosigned by rival lab heads (OpenAI, DeepMind, xAI) signals a rare moment of industry alignment on risk, not just PR. <strong>Takeaway:</strong> expect renewed regulatory momentum off the back of this — boards running AI in production should treat governance and independent evaluation as a near-term compliance item, not a future one.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://hosting.com/blog/cloudflares-new-ai-crawler-defaults-and-what-they-mean-for-site-owners/" target="_blank" rel="noopener">Cloudflare starts blocking mixed-use AI crawlers by default today</a>
+      <p>New free-plan sites and new customers now default to blocking crawlers that blend search, agent and training use on any ad-supported page — part of Cloudflare's push to make AI companies pay for content.</p>
+      <div class="src">Source: hosting.com</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Cloudflare is forcing AI vendors to separate their search-indexing bots from training/agent bots or get blocked outright on a huge share of the web. <strong>For anyone running a site on Cloudflare's free tier:</strong> check your crawler permission settings today — the new default may silently cut off legitimate AI-agent traffic (and revenue-share opportunities via Cloudflare's new Pay Per Use program) unless you explicitly opt back in.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.geekwire.com/2026/agilitys-new-digit-5-robot-lifts-50-pounds-works-20-hours-a-day-and-operates-alongside-people/" target="_blank" rel="noopener">Agility Robotics unveils Digit 5, its first barrier-free humanoid</a>
+      <p>The fifth-gen humanoid lifts 50 lb, runs 20+ hours a day, and uses AI collision-avoidance to work alongside people without safety cages. Early access begins H1 2027, with EU/UK deployment planned for the first time.</p>
+      <div class="src">Source: GeekWire</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Dropping the physical safety barrier requirement is the real unlock here — it's what makes humanoid robots viable in existing warehouse and factory floor plans rather than requiring costly redesigns. <strong>For operations leaders:</strong> with $300M+ in orders already booked and a purpose-built 10,000-unit/year factory behind it, this is moving from pilot novelty to a genuine 2027 procurement line item.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/should-all-enterprise-code-and-workflows-become-natural-language-g5-labs-thinks-so-and-its-new-g5-platform-does-it-for-you" target="_blank" rel="noopener">G5 Labs bets enterprise code and workflow should just be natural language</a>
+      <p>MIT professor Tim Kraska's new startup turns business requirements and policies into a structured "system ontology" that coordinates multiple coding agents in parallel — emerging from stealth with $14M seed funding.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Instead of one model generating code, G5 positions itself as a vendor-neutral control layer that governs how several agents divide and reconcile work against a company's own architecture and policy rules. <strong>Why it matters:</strong> it's a direct pitch against single-vendor lock-in for AI coding — worth a look if you're evaluating enterprise AI-coding platforms and don't want your control plane tied to one model provider.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/" target="_blank" rel="noopener">Revolut breach: hackers used a spoofed government request to get data, now extorting</a>
+      <p>~680 customers' passports, bank details and transaction histories were handed over after attackers used a domain-authenticated fake government email. Data is being leaked daily on Telegram; UK ICO is investigating.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The failure mode wasn't a hack — it was a process gap: a request that "looked" authentic (valid domain auth) bypassed verification and got sensitive data handed over voluntarily. <strong>Action:</strong> any org that fields law-enforcement/government data requests needs an out-of-band verification step (callback to a known number, not email reply) before releasing PII — email authentication alone is not proof of legitimacy.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html" target="_blank" rel="noopener">Chinese-speaking "Red Heron" group weaponized Gitea RCE within days of PoC release</a>
+      <p>CVE-2026-60004 was scanned across 1,386 internet-facing Gitea instances in seven countries, compromising 13 organizations with a new Linux rootkit and reaching root-level access on at least one Proxmox cluster.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The gap between public PoC and mass exploitation is now measured in days, not weeks. Self-hosted Git platforms are an attractive target because a single compromise yields both source code and a foothold for lateral movement. <strong>Action:</strong> if you run Gitea (or any self-hosted git server) exposed to the internet, patch immediately and audit for the JITTERLY implant's post-exploitation indicators, not just the initial CVE.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/" target="_blank" rel="noopener">Mass-scanning campaign hits exposed Vite dev servers for AWS/Azure secrets</a>
+      <p>CVE-2026-39364 lets unauthenticated attackers bypass Vite's file-deny list via URL parameters to read .env files, Terraform state and cloud credentials. F5 logged 800+ attacks and ~32,000 events in a month.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is a reminder that dev servers left reachable from the internet are a live production risk, not a contained sandbox — attackers are systematically wordlist-scanning for exactly this misconfiguration. <strong>Action:</strong> upgrade Vite to 7.3.2/8.0.5+, and as a standing control, ensure dev servers are never bound to public interfaces regardless of framework.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html" target="_blank" rel="noopener">Iranian state hackers use Telegram-controlled malware to spy on dissidents</a>
+      <p>US, UK and Dutch agencies jointly detailed Windows malware attributed to Iranian intelligence, used for global surveillance operations against dissidents and activists.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Using a legitimate consumer messaging platform as a C2 channel makes traffic far harder to distinguish from normal usage than a bespoke protocol would. <strong>For orgs supporting at-risk individuals</strong> (NGOs, media, advocacy groups): this joint advisory is worth reviewing for IOCs, and it's a broader signal that commodity apps as C2 infrastructure is now standard tradecraft for state actors, not just criminal groups.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://themspsummit.com/press-releases/as-managed-services-market-exceeds-600-billion-msp-summit-2026-tackles-who-will-capture-the-next-wave-of-growth/" target="_blank" rel="noopener">Managed services market passes $600B as MSP Summit 2026 nears</a>
+      <p>OMDIA data shows the global MSP market has crossed $600B; industry leaders gather in Orlando Sept 28–30 to debate who captures the next wave of growth amid AI-driven commoditization pressure.</p>
+      <div class="src">Source: MSP Summit 2026</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Market size is up, but so is pricing pressure — AI-enabled automation is commoditizing task-based MSP work faster than new demand is replacing it. <strong>For MSP leaders:</strong> the growth story now favors providers who've moved to outcome-based, AIOps-driven service models over those still selling seat-based break-fix support; that repositioning is the actual competitive battleground for 2027 contracts.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bankinfosecurity.com/nextgen-mirth-connect-flaws-expose-downstream-system-logins-a-32789" target="_blank" rel="noopener">Three high-severity flaws in NextGen Mirth Connect expose downstream system logins</a>
+      <p>CISA added an authenticated SQL injection (CVE-2026-82583) and two unsafe XML parser flaws to its catalog; the integration engine is used by hundreds of healthcare orgs across 40+ countries to move clinical data.</p>
+      <div class="src">Source: BankInfoSecurity</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Mirth Connect sits at the center of healthcare data flows, holding credentials for every system it talks to — so a flaw here cascades into every connected database and clinical endpoint. <strong>Action:</strong> healthcare IT and MSPs supporting clinical clients should patch to 4.7.2+ immediately and rotate any connector credentials that may have been exposed, treating this as a supply-chain-style blast radius, not an isolated bug.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.kaseya.com/press-release/kaseya-connect-edge-showcases-the-future-of-it-cybersecurity-and-ai/" target="_blank" rel="noopener">Kaseya adds FIPS 140-3 compliance and native Apple MDM to Datto RMM</a>
+      <p>Announced at Connect Edge, FIPS 140-3 validated cryptography rolls out free in October, alongside native Apple device management — both aimed at unlocking government, healthcare and defense contracts previously blocked by compliance gaps.</p>
+      <div class="src">Source: Kaseya</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Compliance certifications have become a direct sales lever in the RMM/MSP tooling market, not just a checkbox — this is Kaseya explicitly targeting regulated-industry deals that were previously out of reach. <strong>For MSPs serving government/healthcare/finance clients:</strong> this closes a real gap; worth confirming your RMM stack's compliance posture before your next regulated-client renewal or RFP.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/meet-adapt-westpacs-azure-based-enterprise-data-platform-628927" target="_blank" rel="noopener">Westpac details Adapt, its Azure-based enterprise data platform</a>
+      <p>The bank goes public with the architecture behind its cloud data infrastructure overhaul.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major ANZ bank publicly detailing its core cloud data platform is a useful reference architecture for any large regulated enterprise weighing a similar Azure-based data modernization. <strong>Use it as a benchmark:</strong> Westpac's build choices and governance approach are worth reviewing if you're scoping a comparable enterprise data platform in a regulated ANZ sector.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://nvidianews.nvidia.com/news/nvidia-expands-ai-infrastructure-capacity-in-partnership-with-australias-data-center-ecosystem" target="_blank" rel="noopener">NVIDIA backs eight Australian partners to more than double the nation's AI compute</a>
+      <p>Firmus, Sharon AI, IREN, Megaport, ResetData, CDC, NEXTDC and AirTrunk are building toward 2GW of AI infrastructure by 2027, against Australia's current 1.6GW capacity.</p>
+      <div class="src">Source: NVIDIA Newsroom</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is a large, multi-vendor bet that Australian AI compute demand will outstrip today's capacity within 18 months — spreading the buildout across eight operators reduces single-provider risk for enterprise buyers. <strong>For ANZ enterprises planning AI workloads:</strong> expect more local GPU capacity and pricing competition through 2027, which should ease the case for keeping sensitive workloads in-region rather than defaulting to offshore cloud.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/digital-canberra-to-refresh-private-cloud-platform-628909" target="_blank" rel="noopener">Digital Canberra to refresh its private cloud platform</a>
+      <p>The ACT government agency plans an infrastructure update as existing equipment warranties expire.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A routine-sounding refresh, but public-sector private cloud renewals set precedent for procurement terms other ANZ government agencies follow. <strong>For public-sector suppliers:</strong> worth tracking the tender details as they emerge — hardware-refresh cycles like this are a recurring, predictable channel for gov IT spend.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://databreaches.net/2026/09/07/mathspace-breach-impacts-more-than-1-million-users-in-australia-nz/" target="_blank" rel="noopener">Mathspace breach hits 1M+ students, parents and staff across Australia and NZ</a>
+      <p>Unauthorized access to an internal reporting system exposed names, emails and account details for students, parents/guardians, teachers and staff — passwords and SSO tokens were not affected.</p>
+      <div class="src">Source: DataBreaches.net</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Education-sector platforms holding data on minors are a recurring soft target across ANZ, and this is the latest in a string of school/EdTech breaches this year. <strong>For schools and EdTech vendors:</strong> even "just" names and emails at this scale is a phishing and identity-fraud enabler for families — review what student data your third-party platforms actually need to retain, and confirm breach-notification obligations under the Privacy Act/Privacy Act 2020 (NZ).</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
