@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 17 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Thursday, 17 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.washingtonexaminer.com/policy/technology/4725070/ai-giants-amodei-essay/" target="_blank" rel="noopener">Altman, Musk, Nadella and Hassabis all back Amodei's "pace the frontier" call — Sanders says it's not enough</a>
+      <p>Days after Anthropic's Dario Amodei published his slowdown essay, the CEOs of OpenAI, xAI, Microsoft and Google DeepMind have each publicly endorsed pacing capability growth. Senator Bernie Sanders responded that agreement isn't enough and is pushing a bill to ban superintelligence development outright.</p>
+      <div class="src">Source: Washington Examiner</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Rare cross-lab consensus among direct competitors is itself the signal — when Altman, Musk, Nadella and Hassabis all say the same thing publicly, it's no longer a lone safety advocate's opinion. <strong>Takeaway:</strong> expect this to accelerate concrete regulatory proposals (independent evaluators, capability caps) rather than remain rhetorical; boards should treat "AI pacing/governance policy" as a live legislative risk to track over the next two quarters, not a hypothetical.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.engadget.com/2259938/anthropics-claude-can-now-create-editable-documents-for-you-cowork-chat-together/" target="_blank" rel="noopener">Anthropic folds Cowork into Claude chat, launches Claude Docs and Slides</a>
+      <p>Cowork and Design capabilities are now available from any Claude conversation rather than separate tools. New Docs and Slides features (beta, Pro/Max first) let Claude hand back editable files exportable to Word, PowerPoint or PDF.</p>
+      <div class="src">Source: Engadget</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Collapsing "which mode do I need" into a single conversational surface removes real onboarding friction — the bet is that users shouldn't have to know Claude's internal product architecture to get work done. <strong>For buyers:</strong> if you're evaluating Claude for knowledge-work rollout, the office-suite-in-chat pitch now competes more directly with Copilot and Gemini Workspace — worth a fresh side-by-side before your next seat-license renewal.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/salesforce-researchers-took-an-ai-agent-from-finishing-43-5-of-browser-tasks-to-93-without-touching-the-model" target="_blank" rel="noopener">Salesforce's DarwinX lifts a browser agent from 43.5% to 93% task completion — without touching the model</a>
+      <p>The framework evolves the "harness" — prompts, tools, skills and workflows around a model — using multiple parallel variants and regression gates so gains on new tasks don't silently break ones that already worked.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The result reframes where enterprise AI ROI actually comes from: not a bigger model, but a better-engineered application layer that any team using a hosted model can control. <strong>Action:</strong> if your agent pilots are stalling on reliability, invest in harness engineering and real regression-test infrastructure (ticket states, human corrections, compliance checks) before assuming you need a frontier-model upgrade.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://siliconangle.com/2026/09/15/googles-new-speech-model-gemini-3-8-live-supports-real-time-reasoning/" target="_blank" rel="noopener">Google's Gemini 3.8 Live undercuts GPT-Live-1 on price while topping it on voice quality</a>
+      <p>The new speech-to-speech models handle background tool calls mid-conversation across 97 languages, and the Extended Thinking variant leads Artificial Analysis' Speech Quality Index — at roughly a sixth of GPT-Live-1 Astra's hourly cost.</p>
+      <div class="src">Source: SiliconANGLE</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Voice-agent economics just shifted hard: near-frontier quality at a fraction of the leading competitor's price changes the calculus for any contact-centre or IVR-replacement business case that previously didn't clear the ROI bar. <strong>For anyone building voice agents:</strong> re-run your cost model now — this is available today via the Gemini API and Workspace previews, not a future roadmap item.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html" target="_blank" rel="noopener">Cisco Secure Email Gateway flaw (CVSS 9.8) lets attackers get root via a crafted email</a>
+      <p>CVE-2026-76461 lets an unauthenticated attacker embed malicious SQL in an email to reach root-level command execution, with no workaround available. Active exploitation confirmed; CISA set a September 17 federal patch deadline.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A mail gateway compromised at root can be used to erase its own logs, so "we'd have noticed" is not a safe assumption here. <strong>Action:</strong> patch to 15.5.5-0141/16.0.4-302/16.5.0-780 immediately regardless of configuration, and check mail and firewall logs now for "COPY...TO PROGRAM" patterns and anomalous outbound connections predating the patch.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/active-exploitation-attempts-target.html" target="_blank" rel="noopener">Forged admin tokens hit WSO2 API Manager as JWT bypass exploitation goes active</a>
+      <p>CVE-2026-5430 (CVSS 9.8) lets a token signed with an unsupported algorithm bypass verification entirely. watchTowr's honeypots captured forged JWTs carrying baked-in administrator privileges starting September 13.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">API gateways are the front door to everything behind them — a forged-admin-token bypass here is full account takeover, not a narrow bug. <strong>Action:</strong> any org running WSO2 API Manager, API Control Plane, Traffic Manager or Universal Gateway (4.1.0–4.6.0) should patch immediately and audit recent admin-level API activity for anomalies predating detection.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/one-extension-could-hijack-ai.html" target="_blank" rel="noopener">One malicious browser extension can hijack AI assistants across Chrome, Comet, Edge, Opera Neon and Claude</a>
+      <p>Researchers showed a single extension abusing common permissions (page-modification plus declarativeNetRequest) can impersonate trusted pages to the browser's built-in AI agent. Chrome and Edge are patched; Comet, Opera Neon and Claude in Chrome remain open via bug-bounty disclosures.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Browser AI agents inherit the browser's entire extension attack surface, and most users have no mental model that an "ad blocker"-style permission could let an extension puppet their AI assistant. <strong>Action:</strong> update Chrome to 143.0.7499.192+ and Edge to 150.0.4078.48+ now, and audit extensions with broad page-access permissions across any fleet where AI browser assistants are enabled.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html" target="_blank" rel="noopener">Hard-coded JWT key in Issabel PBX framework lets attackers run OS commands unauthenticated</a>
+      <p>CVE-2026-89026 (CVSS 9.8) stems from an identical HS256 signing key shipped across every Issabel installation, letting attackers forge tokens and get Asterisk to execute arbitrary commands. Shadowserver confirmed active exploitation from September 9.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A shared hard-coded secret across every deployment of a product is a single point of failure for the entire installed base at once — this is a design flaw, not a coding slip. <strong>Action:</strong> if you run Issabel for VoIP/PBX, apply the August 1 patch (moves the key to a per-install config file) now; treat any pre-patch instance as potentially already compromised and audit for unexpected Asterisk-originated commands.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/microsoft-365-hit-by-new-outage/" target="_blank" rel="noopener">Microsoft 365 hit by fresh global outage, hours after an earlier SSO failure the same day</a>
+      <p>Users worldwide saw 502/503 errors from the evening of September 16 (incident MO1472904), just hours after a separate SSO failure had already blocked US/UK access to M365 and Azure portals earlier that day. It's Microsoft's latest disruption after a multi-day Exchange Online outage in August and a Teams/SharePoint networking fault in July.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two separate M365/Azure incidents in a single day, on top of a summer pattern of multi-day outages, is no longer "bad luck" — it's a reliability trend worth planning around. <strong>For IT/MSP leaders:</strong> revisit your single-cloud dependency risk now — offline-capable fallback for email/collaboration and a documented comms plan for extended M365 downtime should be standing incident-response items, not an afterthought discovered mid-outage.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.channelpronetwork.com/2026/09/16/ai-for-small-businesses-how-msps-can-benefit/" target="_blank" rel="noopener">MSPs positioned as the bridge that gets AI to small businesses, ChannelPro argues</a>
+      <p>Only ~30% of small businesses are experimenting with AI versus 70%+ of large enterprises. The pitch: MSPs already have the trusted-advisor relationship to act as "forward-deployed engineers" translating AI capability into workflows clients actually use.</p>
+      <div class="src">Source: ChannelPro Network</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The 30% vs 70%+ AI-adoption gap between small business and enterprise is a real addressable market, not just a trend piece — and it favours whoever already holds the client relationship over whoever has the best model. <strong>For MSPs:</strong> the actionable shift is selling outcomes (not "AI features") and embedding AI into existing service delivery rather than bolting it on as a line item — that's the difference between capturing this gap and watching a SaaS vendor capture it instead.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/uts-embarks-on-20-million-plus-network-refresh-628935" target="_blank" rel="noopener">UTS begins $20M+ network and Wi-Fi 7 refresh across all campuses</a>
+      <p>The University of Technology Sydney has finished design and proof-of-concept and is entering an 18-month build phase, upgrading core/edge infrastructure and data-centre connectivity with Nexon Asia Pacific as managed-services partner, explicitly to support AI-driven, data-intensive workloads.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A university spending $20M+ on network infrastructure specifically citing AI workload demand is a concrete data point that "AI adoption" now shows up as capex in ANZ's education/research sector, not just software licensing. <strong>Reference point:</strong> useful benchmark if you're scoping a similar campus or campus-like network refresh — Wi-Fi 7 plus data-centre connectivity upgrades are becoming the baseline spec, not a stretch goal.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/cleanaway-is-modernising-its-network-connecting-350-sites-628934" target="_blank" rel="noopener">Cleanaway rolls out SD-WAN across 350+ sites to enable fleet analytics and AI operations</a>
+      <p>Waste manager Cleanaway has completed a 25-site pilot of a Netskope SD-WAN, implemented with Macquarie Technology Group, with full national deployment across 350+ sites targeted for April 2027 — citing better site video/safety monitoring as an immediate driver.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is a non-tech-native ANZ enterprise (waste management) treating network modernisation as the prerequisite for AI-supported operations, not AI itself — a useful reminder that "AI readiness" often starts with unglamorous connectivity work. <strong>For infrastructure planners:</strong> the pilot-then-18-month-national-rollout pattern here is a reasonable template for large, multi-site ANZ organisations weighing SD-WAN timelines.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/university-of-sydney-to-roll-out-chatgpt-edu-to-students-628894" target="_blank" rel="noopener">University of Sydney to give 80,000 students and staff ChatGPT Edu access</a>
+      <p>Staff get access this month; student rollout follows a pilot from first semester 2027. The university pairs it with a "responsible AI framework," a two-lane permitted/forbidden-use assessment policy, cheating-detection tooling, and a $1M investment in AI sustainability research — becoming the second major Australian university to sign such a deal after UNSW.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two of Australia's largest universities securing near-identical 80,000-seat OpenAI deals within a week of each other signals a coordinated sector-wide push, not isolated experimentation — expect other ANZ universities to follow with comparable enterprise AI agreements. <strong>For higher-ed IT and policy teams:</strong> the "two-lane" permitted/forbidden framework plus dedicated academic-integrity tooling is emerging as the reference governance model worth benchmarking against.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
