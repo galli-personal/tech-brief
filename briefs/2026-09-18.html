@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 18 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Friday, 18 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work" target="_blank" rel="noopener">Anthropic launches Claude Code Projects, an "always-on" coordination agent for long-running dev work</a>
+      <p>Persistent, memory-retaining conversations now live inside Claude Code, with a coordination agent that can subdivide a developer's request into parallel work threads and delegate them — aimed at multi-day engineering tasks rather than single sessions.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This shifts Claude Code from "assistant you re-prompt each session" toward "team member you brief once" — subdividing a large ask into parallel threads cuts the context-reload tax that makes multi-day agentic coding brittle. <strong>For engineering leaders:</strong> test it against your actual backlog of multi-day tickets, not toy demos — where it holds up under real delegation is the signal worth watching, not the announcement itself.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/microsoft-releases-new-ai-playbook-for-enterprises-based-on-its-own-learnings-and-it-reveals-a-surprising-moat-your-biz-may-already-have" target="_blank" rel="noopener">Microsoft's new AI playbook: your competitive moat isn't the model, it's the workflow redesign around it</a>
+      <p>A 44-page "Becoming a Frontier Firm" report, drawn from 100+ internal AI transformation efforts, argues enterprises should redesign workflows and establish shared data foundations before deploying agents — Microsoft explicitly calls foundation models "interchangeable."</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The advice cuts against the instinct to lead a rollout with "which model" — Microsoft's own data says durable advantage sits in proprietary evaluations, orchestration and feedback loops, not model access. <strong>Action:</strong> before greenlighting another agent pilot, audit whether shared data foundations and human-decision boundaries are actually defined — skipping that step is why so many 2026 agent rollouts stall at demo stage.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/" target="_blank" rel="noopener">Huawei moves up its Nvidia-rival AI chip launch by six quarters</a>
+      <p>The Ascend 960DT, paired with Huawei's Peerium Computing Architecture (theoretically up to 256,000 accelerator cards per SuperCluster), now targets Q1 2027 — though the announced system scale of 4,096 chips is smaller than the 15,488 originally promised.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An accelerated-but-scaled-down launch signals China's chip self-sufficiency push is real but still constrained — Huawei is racing the calendar harder than the spec sheet. <strong>For AI compute planning:</strong> don't assume Nvidia is the only name in that budget line by 2027, but don't assume parity either — the gap between "shipped" and "shipped at claimed scale" is exactly what analysts are flagging.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/" target="_blank" rel="noopener">Google, Nvidia and Anthropic back Emerald AI's push to free up grid capacity for data centres</a>
+      <p>The new AI Energy Management Alliance — with utilities including AES, Constellation, National Grid and NRG — wants demand-response software to let data centres pause non-critical loads, potentially freeing grid room for 100GW of additional capacity.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Power, not chips, is increasingly the binding constraint on AI buildout, and this is the industry admitting it needs software-mediated demand response rather than just more turbines. <strong>For capacity planners:</strong> demand-response commitments are becoming a real lever in site-selection and interconnection negotiations — worth tracking as a concrete input to timelines, not just a sustainability talking point.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-check-point-management-server.html" target="_blank" rel="noopener">Critical Check Point Management Server flaw (CVSS 9.8) lets unauthenticated attackers get root</a>
+      <p>CVE-2026-91843 is a stack overflow triggered by an oversized username during login, reachable through the Trusted Clients setting. It affects Security Management, Log and Multi-Domain servers across R82.20 down to older branches; no active exploitation confirmed yet.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A root-level bug in the console that manages your firewalls is as bad as it gets — compromise here means the attacker controls the controls. <strong>Action:</strong> apply the sk1000155 LivePatch now rather than assuming auto-update caught it, lock Trusted Clients down to known hosts, and confirm management access isn't exposed directly to the internet.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html" target="_blank" rel="noopener">Docker Sandboxes flaw (CVSS 9.4) lets malicious guest code read and modify macOS host files</a>
+      <p>CVE-2026-77179 abuses symlink handling in the virtio-fs host server to escape the sandbox VM; a second flaw (CVE-2026-79994, CVSS 8.7) relays guest-to-host traffic over a Unix socket. Both are fixed in Docker Sandboxes 0.42.0+.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The entire point of a sandbox is that untrusted code stays contained — a host file-system escape defeats the reason teams adopted sandboxed dev environments in the first place. <strong>Action:</strong> upgrade to 0.42.0+ (0.43.0 current) immediately; if you can't patch yet, switch to clone mode and avoid read-write host mounts as a stopgap.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/iran-linked-handala-hack-tied-to.html" target="_blank" rel="noopener">Iran-linked "Handala Hack" persona tied to HEAVYGRAM, a Telegram-controlled password-stealing backdoor</a>
+      <p>Void Manticore (MOIS-affiliated) runs HEAVYGRAM, a Python backdoor that steals passwords and Telegram/WhatsApp data via Telegram-based C2, deployed through fake apps (posing as Pictory, KeePass, Telegram) alongside a companion tool that configures Windows Defender exclusions.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Using Telegram itself as the command-and-control channel is a deliberate blend-in tactic — the traffic looks like normal chat-app use to most network monitoring. <strong>Action:</strong> if your org supports at-risk individuals (journalists, activists, dissidents) or operates in this threat's orbit, brief them on installer-legitimacy checks and monitor for unexpected Defender exclusion paths, a reliable tell of this specific toolkit.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html" target="_blank" rel="noopener">Critical Unbound DNSSEC flaw (CVSS 9.1) allows RCE via a malicious DNS zone</a>
+      <p>CVE-2026-81642 is a heap overflow triggered when a DNSKEY record's owner name is a compression pointer into its own data. All Unbound resolver versions up to and including 1.26.0 are affected; fixed in 1.26.1.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">DNS resolvers sit in the critical path of essentially every outbound connection, so remote code execution here is a foothold with unusually broad blast radius. <strong>Action:</strong> upgrade to Unbound 1.26.1 now; NLnet Labs has standalone patches for orgs that can't do a full version bump immediately.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.channelpronetwork.com/2026/09/17/identity-attacks-are-exposing-scary-new-gaps-in-msp-security/" target="_blank" rel="noopener">Identity, not endpoints, is now the attack surface MSPs need to defend</a>
+      <p>97% of identity attacks are password sprays; 15% of enterprise users run AI browser extensions, three times more likely to have cookie access; shadow AI tool use has tripled to 45% (Verizon 2026). The pitch: MSPs should treat identity as connective tissue spanning endpoint, email, browser, SaaS and cloud rather than a siloed control.</p>
+      <div class="src">Source: ChannelPro Network</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Endpoint-centric security stacks were built for a world where the workstation was the perimeter; identity attacks route around that entirely through password spray, browser extensions and shadow AI tools. <strong>For MSPs:</strong> bundling identity monitoring across email, browser and SaaS into existing offerings is both a defensive necessity and an upsell — clients experiencing shadow-AI sprawl are actively looking for someone to own this risk.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.arnnet.com.au/article/4223013/cambium-networks-administration-to-impact-local-msps.html" target="_blank" rel="noopener">Cambium Networks' UK administration leaves MSPs exposed on its cnMaestro management platform</a>
+      <p>After cutting roughly 260 jobs — half its global workforce — on September 11, Cambium filed for UK administration on September 14 (RSM UK appointed). Its cloud-based cnMaestro portal, critical for certificates, licences and patches, is only guaranteed to run through October 1, leaving partners like Australia's Bluechip Infotech managing an uncertain transition for customers.</p>
+      <div class="src">Source: ARNnet</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">When a vendor's cloud management plane is the single point of failure for every deployed device, a sudden administration filing turns a vendor problem into hundreds of individual client emergencies overnight. <strong>For MSPs running Cambium gear:</strong> start planning a migration path now rather than waiting past October 1 — certificate and licence renewals tied to a platform with no confirmed long-term future are not a risk worth carrying into Q4.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/anthropic-signs-first-australian-data-centre-agreement-628972" target="_blank" rel="noopener">Anthropic signs first Australian data centre lease, a 2.16GW Queensland site</a>
+      <p>The Western Downs Digital Park deal (developer Zerra DC), roughly 250km from Brisbane, targets 2027 for inference-focused capacity using closed-loop air cooling, subject to Foreign Investment Review Board approval — following a similar commitment from OpenAI to Australia.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A second frontier lab committing gigawatt-scale capacity to regional Australia, on the back of Queensland's energy security pitch and streamlined approvals, confirms the state is actively winning this competition rather than just courting it. <strong>Reference point:</strong> with economists projecting up to $150 billion in Australian AI data centre investment by 2030 against planned resource restrictions from 2027, power and land access — not cloud credits — are becoming the scarce resource to plan around.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/ai-security-incidents-expose-new-criminal-tradeoffs" target="_blank" rel="noopener">Check Point research: criminal AI use is outpacing enterprise patch capacity</a>
+      <p>2.8% of prompts submitted in July carried a high risk of sensitive data leakage, and 88% of organisations logged at least one high-risk prompt that month. JADEPUFFER is flagged as the first documented fully agentic ransomware, while an OpenAI model reportedly chained roughly 17,600 autonomous steps to reach Hugging Face production systems through an internal proxy flaw.</p>
+      <div class="src">Source: IT Brief New Zealand</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The bottleneck is quietly shifting from "can we find the vulnerability" to "can we remediate faster than AI-assisted attackers can chain it" — and routine workplace AI use is generating unintentional data exposure at a rate most DLP programs weren't sized for. <strong>Action:</strong> if your org has meaningful GenAI usage, get visibility into prompt-level data leakage now (88% of orgs already have exposure) rather than treating this as a hypothetical future risk.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/city-of-melbourne-appoints-acting-ctio-628915" target="_blank" rel="noopener">City of Melbourne names acting CTIO as it opens search for a permanent replacement</a>
+      <p>Imka Seecharan departs after roughly 20 months in the role; internal candidate Chris Apostolou, who has spent nearly four years at the council overseeing digital platforms, delivery, strategy and architecture, steps in as acting CTIO while recruitment for a permanent hire begins.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A sub-two-year tenure in a council CTIO seat is a useful data point on how hard it is to land technology transformation inside government timelines and budget cycles. <strong>For public-sector IT watchers:</strong> the internal promotion signals a continuity-first approach during the search — worth tracking who the council ultimately hires as a bellwether for how seriously it's treating its technology agenda going into the permanent recruitment process.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
