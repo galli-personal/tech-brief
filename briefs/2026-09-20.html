@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 20 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Sunday, 20 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/anthropic-launches-claude-code-projects-an-always-on-conversation-that-remembers-and-delegates-your-long-running-dev-work" target="_blank" rel="noopener">Anthropic launches Claude Code Projects, an 'always-on' delegated dev workflow</a>
+      <p>A persistent coordinator layer that manages parallel coding sessions with shared memory and project context, letting developers delegate long-running work instead of babysitting multiple agents.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Anthropic is moving up the stack from "agent that codes" to "agent that manages other agents," directly targeting the orchestration layer OpenAI, GitHub and Google are also chasing. <strong>Takeaway:</strong> if your engineering org is standardising on an AI coding tool, evaluate the project-coordination layer now, not just raw code-gen quality — that's where lock-in and productivity gains will actually come from.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/69-of-enterprises-that-install-openais-agent-platform-make-it-primary-for-anthropics-claude-platform-its-38" target="_blank" rel="noopener">69% of enterprises that install OpenAI's agent platform make it primary — for Claude it's 38%</a>
+      <p>New survey data shows OpenAI converting installs into primary usage far more often than Anthropic, though Claude shows stronger consideration-to-install momentum.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Installing a platform and making it your <em>primary</em> agent stack are different commitments, and OpenAI is winning the second one by a wide margin. <strong>For buyers:</strong> don't assume pilot adoption predicts production standardisation — track conversion rate, not just install count, when comparing vendors internally.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/salesforce-researchers-took-an-ai-agent-from-finishing-43-5-of-browser-tasks-to-93-without-touching-the-model" target="_blank" rel="noopener">Salesforce took an AI agent from 43.5% to 93% task success — without touching the model</a>
+      <p>The DarwinX framework evolves the agent's prompts, tools and workflow "harness" rather than model weights, using evolutionary selection to keep only changes that don't regress past capabilities.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A 2x jump in task success from harness engineering alone — no fine-tuning access required — is a big deal for teams stuck on hosted, closed-weight models. <strong>Action:</strong> before requesting budget for a bigger/better model, audit whether your agent's tool definitions, prompts and workflow scaffolding are actually the bottleneck.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/microsoft-releases-new-ai-playbook-for-enterprises-based-on-its-own-learnings-and-it-reveals-a-surprising-moat-your-biz-may-already-have" target="_blank" rel="noopener">Microsoft's new AI playbook: the moat isn't the model, it's your workflow data</a>
+      <p>Microsoft's internal playbook argues for redesigning workflows and governance before deploying agents, citing 75% cycle-time cuts in supply-chain operations once data foundations were fixed first.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Microsoft, with every incentive to sell you a bigger model, is instead telling enterprises the durable advantage is proprietary process data and governance — model-agnostic by design. <strong>Takeaway:</strong> treat model selection as a swappable commodity decision and invest the real budget in data foundations and evaluation harnesses, which is where the 75%-class gains actually came from.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html" target="_blank" rel="noopener">Claude Opus 5 helped researchers take over OpenAI staff accounts</a>
+      <p>Hacktron researchers chained a forum image-processing flaw with a weak OpenAI login mechanism, using Claude Opus 5 to help develop the exploit; OpenAI patched within 14 hours and paid a $6,500 bounty.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AI-assisted vulnerability chaining found and weaponised a real account-takeover path in under a day. <strong>Action:</strong> assume AI-accelerated red-teaming is now standard practice for both attackers and bug-bounty researchers — prioritise chained, multi-flaw exploit paths in your own threat modelling, not just individual CVEs in isolation.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html" target="_blank" rel="noopener">Google Gemini broke into a real company's systems during a security test</a>
+      <p>During a May 2026 evaluation by Israeli firm Irregular, Gemini gained unauthorized access via password guessing after a fictional test domain accidentally matched a real business's domain — and the model stopped once it realised the target was real.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A test environment accidentally overlapping with production namespace turned a benchmark into an actual unauthorized-access incident. <strong>Action:</strong> if you run AI red-team or capability evaluations, isolate test domains/credentials from anything resolvable to real infrastructure — namespace collisions are now a live incident category, not a hypothetical.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html" target="_blank" rel="noopener">CISA flags three Linux kernel flaws as actively exploited</a>
+      <p>The vulnerabilities (CVSS 7.8–9.8) enable memory disclosure, DoS and local privilege escalation; federal agencies have been given until 21 September to patch.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Kernel-level privilege escalation flaws under active exploitation demand urgency beyond the federal deadline. <strong>Action:</strong> patch Linux fleets now, and treat the two-day federal turnaround as the de facto industry SLA for this class of bug going forward.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html" target="_blank" rel="noopener">SolarWinds patches hard-coded key flaw enabling unauthenticated RCE</a>
+      <p>CVE-2026-28326 (CVSS 8.8) in Access Rights Manager stems from a static hard-coded key affecting all versions through 2026.2.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Hard-coded keys keep surfacing in identity/access management tooling — exactly the software meant to secure everything else. <strong>Action:</strong> patch ARM immediately if deployed; more broadly, add hard-coded-secret scanning to vendor security reviews for any IAM or privileged-access product you run.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html" target="_blank" rel="noopener">New WordPress "Click2Shell" flaw chains to remote code execution</a>
+      <p>The exploit chain can force a malicious theme install without user interaction and escalate to full RCE from a single crafted link.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">One-click, no-interaction RCE on the world's most widely deployed CMS is a mass-exploitation risk the moment a public PoC lands. <strong>Action:</strong> patch WordPress installs and restrict theme-install capability to trusted admins only; if you manage WordPress for clients, push this update ahead of your normal patch cadence.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.prnewswire.com/news-releases/alfar-capital-walter-capital-partners-and-bdc-capital-complete-the-sale-of-msp-corp-to-niobrara-capital-capping-a-four-year-build-from-a-regional-quebec-it-provider-into-one-of-canadas-largest-managed-it-and-cybersecurity-pla-302881001.html" target="_blank" rel="noopener">Niobrara Capital acquires MSP Corp, one of Canada's largest managed IT platforms</a>
+      <p>The PE-backed roll-up, built from five acquisitions into a single Microsoft and cybersecurity-focused practice, changes hands as Niobrara plans to extend the platform into the US.</p>
+      <div class="src">Source: PR Newswire</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another sizeable MSP consolidation exit confirms private equity's continued appetite for scaled managed IT/cybersecurity platforms. <strong>For MSP owners:</strong> multi-year roll-up-then-exit remains a viable path to liquidity; for buyers of MSP services, expect continued consolidation to reshape vendor relationships as regional providers get absorbed into larger platforms.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.kaseya.com/press-release/kaseya-connect-edge-showcases-the-future-of-it-cybersecurity-and-ai/" target="_blank" rel="noopener">Kaseya adds FIPS 140-3 cryptography and native Apple MDM to Datto RMM</a>
+      <p>NIST-validated cryptography for core communication channels arrives at no extra cost from October, alongside native iOS/iPadOS/macOS enrolment and management via Apple Business Manager.</p>
+      <div class="src">Source: Kaseya</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Compliance-grade cryptography and native Apple device management collapsing into the core RMM removes two reasons regulated-industry clients (govt, healthcare, finance) previously said no to a given MSP. <strong>For MSPs:</strong> this is a concrete new selling point for regulated-sector prospects — get ahead of the October release to pitch it into renewal conversations now.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.techmarketview.com/ukhotviews/archive/2026/09/08/advania-uk-turns-to-annette-murphy-for-next-phase-of-growth" target="_blank" rel="noopener">Advania UK names Annette Murphy permanent CEO</a>
+      <p>The Colt/Lumen/BT veteran takes the reins as Advania targets mid-market and public-sector growth across cloud, cybersecurity, managed services and AI.</p>
+      <div class="src">Source: TechMarketView</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A telco-sector leadership hire into an IT services CEO seat signals Advania is betting on connectivity/telecom expertise to win larger mid-market and public-sector managed services deals. <strong>Watch for:</strong> a push into converged network-plus-managed-services bundles as a differentiator against pure-play MSPs.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/anthropic-signs-first-australian-data-centre-agreement-628972" target="_blank" rel="noopener">Anthropic signs first Australian data centre agreement</a>
+      <p>A 2.16-gigawatt inference-focused facility at Western Downs Digital Park, ~250km from Brisbane, is slated to begin operations in 2027 — following OpenAI's earlier Australian commitment.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A second frontier lab committing gigawatt-scale inference capacity to Australia signals the region is becoming a genuine AI infrastructure hub, not just a customer market. <strong>For ANZ enterprises:</strong> expect lower-latency, potentially data-sovereign inference options to mature over the next 12-18 months — worth factoring into any AI procurement roadmap that currently routes through US regions.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/westpac-spends-us12000-in-ai-tokens-on-intranet-migration-628988" target="_blank" rel="noopener">Westpac spends US$12,000 in AI tokens on intranet migration</a>
+      <p>A project that would typically cost low seven figures and take about a year was completed for a fraction of the cost via an AI engineering partnership with Amp.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A concrete, disclosed before/after cost comparison from a major bank is rare and useful ammunition. <strong>For ANZ IT leaders:</strong> use this as a benchmark case when building the internal ROI argument for AI-assisted engineering on internal migration/modernisation backlogs — but verify token cost claims exclude the (likely substantial) human review and validation time.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/optus-may-ban-smart-glasses-in-stores-offices-628995" target="_blank" rel="noopener">Optus may restrict smart glasses in stores and offices</a>
+      <p>Optus EGM security and risk Corien Vermaak says the telco is weighing disclosure requirements — similar to announcing a recording — rather than an outright ban.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major ANZ employer publicly grappling with always-on recording wearables in customer-facing and office settings is an early signal other enterprises will need workplace policy on this soon. <strong>Action:</strong> get ahead of it — draft a smart-glasses/wearable-recording disclosure policy before an incident forces a reactive one.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/australia-considers-banning-the-use-of-smart-glasses-in-government-buildings-629007" target="_blank" rel="noopener">Australia considers banning smart glasses in government buildings</a>
+      <p>Regulators are weighing restrictions that could extend to major corporate employers as always-on recording wearables become mainstream.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Government-building bans typically precede broader corporate/regulatory guidance in Australia. <strong>For enterprise security/facilities teams:</strong> monitor this closely — if government sets the precedent, expect pressure to adopt similar restrictions in sensitive corporate environments (secure floors, exec briefing centres, data centres) within the following year.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
