@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 22 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Tuesday, 22 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/anthropic-quietly-sets-up-biology-lab-629046" target="_blank" rel="noopener">Anthropic quietly sets up a biology lab</a>
+      <p>Anthropic has established an in-house biology lab, hiring wet-lab scientists to accelerate its AI-driven drug discovery program, extending its model-building work into experimental life sciences.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Anthropic is no longer purely a model vendor — building physical lab capacity signals it intends to own more of the AI-drug-discovery value chain rather than just license models to pharma partners. <strong>Watch for:</strong> if you're evaluating AI vendors in biotech or pharma, expect Anthropic to compete more directly with specialised drug-discovery AI vendors rather than remain a neutral infrastructure supplier.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://qz.com/anthropic-claude-ai-research-development-automation-091826" target="_blank" rel="noopener">Anthropic says Claude now leads 26% of its own AI R&D work</a>
+      <p>Anthropic's self-reported internal metrics show Claude "leads" 26% of the company's AI research work as of August, up from zero in February, using an automation scale where the model completes most of a task from a high-level prompt under human supervision.</p>
+      <div class="src">Source: Quartz</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the first hard, if self-reported and unverified, number on how fast a frontier lab is automating its own R&D pipeline — a climb from 0% to 26% in six months. <strong>Takeaway:</strong> if AI labs are automating their own model-building work this fast, plan technology roadmaps on an accelerating capability curve rather than assuming a slowdown.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://edition.cnn.com/2026/09/19/business/ai-slowdown-lawsuit-antitrust" target="_blank" rel="noopener">Antitrust suit accuses Anthropic, OpenAI, SpaceX AI and Google of illegally colluding to slow AI development</a>
+      <p>The suit alleges the four companies coordinated on AI deceleration after Anthropic CEO Dario Amodei's 12 September essay calling for industry-wide slowdown drew public agreement from Altman, Musk and Hassabis the same day, breaching the Sherman Act.</p>
+      <div class="src">Source: CNN Business</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The suit doesn't dispute that safety-driven slowdowns are legitimate — it argues doing so by coordinated agreement, rather than unilaterally, breaches antitrust law. <strong>Implication:</strong> expect AI labs to grow far more cautious about public statements that look like coordinated pacing, which could weaken cross-lab safety commitments as a governance tool.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://pandaily.com/stepfun-step-5-preview-600b-moe-1m-context" target="_blank" rel="noopener">China's StepFun launches Step 5, a 600B-parameter open-weight model with 1M-token context</a>
+      <p>StepFun's Step 5 Preview is a 600-billion-parameter sparse mixture-of-experts model priced at $1/$2.70 per million tokens, with open weights due 15 October; it trails GPT-6 Astra and Claude Opus 5 on coding benchmarks but undercuts them sharply on price.</p>
+      <div class="src">Source: Pandaily</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another Chinese lab shipping a frontier-scale, near-frontier-capability model at a fraction of Western API pricing, with open weights following in weeks. <strong>Implication:</strong> for cost-sensitive, long-context or agentic workloads that don't need top-tier coding performance, expect procurement teams to start benchmarking Chinese open-weight models on price/performance, not just capability.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html" target="_blank" rel="noopener">Cisco ISE zero-day (CVSS 10.0) under active exploitation, no workaround</a>
+      <p>CVE-2026-76460 is a maximum-severity authentication-bypass flaw in Cisco Identity Services Engine and ISE-PIC that's already being exploited and can lead to root-level command execution; CISA has added it to its Known Exploited Vulnerabilities catalog.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A maximum-severity, no-workaround, actively exploited flaw in an identity/NAC platform is about as high-priority as patching gets — ISE sits at the centre of network access control for most enterprises that run it. <strong>Action:</strong> patch immediately; where same-day patching isn't possible, apply infrastructure ACLs to lock down management-plane access as an interim control.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html" target="_blank" rel="noopener">Fake LastPass Authenticator installer abuses signed driver to kill antivirus and EDR</a>
+      <p>Attackers are distributing a fake LastPass Authenticator installer via a GitHub impersonation page that deploys a Microsoft-signed kernel driver to disable security software before running password-stealing malware.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Abusing a legitimately signed driver to blind security tooling before the real payload runs is a technique moving from nation-state toolkits into commodity credential-theft campaigns. <strong>Action:</strong> block known-abused signed driver hashes at the EDR/application-control layer, and remind staff to only install security software from vendor-verified sources, not GitHub search results.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/contagious-interview-campaign.html" target="_blank" rel="noopener">"Contagious Interview" campaign compromises 30,000 devices, steals $10.71M in crypto</a>
+      <p>North Korean-linked operators posing as recruiters have compromised more than 30,000 devices across 100+ countries by tricking tech and crypto job seekers into running malicious "interview" code.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Fake-recruiter malware campaigns keep scaling because the social-engineering premise, a job interview, reliably bypasses technical staff's usual scepticism. <strong>Action:</strong> brief developers and crypto-adjacent staff specifically on this pattern — legitimate interviews don't require candidates to clone and run unverified code locally.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location" target="_blank" rel="noopener">Ireland's DPC fines Google €403 million over unlawful location-data processing</a>
+      <p>Ireland's Data Protection Commission found Google's processing of Web & App Activity and Location History data between 2018-2020 breached GDPR's lawfulness, fairness and transparency principles, and ordered compliance within six months.</p>
+      <div class="src">Source: Data Protection Commission (Ireland)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The fourth-largest DPC penalty since GDPR took effect, and a reminder that years-old data practices are still landing major fines today. <strong>Implication:</strong> if your organisation processes EU location or behavioural data under a legal basis you haven't re-tested recently, treat this as a prompt to revisit it — "it was fine when we built it" isn't a defence years later.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://csrc.nist.gov/projects/fips-140-3-transition-effort" target="_blank" rel="noopener">All FIPS 140-2 cryptographic module validations move to Historical status</a>
+      <p>As of 21 September 2026, remaining FIPS 140-2 certificates have moved to Historical status under NIST's Cryptographic Module Validation Program; FIPS 140-3 is now the only standard accepted for new validations, though existing Historical-status modules remain usable subject to agency or contract terms.</p>
+      <div class="src">Source: NIST CSRC</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This doesn't break anything running today, but it removes the compliance standing that federal procurement, FedRAMP and various defence and healthcare contracts are built on. <strong>Action:</strong> if you sell into government, defence or regulated clients, audit which products in your stack still cite FIPS 140-2 validation and confirm with vendors whether FIPS 140-3-validated versions exist for new procurements.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itpro.com/business/leadership/advania-targets-fresh-growth-with-new-uk-chief-executive" target="_blank" rel="noopener">Advania UK names Annette Murphy as permanent CEO</a>
+      <p>Advania has appointed Annette Murphy, previously chief commercial officer at Colt Technology Services with prior senior roles at Lumen and BT, as permanent CEO of Advania UK, tasked with growing its AI platform and mid-market presence.</p>
+      <div class="src">Source: ITPro</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large European MSP pulling its next CEO from a major carrier rather than internal channel ranks signals it's betting growth comes from selling platform and AI capability at scale, not just channel relationships. <strong>Watch for:</strong> Advania's UK strategy under Murphy as a bellwether for how carrier-background leadership reshapes MSP go-to-market.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.pax8.com/blog/pax8-and-microsoft-updates-for-september-2026-apac/" target="_blank" rel="noopener">Microsoft introduces new CSP "growth margin" for partners from October 2026</a>
+      <p>Microsoft's Cloud Solution Provider program will add a growth margin rewarding partners for qualifying customer growth, new-to-offer, seat expansion or strategic mix, across Microsoft 365 Copilot, E5/E7, Defender and Purview suites, and Windows 365 Enterprise.</p>
+      <div class="src">Source: Pax8</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Microsoft is restructuring CSP economics to explicitly reward partners who drive Copilot and security-suite expansion, not just base licence resale. <strong>Action:</strong> MSPs reselling Microsoft 365 should model the new growth margin against current CSP margins now, since it changes which upsell motions are most profitable from October.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/asd-says-prompt-injection-in-ai-cannot-be-fixed-629019" target="_blank" rel="noopener">ASD says prompt injection in AI "cannot be fixed"</a>
+      <p>The Australian Signals Directorate says prompt injection cannot be fixed as a class of AI vulnerability, urging organisations to rely on harness-level controls, restricting what agentic AI tools can access and do, rather than expecting the underlying model to reliably resist manipulation.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A national cyber authority publicly stating a top AI risk class is architecturally unfixable is a stronger, more direct position than most vendor messaging around agentic AI safety. <strong>Action:</strong> for any AI agent with access to tools, data or actions, design and audit the harness, permissions, scopes, human approval gates, as the primary control, not the model's own judgement.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/anglicare-victoria-secures-its-ai-adoption-629020" target="_blank" rel="noopener">Anglicare Victoria secures its AI adoption</a>
+      <p>Director of IT Services Dean Mills discusses in a new iTnews podcast how the aged and community care provider is securing growing staff AI usage, balancing productivity gains against data-handling risk in a highly regulated sector.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A practical, sector-specific case study rather than a vendor pitch, from an organisation handling sensitive client data under strict compliance obligations. <strong>For MSPs and internal IT teams in health, aged care and community services:</strong> Anglicare Victoria's governance approach is worth reviewing when scoping AI guardrails for similarly regulated clients.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/aussie-mobile-telcos-face-automatic-customer-compensation-for-outages-629067" target="_blank" rel="noopener">Aussie mobile telcos face 'automatic' customer compensation for outages</a>
+      <p>The Australian government is weighing automatic compensation for mobile customers hit by telco outages, but the major parties are split on the proposal, with debate centring on scope, thresholds and who bears the cost.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Automatic compensation would shift outage risk from a reputational problem to a direct, quantifiable financial liability for telcos. <strong>Watch for:</strong> if your business depends on mobile carriers for critical connectivity, an automatic compensation scheme could also strengthen your own commercial leverage in SLA negotiations with network providers.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
