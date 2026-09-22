@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 23 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Wednesday, 23 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/" target="_blank" rel="noopener">Newsom orders a blueprint for a frontier-AI "kill switch"</a>
+      <p>California's executive order directs agencies to draft rules by 16 November requiring independent auditors embedded on-site at frontier AI labs, plus an emergency shutoff mechanism for frontier models.</p>
+      <div class="src">Source: Governor of California (gov.ca.gov)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">With Washington explicitly stepping back from AI safety regulation this week, California is filling the vacuum with binding state-level rules, on-site auditors and a mandated emergency shutoff for frontier models. <strong>Why it matters:</strong> any org building on frontier models should expect a state-by-state compliance patchwork rather than one federal standard, and should track California specifically since its rules tend to become de facto national baselines.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.axios.com/2026/09/19/trump-ai-czar-space-force-safety" target="_blank" rel="noopener">Trump dismisses AI safety as a "hoax," announces an "AI Force"</a>
+      <p>Trump said he'll create an AI Force modelled on Space Force and name a new AI czar, rejecting an Anthropic researcher's warning that AI could pose existential risk within a decade.</p>
+      <div class="src">Source: Axios</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Paired with Newsom's order the same week, this confirms a widening split between a deregulation-first federal posture and stricter state action. <strong>Implication:</strong> compliance planning built around an eventual single federal AI framework is now a weaker bet than planning for divergent state rules, starting with California's.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/us-proposes-ai-incident-alert-system-in-talks-with-china-bessent-says/" target="_blank" rel="noopener">US proposes an AI incident "hotline" with China</a>
+      <p>Treasury Secretary Bessent says Washington pitched Beijing a notification mechanism for AI incidents that could threaten national security, ahead of a Trump-Xi meeting.</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A bilateral AI-incident notification channel between the two dominant AI powers would be a first, and a template other governments may copy for cross-border AI risk coordination. <strong>Watch for:</strong> whether China actually reciprocates, since its official readout barely mentioned AI, suggesting the offer may stay one-sided for now.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bloomberg.com/news/articles/2026-09-21/startups-like-harvey-embrace-open-models-to-cut-reliance-on-anthropic-openai" target="_blank" rel="noopener">Legal AI firm Harvey drops OpenAI and Anthropic for its own Kimi K3-based model</a>
+      <p>Harvey's gross margin swung to roughly -50% as usage-based token costs rose twentyfold; its new in-house model, built on Chinese lab Moonshot's open-weight Kimi K3, restored positive margins within weeks.</p>
+      <div class="src">Source: Bloomberg</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An OpenAI-backed company abandoning OpenAI and Anthropic's usage-based pricing for a self-hosted Chinese open-weight model is a concrete signal that frontier API economics are becoming unworkable for high-volume vertical AI products. <strong>Action:</strong> if your product or internal tooling has token spend scaling faster than revenue, model an open-weight/self-hosted fallback now rather than after margins go negative.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" target="_blank" rel="noopener">Critical flaw in Bifrost AI gateway lets attackers run commands with one request</a>
+      <p>CVE-2026-90898 (CVSS 9.8) lets an unauthenticated attacker register a malicious MCP client via a single API call and execute arbitrary commands, exposing every connected LLM provider's API keys. Fixed in transports/v2.1.0.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Bifrost sits in front of 20+ LLM providers and stores all their credentials, so one unauthenticated request compromises every provider key behind it. <strong>Action:</strong> if you run Bifrost, patch to transports/v2.1.0 immediately, restrict the management API to trusted networks, and treat any exposed instance as compromised, rotating all provider API keys.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html" target="_blank" rel="noopener">Microsoft dismantles "EvilTokens," an AI-powered phishing-as-a-service platform</a>
+      <p>The Telegram-sold service used AI at every stage, including an AI chatbot that mined compromised mailboxes for fraud opportunities, compromising over 12,000 inboxes across 10,000+ organisations, including in Australia. Microsoft seized 50 sites and UK police made two arrests.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is one of the clearest examples yet of AI embedded across an entire commodity attack chain, from lure generation to post-compromise fraud targeting, not just used to write phishing emails. <strong>Action:</strong> device-code phishing bypasses password and even some MFA flows, so restrict or disable device-code authentication in Entra ID/Azure AD unless a specific business need requires it.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/check-point-warns-of-management-server.html" target="_blank" rel="noopener">Check Point management server zero-day exploited in targeted attacks</a>
+      <p>CVE-2026-93616 (CVSS 9.8), a path-traversal flaw in Check Point Security Management Server, was actively exploited from 23 July before today's fix. It lets unauthenticated attackers upload and run scripts.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is the server that controls firewall policy, so compromise here is a path to controlling network-wide security posture, and it was exploited in the wild for two months before disclosure. <strong>Action:</strong> apply the fix in sk1000171 immediately and run the hunting guidance in the same advisory, since patching alone won't reveal whether you were already hit during the exploitation window.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html" target="_blank" rel="noopener">WordPress core patches critical unauthenticated file-inclusion flaw</a>
+      <p>CVE-2026-87902 (CVSS 9.2) affects WordPress core versions 4.7 through 7.1.1 and, under specific theme conditions, can escalate to remote code execution. Fixed in 7.1.2, 7.0.6 and 6.9.9.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A core-software flaw, not a plugin, means the exposure spans a huge share of the web regardless of which plugins a site runs. <strong>Action:</strong> update WordPress sites to the latest patched release for your branch now; if you manage client WordPress sites, treat this as an urgent patch cycle rather than routine maintenance.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.infoworld.com/article/4223072/the-cloud-outage-that-should-terrify-the-cio.html" target="_blank" rel="noopener">One Azure region outage took down ChatGPT, Claude, Grok and Copilot together</a>
+      <p>A single Azure East US failure on 3 September knocked four major AI services from four different companies offline within 90 minutes, generating 66,000+ outage reports, exposing how much AI infrastructure shares the same cloud backbone.</p>
+      <div class="src">Source: InfoWorld</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">As AI agents take over procurement, finance and other core workflows, the blast radius of a single cloud region failing grows from "annoying" to "revenue-critical," and most enterprises haven't mapped which of their AI dependencies actually share infrastructure. <strong>Action:</strong> map your AI and cloud dependency chains for shared-region risk, and put a dollar figure on downtime exposure to justify multi-region or multi-provider failover investment.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://dealroom.co/news/155404-it-solutions-buys-detroits-stack-cybersecurity-to-bolster-ai-and-securit/" target="_blank" rel="noopener">MSP IT Solutions acquires STACK Cybersecurity to add AI enablement</a>
+      <p>The Detroit-area MSSP and AI-enablement firm was acquired to combine cybersecurity governance with AI adoption services under one roof, closing 22 September.</p>
+      <div class="src">Source: Dealroom</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This continues a clear consolidation pattern: MSPs are buying security and AI-governance capability rather than building it, because clients increasingly won't adopt AI without a governance story attached. <strong>For MSP leaders:</strong> cybersecurity governance is becoming the entry ticket to selling AI services, not a separate line item, worth reflecting in how AI offerings are packaged and sold.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.prnewswire.com/news-releases/mspalliance-launches-ucs-4-0--establishing-ai-governance-requirements-for-managed-service-providers-302880965.html" target="_blank" rel="noopener">MSPAlliance launches UCS 4.0, its first AI-governance certification standard</a>
+      <p>Effective from 1 July, the updated Unified Certification Standard formally frames MSPs as custodians of both human and non-human (AI agent, service account) identities, with new requirements for identity, access and third-party oversight.</p>
+      <div class="src">Source: PR Newswire</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is one of the first formal certification frameworks to treat AI-agent identities as equivalent to human identities requiring governed access controls, ahead of most regulatory requirements catching up. <strong>Action:</strong> MSPs pursuing or holding UCS certification should review non-human identity and AI-agent access controls now, since this will likely become a client due-diligence checklist item before it's a compliance mandate.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/suncorp-group-brings-ai-into-its-risk-function-629054" target="_blank" rel="noopener">Suncorp Group brings AI into its risk function</a>
+      <p>The insurer is using AI for incident lodgement classification and a chatbot that simplifies long, technical risk-policy documents for staff, part of a broader push to apply generative AI beyond customer-facing use cases.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Suncorp is applying AI to internal governance and compliance workflows, not just customer channels, a maturity signal for regulated ANZ enterprises moving past pilot-stage chatbots. <strong>For financial services and insurance IT leaders:</strong> internal risk/compliance functions are an underused AI use case worth benchmarking against Suncorp's approach.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/beware-dprk-job-scams-asd-warns-but-wont-confirm-local-impact-629081" target="_blank" rel="noopener">ASD warns of DPRK fake-recruiter malware campaign, won't confirm local impact</a>
+      <p>The Australian Signals Directorate joined international partners warning that North Korean group "WaterPlum" has infected 30,000+ devices globally via fake job offers, but declined to say whether Australian organisations were among the victims.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A national cyber authority issuing a warning while declining to confirm domestic impact leaves Australian organisations unable to gauge their actual exposure from official channels alone. <strong>Action:</strong> don't wait for confirmed local-impact data; brief developers and crypto-adjacent staff now on the fake-interview pattern, since the advisory itself is the actionable signal regardless of confirmed local victims.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/new-zealand-academics-call-for-ai-office-as-fears-grow" target="_blank" rel="noopener">NZ academics call for a dedicated AI office as fears grow</a>
+      <p>University of Canterbury researchers argue New Zealand should set up an AI office to coordinate policy and represent the country in international AI-safety talks, positioning NZ as a "critical and responsible adopter" rather than a builder of frontier systems.</p>
+      <div class="src">Source: IT Brief New Zealand</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">New Zealand currently has no dedicated AI coordination body while Australia, Canada and others have already stood theirs up, leaving policy scattered across existing agencies. <strong>Watch for:</strong> if an Office of AI is established, it would likely become the reference point for procurement guidance and compliance expectations for any NZ organisation deploying AI systems.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
