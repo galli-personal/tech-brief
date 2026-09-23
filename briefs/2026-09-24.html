@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 24 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Thursday, 24 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/23/ai-leaders-to-brief-un-amid-warnings-the-technology-could-slip-beyond-human-control/" target="_blank" rel="noopener">AI leaders brief UN Security Council amid warnings AI could "slip beyond human control"</a>
+      <p>OpenAI's Sam Altman, Anthropic's Dario Amodei, Hugging Face's Clément Delangue and UN AI panel co-chair Yoshua Bengio addressed the 15-member Security Council in a session convened by France, the first to host both US and Chinese frontier AI developers together.</p>
+      <div class="src">Source: BNN Bloomberg</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Frontier AI safety has moved from industry conferences to the UN Security Council floor, with Altman separately pushing for UN-adopted global capability/safety benchmarks. <strong>Why it matters:</strong> the gap between the US's pro-acceleration stance and UN calls for binding governance is widening, not narrowing. <strong>Watch:</strong> any move toward international benchmarks could eventually shape procurement and compliance requirements, similar to how export controls followed earlier chip policy debates.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" target="_blank" rel="noopener">OpenAI launches GPT-6 Sol and Luna at half the price of the prior tier</a>
+      <p>Sol targets everyday reasoning and coding at $2/$10 per million tokens, while Luna is a fast, ultra-cheap model at $0.10/$0.50 per million tokens. OpenAI says Sol makes roughly half as many mistakes as GPT-5.6 Sol and matches or beats Claude on some benchmarks.</p>
+      <div class="src">Source: TechCrunch</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A meaningful price cut at improved quality tightens the competitive squeeze on every other frontier lab, including Anthropic. <strong>For buyers:</strong> re-run cost/quality comparisons on any workload currently pinned to a single vendor's mid-tier model, since the economics just shifted materially in OpenAI's favour.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://siliconangle.com/2026/09/22/googles-robotics-unit-intrinsic-open-sources-its-foundational-infrastructure-for-intelligent-robots/" target="_blank" rel="noopener">Alphabet's Intrinsic open-sources its industrial robotics platform</a>
+      <p>Announced at ROSCon 2026 in Toronto: a ROS-compatible stack for real-time control, pose estimation and motion/grasp planning, released under Apache 2.0 to lower the barrier to building intelligent robots.</p>
+      <div class="src">Source: SiliconANGLE</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major cloud player open-sourcing core robotics infrastructure mirrors the earlier open-model playbook in LLMs: commoditise the substrate, compete on the layer above it. <strong>For manufacturing and logistics operators:</strong> this lowers the cost of entry for building custom robotics rather than buying closed vertical solutions, worth a look if automation is on the roadmap.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/security-researcher-says-dont-install-metas-muse-ai-assistant-629088" target="_blank" rel="noopener">Security researcher warns against installing Meta's Muse AI assistant over zero-day risk</a>
+      <p>Patrick Wardle disclosed an unpatched flaw in Meta's Muse personal AI agent: an undocumented setting can redirect audio to an attacker's server, serious given Muse's broad permissions over files, mic, camera, location and calendar.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Consumer AI agents are shipping with device-level permissions well ahead of their security maturity. <strong>Action:</strong> if staff use personal AI assistants on devices that also touch corporate data, treat them as unmanaged endpoints in your BYOD policy until vendors demonstrate a security response process, not just a feature roadmap.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/f5-warns-of-big-ip-apm-remote-code-execution-zero-day-exploited-in-attacks/" target="_blank" rel="noopener">F5 patches BIG-IP APM zero-day exploited for unauthenticated RCE</a>
+      <p>CVE-2026-94127 (CVSS 9.8), a heap-based buffer overflow in BIG-IP APM configured as an OAuth Authorization Server, is under active exploitation. CISA added it to KEV with a 25 September remediation deadline for federal agencies.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Unauthenticated RCE on internet-facing access infrastructure, already weaponised. <strong>Action:</strong> if you run BIG-IP APM as an OAuth Authorization Server, apply F5's hotfix or the iRule mitigation today rather than waiting for the next patch cycle, this is not a routine severity rating.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/critical-nextjs-imageresponse-flaw-can.html" target="_blank" rel="noopener">Critical Next.js flaw allows server code execution via crafted SVG</a>
+      <p>CVE-2026-94545 (CVSS 9.5) affects Next.js 16.2.0-16.3.5 due to improper escaping in Satori-generated SVG output when user-controlled data feeds the ImageResponse function. Patched in 16.3.6.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Any app using ImageResponse with user-supplied input (og-image generation, dynamic social cards) is exposed to server-side code execution. <strong>Action:</strong> upgrade to 16.3.6 now and audit for any endpoint that passes user data into ImageResponse, this is a straightforward exploitation path once public.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/" target="_blank" rel="noopener">Malicious AI agents steal 600K+ credit cards, infect 100+ retail sites with skimmers</a>
+      <p>A financially motivated actor is using open-source AI agent frameworks (Strix, Cairn, Hermes) to compromise at least 119 online retailers since July, at an estimated cost of roughly $25 per target.</p>
+      <div class="src">Source: BleepingComputer</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Agentic automation has cut the cost of running a large-scale skimmer campaign to near-nothing, meaning volume attacks against smaller e-commerce sites will keep rising. <strong>Action:</strong> any org running an online store should confirm PCI-scope segmentation and script integrity monitoring (SRI/CSP) are actually in place, not just documented.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/new-malware-lets-commercial-ai-models-call-the-shots-talos-629108" target="_blank" rel="noopener">New malware "CLOSEDQUORUM" lets commercial AI models vote on its next move</a>
+      <p>Cisco Talos describes the first publicly documented Windows implant using LLMs (DeepSeek, Qwen, Mistral, Gemini) for automated command-and-control, querying multiple models and executing whichever action gets the most votes. The analysed sample used placeholder API keys, so no confirmed real-world victims yet.</p>
+      <div class="src">Source: iTnews (Cisco Talos research)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Still a proof-of-concept rather than an active campaign, but it's a concrete preview of LLM-driven malware decision-making rather than static logic. <strong>For defenders:</strong> outbound traffic to commercial LLM API endpoints from unexpected processes is a detection signal worth adding now, before this pattern matures into deployed tooling.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://siliconangle.com/2026/09/22/okta-adds-ai-agent-runtime-gateway-forms-blueprint-alliance-with-aws-and-crowdstrike/" target="_blank" rel="noopener">Okta forms 12-vendor "Blueprint Alliance" to secure enterprise AI agents</a>
+      <p>Announced at Oktane with AWS, CrowdStrike, Google Cloud, Salesforce, ServiceNow and others: an open reference architecture for agent identity and security, plus Okta's new Agent Gateway (runtime enforcement with a session/token kill switch) and Agent SSO, now generally available.</p>
+      <div class="src">Source: SiliconANGLE</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A cross-vendor consortium forming around agent identity signals the market has accepted that long-lived API keys for agents are a dead end. <strong>For MSPs:</strong> start scoping how client environments will adopt short-lived, identity-bound tokens for AI agents, this is likely to become a baseline security expectation within 12-18 months.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://techcommunity.microsoft.com/blog/partnernews/whats-new-for-msps-september-2026/4558733" target="_blank" rel="noopener">Microsoft launches new monthly "What's New for MSPs" blog series</a>
+      <p>The inaugural post covers Microsoft 365 Backup and Intune Suite roadmap updates, new partner tooling for managing AI agents and tenant configuration at scale, and the first "Microsoft Meetups for MSPs" session.</p>
+      <div class="src">Source: Microsoft Tech Community</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A dedicated, recurring MSP communication channel from Microsoft is worth subscribing to directly rather than relying on general partner-program noise. <strong>Action:</strong> add this to the regular reading list for the team tracking M365/Intune roadmap changes, it's likely to become the first place Microsoft surfaces partner-relevant tooling changes.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/cloudbrink-launches-onguard-to-unify-enterprise-security" target="_blank" rel="noopener">Cloudbrink launches "OnGuard" to unify enterprise security under one policy framework</a>
+      <p>Consolidates secure access, secure web gateway, AI security and remote connectivity into a single console, extending policy enforcement to devices pre-login, positioned against point-tool sprawl.</p>
+      <div class="src">Source: IT Brief NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Another entrant in the security-platform consolidation trend that's been building all year (SASE, XDR, now agent security folded in too). <strong>For MSPs managing multiple point tools per client:</strong> consolidation vendors are worth evaluating for reducing tool sprawl, but weigh migration cost and lock-in against the admin savings before committing.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/interview-cloudera-says-open-ended-ai-spending-is-over" target="_blank" rel="noopener">Cloudera: "open-ended AI spending is over" for large enterprises</a>
+      <p>Cloudera leadership says enterprises now demand measurable ROI, clearer deployment plans and lower infrastructure cost before further AI investment, and is pivoting toward private/sovereign AI with a new "Applied AI" organisation.</p>
+      <div class="src">Source: IT Brief NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A vendor with visibility across large enterprise data estates is publicly calling the end of blank-cheque AI pilots. <strong>For anyone building an internal AI business case:</strong> this is useful cover, lead with ROI and production deployment plans rather than experimentation budget, that's now the bar decision-makers expect.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/ato-culture-keeps-a-cap-on-agentic-ai-ambitions-629118" target="_blank" rel="noopener">ATO's risk-averse culture caps its agentic AI ambitions</a>
+      <p>The Australian Taxation Office keeps Copilot Chat's agentic features disabled over sensitive financial-data risk, shifting philosophy from "human in the loop" to "human at the helm," and favours process reengineering and traditional ML over full agentic AI for most use cases.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A major public-sector agency deliberately choosing caution over the agentic-AI hype cycle is a useful counterweight to vendor messaging. <strong>Takeaway:</strong> "human at the helm" is a cleaner accountability framing than "human in the loop" for any org justifying why it hasn't switched on agentic features yet, worth borrowing for governance conversations.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/telstra-deploys-ai-agent-to-help-it-meet-customer-service-guarantee-629105" target="_blank" rel="noopener">Telstra deploys AI agent to help meet its Customer Service Guarantee</a>
+      <p>Built on Salesforce Agentforce, the agent automates the end-to-end process of keeping customers informed while they wait for fixed-line service restoration, cutting admin load on over 1,000 contact-centre staff.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A concrete, narrow-scope agentic AI deployment (status updates, not decision-making) tied to a regulatory obligation is a more realistic template than open-ended "AI transformation" pitches. <strong>For service delivery teams:</strong> look for similarly bounded, high-volume-but-low-risk processes as first agentic AI candidates rather than starting with judgment-heavy workflows.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/australia-new-zealand-top-asia-pacific-in-it-stability" target="_blank" rel="noopener">Australia and New Zealand top Asia-Pacific in IT operational stability</a>
+      <p>New Relic's 2026 Observability Forecast finds ANZ organisations report the region's lowest outage frequency and downtime costs, but fragmented monitoring tools and growing AI-generated code complexity are widening the gap between detecting and resolving problems.</p>
+      <div class="src">Source: IT Brief NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Good headline stability numbers mask a growing detection-to-resolution gap as AI-generated code adds complexity faster than observability tooling consolidates. <strong>Action:</strong> if AI coding assistants are in active use, revisit whether observability coverage has kept pace with the code volume they're producing, this is exactly the gap the report flags.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/agi-is-coming-the-future-of-work-isn-t-ready" target="_blank" rel="noopener">AGI is coming. The future of work isn't ready</a>
+      <p>Opinion piece arguing NZ and Australian organisations must proactively redesign roles around "Human + AI" collaboration now, warning that delay risks sliding into an "AI + Human" model that erodes human capability over time.</p>
+      <div class="src">Source: IT Brief NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The "Human + AI" versus "AI + Human" framing is a sharp way to describe the difference between humans directing AI tools and humans becoming the fallback for AI-run processes. <strong>Use it as a discussion prompt</strong> when scoping AI-driven process redesigns, it forces an explicit choice about which model a given workflow is heading toward before implementation, not after.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; “Exec summary” expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
