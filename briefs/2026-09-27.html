@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 27 September 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Sunday, 27 September 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/microsoft-revamps-its-copilot-ai-with-a-persistent-autopilot-agent-and-hosting-for-ai-generated-apps" target="_blank" rel="noopener">Microsoft revamps Copilot with a persistent "Autopilot" agent and hosting for AI-built apps</a>
+      <p>The redesign splits Copilot into three destinations: Home, Code, and Autopilot, an always-on agent that keeps working on assigned projects after staff sign off, plus managed hosting for apps Copilot generates.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An agent that keeps running unattended and apps hosted directly by Microsoft both raise the same question: how much standing responsibility and infrastructure are you comfortable handing to AI without a human checkpoint. <strong>Action:</strong> before enabling Autopilot for any team, confirm what it's authorised to do while unsupervised and who reviews its output before it ships.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/stanford-and-nvidias-open-clm-8b-caches-reusable-agent-actions-and-runs-up-to-9x-faster-than-jev-in-tests" target="_blank" rel="noopener">Stanford and Nvidia's open CLM-8B cuts agent latency by caching reusable actions</a>
+      <p>Rather than generating tokens for every decision, the 8B model matches states and available actions in a shared embedding space, running up to 9x faster than rival Jev in bounded, predefined-action scenarios.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Most enterprise agent workflows (approve/reject, route to queue, pick from a menu of tools) are exactly the bounded-action case this targets, not open-ended generation. <strong>Why it matters:</strong> if agent latency or token cost is a pain point in a specific workflow, this is a concrete architecture worth benchmarking rather than assuming a bigger model is the fix.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/zero-trust-for-ai-agents-starts-with.html" target="_blank" rel="noopener">Zero Trust for AI agents starts with fixing zero visibility</a>
+      <p>Research cited puts 70% of organisations running AI workflows against sensitive data without full oversight — agents show up as shadow IT, no single team can see all of them, and periodic audits can't keep pace with how fast they're deployed.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Zero Trust policy is meaningless if you don't have a complete inventory of the agents it's supposed to govern. <strong>Action:</strong> before investing in agent permission controls, confirm there's a single, current inventory of every agent touching sensitive data — most of the "governance gap" starts there, not with the controls themselves.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html" target="_blank" rel="noopener">Attackers bypass WAFs to exploit critical Oracle PeopleSoft flaw at scale</a>
+      <p>Google warns of mass exploitation of CVE-2026-35273 (CVSS 9.8), an unauthenticated RCE in PeopleSoft. ShinyHunters-linked group UNC6240 evades WAF rules by URL-encoding a single character, deploying web shells and a backdoor across education, healthcare and government targets.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A one-character encoding trick defeating WAF rules shows how thin some "virtual patching" defences are against a determined, financially motivated actor. <strong>Action:</strong> if you run PeopleSoft anywhere in the estate, patch CVE-2026-35273 directly rather than relying on WAF rules alone, and check logs for the "/%50SEMHUB/" encoding pattern as a compromise indicator.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html" target="_blank" rel="noopener">Roundcube pre-auth SQL injection flaw under active exploitation</a>
+      <p>CVE-2026-48842 lets an unauthenticated attacker inject SQL via Roundcube Webmail's virtuser_query plugin (versions before 1.6.16 / 1.7.1), exposing mail credentials and stored messages.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Webmail platforms are a common self-hosted choice for SMBs and are rarely front-of-mind for patch prioritisation. <strong>Action:</strong> if any client or internal system runs Roundcube, confirm it's on 1.6.16/1.7.1 or later today; pre-auth SQLi with no user interaction required means exposure starts the moment a version becomes public knowledge.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html" target="_blank" rel="noopener">Cloudflare fixes flaw letting one customer read another's leftover container disk data</a>
+      <p>Disabled disk-wiping in thin provisioning let attackers retrieve up to 60KB of unwiped data, including database pages and complete SQLite databases, from other customers' deleted containers. Found via bug bounty on 4 September, fixed by 19 September, no evidence of exploitation.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Multi-tenant compute isolation failing at the storage layer, not the network layer, is a reminder that "shared nothing" claims from cloud vendors deserve scrutiny rather than blanket trust. <strong>Action:</strong> no action needed on this specific flaw (patched, no known exploitation), but worth asking any shared-compute vendor how they handle disk wiping between tenant workloads.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html" target="_blank" rel="noopener">Kiteworks urges customers to shut down systems for nine hours over credible attack threat</a>
+      <p>Acting on threat intelligence from federal authorities, Kiteworks recommended a precautionary nine-hour shutdown window over the weekend. No compromise confirmed; the company points customers to version 9.5.1, which addresses all known vulnerabilities.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A vendor choosing a precautionary shutdown over silence is the right call, but it also means credible, specific threat intelligence about an imminent attack existed before any breach occurred. <strong>Action:</strong> if you or a client run Kiteworks, confirm you're on 9.5.1 and check whether the recommended shutdown window was actually followed.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/abandoned-qr-code-subdomains-open-to-hijacking-researcher-says-629200" target="_blank" rel="noopener">Abandoned QR code subdomains open to hijacking in under a minute</a>
+      <p>Researcher Farzan Karimi found that stale DNS records left behind by QR Tiger's custom-domain feature let attackers claim the subdomain and silently redirect legitimate, already-printed QR codes to malicious sites. QR Tiger had not fixed it five months after notification.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A QR code on a poster or invoice can't be "patched" once printed — if the underlying domain lapses, every physical copy silently becomes a phishing link. <strong>Action:</strong> if marketing or facilities teams use QR codes with a custom short-domain service, confirm the domain renews automatically and audit any codes tied to campaigns or vendors that may have gone stale.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://hostingdiscussion.com/news/azure-vmware-customers-face-an-october-deadline-tied-to-broadcoms-licensing-overhaul/" target="_blank" rel="noopener">Azure VMware Solution customers face an October 31 licensing deadline</a>
+      <p>Pay-as-you-go Azure VMware Solution customers must move to Broadcom's bring-your-own-license VCF model by 31 October 2026 or fall out of compliance; reserved-instance customers get until their term ends.</p>
+      <div class="src">Source: Hosting Discussion</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Compliance lapses here aren't abstract, non-compliant nodes risk service suspension. <strong>Action:</strong> if you manage any client's Azure VMware Solution footprint, confirm now whether they're PayGo or reserved-instance, and get BYOL VCF subscriptions purchased and applied well before 31 October.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-september" target="_blank" rel="noopener">Microsoft's CSP growth margins go live 1 October, eligibility API opened early</a>
+      <p>Microsoft gave distributors and direct-bill partners early access to the growth-margin eligibility API from 23 September ahead of the 1 October launch, while confirming a 5% partner margin cut on legacy and low-run-rate standalone SKUs from October.</p>
+      <div class="src">Source: Microsoft Learn</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Microsoft is explicitly rewarding new-customer growth and premium/AI workloads while quietly trimming margin on flat legacy run-rate, the CSP economics are shifting under partners' feet again. <strong>Action:</strong> check eligibility for growth margins now via the API, and model the margin impact on any legacy/standalone SKUs still making up a meaningful share of the book.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/09/compromised-github-actions-came-back.html" target="_blank" rel="noopener">Dormant compromised GitHub Actions repos came back online, resumed malware execution</a>
+      <p>Two repositories compromised in May's Shai-Hulud campaign were re-enabled on 16 September with their original malicious payloads untouched, meaning any workflow still referencing old release tags resumed executing infostealer code automatically, no new infrastructure required.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">"We remediated this months ago" doesn't hold if the fix was disabling the repo rather than removing the exposure, re-enabling it silently un-does the fix. <strong>Action:</strong> pin GitHub Actions to commit SHAs predating 18 May 2026, not tags or branches, and audit CI/CD workflow history for any client environments touched by this campaign.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/agl-builds-ai-agent-for-security-architecture-reviews-629052" target="_blank" rel="noopener">AGL builds its own AI agent for security architecture reviews</a>
+      <p>The Australian energy giant's security architecture team is using an internal agent that drafts security architecture review documents from Confluence pages and PDFs against threat-modelling frameworks, with expansion to solution architects under consideration.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A large ANZ enterprise choosing to build rather than buy for a security-sensitive workflow, and being deliberate about which vendor models touch which data, is a useful reference model. <strong>Why it matters:</strong> it's a concrete example of "AI drafts, human reviews" applied to a compliance-adjacent process, worth citing if building the case for narrow, internally-controlled agent deployments over broad vendor rollouts.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://itbrief.co.nz/story/auckland-to-host-game-developers-conference-after-boom" target="_blank" rel="noopener">NZ game development revenue hits NZD $1 billion, up from $759 million</a>
+      <p>Auckland Games Week will host the NZ Game Developers Conference at the ICC, with the sector's association citing growth at "more than 20 times the global average" year-on-year.</p>
+      <div class="src">Source: IT Brief New Zealand</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A "weightless" digital export sector growing 20x the global average, with no supply-chain constraints, is a rare good-news data point for NZ's tech economy. <strong>Why it matters:</strong> worth noting as a counterpoint when discussing NZ tech-sector health, and as a talent pool if any client work touches gaming, interactive media, or related digital-content tooling.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://securitybrief.co.nz/story/it-took-20-years-to-start-regulating-social-media-will-ai-controls-come-sooner" target="_blank" rel="noopener">Australia joins 22 nations pushing for faster global AI regulation</a>
+      <p>PM Anthony Albanese used the disclosure of the OpenAI Medicare portal breach to argue for AI controls, pointing to Australia's precedent of forcing action on social media and news-publisher payments, and noting apparent bipartisan appetite this time versus the 20 years social media regulation took.</p>
+      <div class="src">Source: SecurityBrief NZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Australia has a track record of moving fast and unilaterally on tech regulation once it decides to act (social media bans, media bargaining code), and is now signalling the same intent for AI. <strong>Action:</strong> if you operate in or serve the Australian market, treat binding AI-specific rules as a "when, not if" and keep vendor AI contracts and data-handling documentation ready for scrutiny sooner rather than later.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
