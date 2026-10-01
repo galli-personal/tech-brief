@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 2 October 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Friday, 2 October 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://www.helpnetsecurity.com/2026/10/01/divd-agentic-ai-attack-breach/" target="_blank" rel="noopener">Autonomous AI agent breaches Dutch cybersecurity nonprofit via chained zero-days</a>
+      <p>An agentic AI system chained two zero-day flaws in the Zammad helpdesk platform, escalating from an unauthenticated foothold to root access in seconds, without human direction.</p>
+      <div class="src">Source: Help Net Security</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is reportedly the first documented case of an AI agent independently deciding its own attack steps end to end, rather than executing a human-scripted exploit chain. <strong>Takeaway:</strong> patch Zammad to version 7 immediately if you run it, and start treating autonomous decision-making as a new variable in incident response speed, since detection windows built around human-paced attacks won't hold.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.helpnetsecurity.com/2026/10/01/google-ai-discovered-vulnerabilities-remote-code-execution/" target="_blank" rel="noopener">Google's AI-discovered vulnerabilities are the ones attackers want most</a>
+      <p>Analysis of automated vulnerability discovery tools finds the flaws AI systems surface skew toward high-impact remote code execution bugs, the same class attackers prioritise.</p>
+      <div class="src">Source: Help Net Security</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AI-assisted vulnerability discovery is maturing fast enough that defenders and attackers are now racing for the same bugs. <strong>Takeaway:</strong> if your vendors are adopting AI-assisted fuzzing and discovery, expect faster patch cycles but also a shorter gap between disclosure and exploitation, so patch management cadence needs to tighten accordingly.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/amazon-unveils-a-free-fast-open-source-jev-killer-strands-decider-2b-makes-decisions-in-fractions-of-a-second" target="_blank" rel="noopener">Amazon releases free open-source decision model for AI agent workflows</a>
+      <p>Strands Decider 2B, a roughly 2-billion-parameter model built on an Alibaba Qwen base, answers bounded yes/no and multiple-choice decisions inside an agent's workflow in a single pass, free under Apache 2.0.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A small, fast, free decision model aimed squarely at the slow and expensive part of agent pipelines: routing and bounded choices. <strong>Takeaway:</strong> if you're running agent workflows with cost or latency problems at the decision-routing step, this is a concrete, zero-licence-cost option worth piloting rather than defaulting to a full frontier model for every small decision.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/googles-wikiskill-gives-ai-agents-a-memory-of-what-went-wrong-without-putting-it-in-the-prompt" target="_blank" rel="noopener">Google's WikiSkill gives AI agents a persistent memory of past mistakes</a>
+      <p>A persistent knowledge layer turns an agent's past execution traces into reusable skills, improving task performance without bloating the prompt with accumulated history.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Context-window bloat from accumulated history is one of the quiet cost and reliability drains in production agents. <strong>Takeaway:</strong> externalising learned skills into a persistent store, rather than cramming history into every prompt, is a pattern worth evaluating if your agents get slower or more expensive the longer they run.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html" target="_blank" rel="noopener">CISA adds exploited Cisco Catalyst SD-WAN Manager flaw to its must-patch list</a>
+      <p>CVE-2026-76504 (CVSS 9.8) lets an unauthenticated attacker reach the SD-WAN Manager API with admin rights; CISA confirms active exploitation and adds it to the Known Exploited Vulnerabilities catalogue.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A 9.8 authentication bypass on network management infrastructure, now confirmed under active exploitation, is as urgent as patching gets. <strong>Takeaway:</strong> patch Catalyst SD-WAN Manager now, and if you can't patch immediately, pull management-plane access off the public internet today.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html" target="_blank" rel="noopener">Citrix NetScaler flaw exploited to plant hidden superuser accounts</a>
+      <p>Attackers are exploiting a pre-authentication command injection flaw in NetScaler ADC and Gateway to drop web shells disguised as CSS files and create a persistent superuser account.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Disguising a web shell as a CSS-style URL is designed specifically to survive a casual log review. <strong>Takeaway:</strong> if you run NetScaler, patch immediately and audit for unexpected local accounts and unfamiliar static-asset paths, since this persistence technique is built to blend in rather than stand out.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html" target="_blank" rel="noopener">Spanish police arrest 16-year-old suspected of running KillSec ransomware operation</a>
+      <p>Authorities seized the group's leak site, servers and more than 110 TB of stolen data in the takedown.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A teenager allegedly running a named ransomware brand is a reminder that the barrier to entry for ransomware-as-a-service has collapsed: skill and age are no longer reliable predictors of threat severity. <strong>Takeaway:</strong> calibrate risk assessments by the access and tooling available to an attacker, not by assumed sophistication, since both are now cheap and widely distributed.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/bitget-confirms-third-party-zero-day.html" target="_blank" rel="noopener">Bitget confirms third-party zero-day behind $387.5 million crypto theft</a>
+      <p>Attackers exploited flaws in two unnamed third-party security products to obtain high-level internal credentials and push fraudulent withdrawals across 11 blockchains; Bitget points to North Korean actors.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The breach didn't start with Bitget's own code: it started with security products Bitget trusted and integrated. <strong>Takeaway:</strong> third-party security tooling is part of your attack surface, not a mitigation of it, so vendor risk assessment needs to cover the security stack itself, not just the primary application.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.networkworld.com/article/4127142/azure-outage-disrupts-vms-and-identity-services-for-over-10-hours.html" target="_blank" rel="noopener">Azure network outage knocks out VMs and identity services for over 10 hours</a>
+      <p>A regional gateway management change collided with unrelated OS maintenance, degrading ExpressRoute and VPN Gateway connectivity across 19 regions from Japan West outward before recovery.</p>
+      <div class="src">Source: Network World</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A routine infrastructure change interacting badly with unrelated maintenance work is a familiar failure mode, and ten-plus hours of degraded hybrid connectivity is a long window for any customer leaning on Azure as primary connectivity. <strong>Takeaway:</strong> if your DR plan treats Azure networking as a single point of failure, this is a concrete data point for the business case to add a secondary path.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.channele2e.com/news/inside-microsofts-2026-ms365-retirements-what-msps-need-to-manage-now" target="_blank" rel="noopener">Microsoft trims partner margins and adds a cost-of-capital uplift on M365 from October 1</a>
+      <p>A 5% cost-of-capital uplift now applies to CSP annual-term monthly billing on products like SQL Server and Windows Server, alongside reduced partner margin on standalone products including Exchange Online and Office 365 E1/E3.</p>
+      <div class="src">Source: ChannelE2E</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Margin compression on standalone M365 products and a billing surcharge on annual-term CSP products land on the same date, squeezing the economics of exactly the products MSPs use to anchor recurring revenue. <strong>Takeaway:</strong> review CSP billing terms and standalone product mix now, since the margin and cash-flow impact compounds across a large customer base.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://aws.amazon.com/blogs/apn/updates-to-aws-channel-programs-to-drive-growth-in-2026/" target="_blank" rel="noopener">AWS updates its Channel Partner and MSP programs for 2026</a>
+      <p>Changes add enhanced incentives, streamlined benefits and new deal-registration capabilities aimed at helping partners scale AWS practices around modernisation and AI initiatives.</p>
+      <div class="src">Source: AWS Partner Network Blog</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AWS tightening deal registration and incentive structures usually comes with more scrutiny on how partners source and register opportunities, not just more upside. <strong>Takeaway:</strong> review the updated program terms against your current AWS practice before assuming the "enhanced incentives" headline applies to your existing deal flow unchanged.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.rnz.co.nz/news/business/1573453/anz-reportedly-considers-cutting-more-than-100-jobs-in-nz-it-teams" target="_blank" rel="noopener">ANZ Bank restructuring puts 100+ New Zealand tech jobs at risk</a>
+      <p>The bank is consulting on cuts across more than 400 technology roles, including QA and lead engineers, as it shifts work to its offshore hubs in India and the Philippines, with a final structure due to settle in early October.</p>
+      <div class="src">Source: RNZ</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">ANZ's technology and operations hubs in India and the Philippines now account for close to 30% of its global workforce, and this restructure extends that trend into New Zealand-based QA and engineering roles specifically. <strong>Takeaway:</strong> if you compete for enterprise IT talent in NZ, or support banking-sector IT clients, expect more experienced technology staff to become available locally over the next quarter.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/australias-firmus-to-launch-7-billion-ipo-on-october-6-629079" target="_blank" rel="noopener">Nvidia-backed Firmus lines up Australia's second-largest ever IPO to fund AI data centres</a>
+      <p>The AI data centre operator targets an A$7 billion ASX listing from 6 October, backed by Nvidia, Blackstone and Jane Street, with compute deals reportedly locked in with OpenAI and Meta.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A $7 billion float dedicated to AI data centre capacity, anchored by hyperscaler-adjacent compute deals, signals that AI infrastructure investment in Australia has moved from announcement to serious capital commitment. <strong>Takeaway:</strong> watch this listing as a bellwether for AI infrastructure investor appetite in the region, since its reception will shape how easily the next wave of data centre operators can raise locally.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://ecommercenews.com.au/story/australia-bans-card-surcharges-will-we-follow-suit" target="_blank" rel="noopener">Australia's card surcharge ban takes effect while New Zealand's stalls</a>
+      <p>From 1 October, Australian merchants can no longer surcharge on eftpos, Mastercard or Visa transactions, with fees folded into sticker prices; a similar New Zealand ban has lost support from coalition partners and remains unresolved.</p>
+      <div class="src">Source: eCommerceNews Australia</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Two near-identical reforms, one now live and one stalled, create a genuine pricing and compliance divergence for any retailer or payment provider operating across both markets. <strong>Takeaway:</strong> don't assume policy parity across the Tasman; AU-side systems need surcharge logic removed now, while NZ-side systems should stay flexible until the local bill's fate is clearer.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
