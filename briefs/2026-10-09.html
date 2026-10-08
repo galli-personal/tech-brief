@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 9 October 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Friday, 9 October 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/anthropic-expands-claude-access-for.html" target="_blank" rel="noopener">Anthropic expands Claude access for vetted security teams as Glasswing finds 129,000 flaws</a>
+      <p>Revamped three-tier Cyber Verification Program folds in Project Glasswing; partners found 129,000+ verified vulnerabilities between April and July, with Anthropic's own scanning adding 5,500 more.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This positions Claude as a sanctioned offensive/defensive security tool rather than a general chatbot, with named launch partners including AWS, Cisco, CrowdStrike, Google and Microsoft. <strong>For IT teams:</strong> if staff are already using AI for vulnerability triage, a vetted program like this is a safer channel than ad hoc use of frontier models with fewer guardrails.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna" target="_blank" rel="noopener">Claude Haiku 5.5 launches with up to 90% lower API pricing</a>
+      <p>New small model ships with a 1M-token context window at $0.10 input / $0.50 output per million tokens for prompts under 100K tokens, matching OpenAI's GPT-6 Luna pricing.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Cheap, fast models are now commodity-priced across both major labs, so cost is less of a reason to avoid embedding AI into routine workflows. <strong>For MSPs:</strong> a materially cheaper tier is worth re-costing for any high-volume AI-assisted task (ticket triage, log summarisation) already in pilot.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://openai.com/index/gpt-6-for-everyone/" target="_blank" rel="noopener">OpenAI rolls out GPT-6 with "Intelligent UI" to all ChatGPT tiers</a>
+      <p>GPT-6 Sol (paid tiers) and GPT-6 Luna (Free/Go) replace the GPT-5.6 models, adding interactive charts, buttons and forms directly in chat replies. OpenAI rates the release "High capability" in both cybersecurity and biological/chemical risk domains.</p>
+      <div class="src">Source: OpenAI</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The capability-tier bump matters more than the UI feature: OpenAI is self-rating this model as higher-risk in exactly the domains (cyber offence, bio/chem) that matter for misuse. <strong>For risk/compliance teams:</strong> check whether your AI acceptable-use policy references model capability tiers, since this is the first mainstream ChatGPT release at that rating.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.axios.com/2026/10/07/chatgpt-teens-safety-risk-common-sense-media" target="_blank" rel="noopener">Common Sense Media rates ChatGPT for Teens "Unacceptable Risk"</a>
+      <p>Testing on 4,000+ prompts against teen accounts found the chatbot missed over one in four warranted crisis referrals and let hour-long self-harm conversations pass without parental alerts. OpenAI disputes the findings.</p>
+      <div class="src">Source: Axios</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Regardless of this specific product, it's a usable benchmark for what "AI safety testing" should actually measure: crisis-response accuracy and alerting, not just content filtering. <strong>Relevance:</strong> directly useful as a checklist for any organisation deploying AI chat to under-18 users or other vulnerable cohorts.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/cisco-patches-35-vulnerabilities-across-several-products/" target="_blank" rel="noopener">Cisco patches 35 vulnerabilities, more than a dozen critical</a>
+      <p>October batch spans License On-Prem, NX-OS and Meraki; several flaws allow unauthenticated root-level code execution or denial of service, with no interim workaround for the worst advisories.</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No mitigation exists for several of the critical NX-OS and Meraki bugs, so this isn't a patch-when-convenient release. <strong>Action:</strong> prioritise NX-OS and Meraki-managed devices this cycle, and confirm with any client running License On-Prem whether they're on an affected build.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/splunk-patches-critical-flaw/" target="_blank" rel="noopener">Splunk patches critical 9.8 unauthenticated RCE in Enterprise search head clusters</a>
+      <p>CVE-2026-76268 lets an attacker with network access to a cluster's Patroni interface run OS commands with no login. Affects versions before 10.4.3 and 10.2.7; no active exploitation confirmed yet.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Splunk deployments sit deep inside security operations, so a pre-auth RCE here is a soft target for attackers wanting to blind a SOC before moving elsewhere. <strong>Action:</strong> patch to 10.4.3/10.2.7 or apply the documented server.conf workaround, and confirm the Patroni interface isn't exposed beyond the cluster network.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://thehackernews.com/2026/10/attackers-hijack-gh-sl-and-as.html" target="_blank" rel="noopener">Attackers hijack three country-code domain registries to forge valid Google HTTPS certificates</a>
+      <p>Ghana (.gh), Sierra Leone (.sl) and American Samoa (.as) registries were compromised in September, letting attackers alter DNS and pass domain-validation checks to obtain real, browser-trusted certificates for Google names. Chrome has blocked the rogue certificates via CRLSets.</p>
+      <div class="src">Source: The Hacker News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This defeats domain validation at the registry level, a layer most organisations assume is outside their own control. <strong>Action:</strong> if any managed domain sits under a ccTLD with weak registry security, add Certificate Transparency log monitoring now — CAA records don't help during a live registry hijack.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.investing.com/news/stock-market-news/crowdstrike-says-chinabased-suspect-used-ai-tools-in-south-korean-bank-hacks-4937965" target="_blank" rel="noopener">CrowdStrike traces South Korean bank hacking campaign to attacker's own use of Claude Code</a>
+      <p>A suspected China-based, financially motivated actor used an AI agent plus Anthropic's Claude Code against at least nine banks. Investigators identified the suspect after he asked Claude to draft a resume that leaked personal details.</p>
+      <div class="src">Source: Reuters (via Investing.com)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Confirms this month's broader warnings that one operator with AI agents can now run attacks at a scale that used to need a team. <strong>Silver lining:</strong> the same AI tooling left an unusually rich forensic trail — a reminder to log and retain AI-assistant interactions wherever they're used operationally.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.unisys.com/news-release/information-services-group-isg-names-unisys-a-leader-in-2026-private-hybrid-cloud-data-center-services-provider-lens/" target="_blank" rel="noopener">Unisys named Leader across five categories in ISG's 2026 Hybrid Cloud Data Center Provider Lens</a>
+      <p>Sixth consecutive year as a Leader, up from four categories in 2025 to five, including a new Leader rating in US Managed Cloud Hosting and Resilient Infrastructure Services.</p>
+      <div class="src">Source: Unisys</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A vendor-supplied result, but ISG's quadrant criteria (portfolio breadth, market presence, innovation) are a reasonable proxy for who's investing in AI-driven hybrid cloud operations. <strong>Use:</strong> a reference point when benchmarking managed cloud hosting positioning against established global providers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://federalnewsnetwork.com/contractsawards/2026/10/dhs-readies-major-cyber-contract/" target="_blank" rel="noopener">DHS prepares $626M single-award IDIQ for network, cloud and cyber services</a>
+      <p>Phase 2 proposals due 21 October, award expected late November. Scope covers round-the-clock Tier 1/2 operations plus threat hunting, Zero Trust and red/blue/purple team work across DHS's enterprise network.</p>
+      <div class="src">Source: Federal News Network</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A useful external data point on contract structure and scope when pricing large managed-security engagements: single-award vehicles bundling NOC and SOC functions are becoming the default shape for deals this size, public sector or not.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.infosecurity-magazine.com/news/microsoft-ai-attack-time-minutes/" target="_blank" rel="noopener">Microsoft: AI has cut post-compromise attack time from days to minutes</a>
+      <p>Microsoft's 2026 Digital Defense Report says AI is accelerating data exfiltration, credential discovery and lateral movement after initial compromise. Figures are Microsoft's own estimates, not independently verified.</p>
+      <div class="src">Source: Infosecurity Magazine</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">If post-compromise dwell time is now minutes rather than days, detection-and-response SLAs built around hourly review cadences are already out of date. <strong>Action:</strong> review whether MDR tooling and escalation paths can realistically act within a minutes-not-hours window for high-severity alerts.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/nt-government-recovers-from-lengthy-network-outage-629518" target="_blank" rel="noopener">NT government recovers from 12-hour, territory-wide network outage</a>
+      <p>A fault in a core IT gateway disrupted telecommunications, hospital systems and police non-emergency lines across NT government agencies from around 3am, including three missed Triple Zero calls routed via Telstra. Officials say it wasn't a cyberattack; Chief Minister Lia Finocchiaro has ordered a formal inquiry.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A single gateway fault cascading into hospital and emergency-call disruption is a stark single-point-of-failure example that typical incident-response runbooks (built around cyber scenarios) often don't cover. <strong>Relevance:</strong> worth reviewing for any client with centralised, whole-of-government style network architecture.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://securitybrief.com.au/story/trendai-joins-anthropic-s-project-glasswing-for-security" target="_blank" rel="noopener">TrendAI joins Anthropic's Project Glasswing for ANZ security teams</a>
+      <p>TrendAI becomes one of the first Australia/NZ-based participants in Anthropic's vetted cyber program, giving selected local security teams access to Claude's strongest models for defensive work.</p>
+      <div class="src">Source: SecurityBrief AU</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A concrete local on-ramp for sanctioned, higher-capability Claude access for security use cases, rather than general-purpose API access. <strong>Worth a conversation</strong> with TrendAI if there's genuine appetite for AI-assisted vulnerability research in-house.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.nzherald.co.nz/business/cyber-threat-report-warns-of-rising-risk-from-ai-turbo-charging-cybercrime/RUH7DCS2BJA5FMNPEL3PJKOJ3E/" target="_blank" rel="noopener">NZ's NCSC warns AI will let criminals reach frontier-level attack capability by early 2027</a>
+      <p>Cyber Threat Report 2026 logged 369 nationally significant incidents (up from 331), 162 of them criminal or financially motivated (+18%), with four Highly Significant incidents — matching the prior decade's total combined.</p>
+      <div class="src">Source: NZ Herald</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">The jump in Highly Significant incidents (four in one year, matching ten prior years combined) is the number that should get board attention, more than the AI framing. <strong>Action:</strong> if NZ-based clients haven't reviewed their incident response plan against a "disruptive incident with little warning" scenario this year, that's the gap this report flags.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
