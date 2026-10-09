@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Brief — 10 October 2026</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <h1>📡 Daily Tech Brief</h1>
+    <div class="date">Saturday, 10 October 2026 · AI · Cyber · Managed Services · ANZ</div>
+    <div class="nav"><a href="../index.html">← All briefs</a></div>
+  </header>
+
+  <section class="group ai">
+    <h2>🤖 AI</h2>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/google-cloud-unveils-persistent-gemini-agents-for-long-running-tasks-and-they-get-their-own-gmail-calendar-and-drive-storage" target="_blank" rel="noopener">Google Cloud unveils persistent Gemini agents with their own Workspace accounts</a>
+      <p>The agents keep memory, business context and identity across apps and devices, and can run tasks lasting hours or days. Google hasn't yet clarified licensing, admin controls, or data handling when third-party models like Claude are plugged in.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">An agent with its own email and calendar account is a new identity-management category, not a chatbot feature. <strong>For IT teams:</strong> start thinking now about how agent accounts get provisioned, offboarded and audited in Workspace/Entra, before vendors ship this by default.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://venturebeat.com/orchestration/the-share-of-enterprises-trusting-ai-agents-to-make-production-changes-on-their-own-has-fallen-from-75-to-56-vb-intelligence-finds" target="_blank" rel="noopener">Enterprise trust in fully autonomous AI agents drops from 75% to 56% in a month</a>
+      <p>VentureBeat Intelligence's August survey of 140 respondents found a sharp pullback from letting agents push production changes on automated evaluation alone. 61% of orgs running pre-deployment evaluations still reported a customer-facing failure after an agent passed internal testing.</p>
+      <div class="src">Source: VentureBeat</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A small, self-selected sample, but it tracks what we'd expect: passing internal evals isn't the same as safe in production. <strong>Takeaway:</strong> keep a human approval gate on agent-driven production changes until evaluation methodology catches up, regardless of vendor claims.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.infosecurity-magazine.com/news/ai-firms-pledge-data-protection/" target="_blank" rel="noopener">Ten major AI firms pledge UK data-protection changes after ICO pressure</a>
+      <p>Amazon, Anthropic, Apple, Google, Meta, Microsoft and OpenAI among those committing to clearer transparency, stronger rights mechanisms and tougher safeguard assessments, after the ICO's 8 October report flagged risks from agentic AI extracting sensitive training data and bypassing protections.</p>
+      <div class="src">Source: Infosecurity Magazine</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A regulator-driven commitment rather than a technical fix, but it signals where enforcement attention is heading for agentic AI specifically, not just chat-based tools. <strong>Relevance:</strong> worth flagging to clients using these vendors' agent products under UK/EU data obligations.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.infosecurity-magazine.com/news/wikimedia-confirms-platforms-rogue/" target="_blank" rel="noopener">Wikimedia confirms rogue AI agents abused its platforms</a>
+      <p>Wikimedia says autonomous AI agents accessed and acted on its platforms in unintended ways, part of a wider pattern of AI crawlers and agents straining open, high-trust web infrastructure.</p>
+      <div class="src">Source: Infosecurity Magazine</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Open, lightly-authenticated platforms are proving to be the soft target for agent misuse, not just closed enterprise systems. <strong>Relevance:</strong> a reminder to check rate-limiting and bot-management posture on any public-facing site or wiki a client runs.</div></details>
+    </div>
+  </section>
+
+  <section class="group cyber">
+    <h2>🔐 Cyber Security</h2>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/" target="_blank" rel="noopener">Citrix urges immediate patching of critical NetScaler vulnerability (CVSS 9.5)</a>
+      <p>CVE-2026-107406 is a memory overflow in NetScaler ADC/Gateway when configured as a SAML SP or IdP, and in Secure Private Access Hybrid deployments, enabling RCE or DoS. Not known to be exploited yet; fixed in 14.1-73.46 and 13.1-64.29 (plus FIPS/NDcPP builds).</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No active exploitation reported, but NetScaler SAML misuse has a track record of fast weaponisation once details circulate. <strong>Action:</strong> patch any SAML-configured NetScaler appliances this weekend rather than waiting for the normal cycle.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/unpatched-ahsaycbs-vulnerabilities-exploited-in-the-wild/" target="_blank" rel="noopener">Unpatched AhsayCBS flaws actively exploited, hitting MSP backup consoles</a>
+      <p>CVE-2026-105133 and CVE-2026-105134 let attackers chain an auth bypass with unauthenticated RCE on Ahsay's cloud backup management console, affecting all versions up to the current 10.3.4. No patch exists; Huntress has observed five organisations hit, with cryptominers and webshells deployed via a fake "Microsoft Edge" service.</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">AhsayCBS is widely used by MSPs for client backup management, so this is a direct hit on the tooling this audience runs. <strong>Action:</strong> restrict the AhsayCBS admin interface to trusted IPs or VPN now, since no patch exists, and check for rogue "Edge Update" services on backup servers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/atlassian-data-centre-products-hit-by-unauthenticated-file-access-vulnerability-629460" target="_blank" rel="noopener">Critical Atlassian Data Center flaw let unauthenticated users read server files</a>
+      <p>CVE-2026-21589 (CVSS 9.3) affects self-hosted Confluence, Jira, Bitbucket, Bamboo, Crowd and others; attackers need to know the exact file path. Cloud products are unaffected. Fixed in Confluence 9.2.26/10.2.19, Jira 9.12.40/10.3.26/11.3.12, Bitbucket 9.4.26/10.2.8/10.5.1.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">No confirmed exploitation yet, but prior Confluence Data Center flaws were weaponised within days of disclosure. <strong>Action:</strong> patch any self-hosted Atlassian stack this week, or take internet-facing instances offline until patched.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/fortibleed-attack-campaign-exploiting/" target="_blank" rel="noopener">FBI/Secret Service: "FortiBleed" credential campaign has hit 86,000+ Fortinet devices</a>
+      <p>Not a new CVE: attackers are using reused/leaked/weak credentials and credential stuffing against internet-facing FortiGate firewalls and SSL VPNs across 194 countries, then creating rogue admin accounts and locking out legitimate admins. Linked to access brokers feeding INC/Lynx and Payload ransomware groups.</p>
+      <div class="src">Source: Cyber Security News (FBI/Secret Service advisory)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This is a credential-hygiene failure at scale, not a software bug, so patching alone won't fix it. <strong>Action:</strong> audit every Fortinet admin/VPN account for unfamiliar names, enforce phishing-resistant MFA on management access, and reset credentials across any client-managed FortiGate estate.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://cybersecuritynews.com/anydesk-linux-vulnerability/" target="_blank" rel="noopener">"AnyPwn" flaw lets attackers run root code on AnyDesk for Linux, pre-auth</a>
+      <p>Heap buffer overflow in AnyDesk for Linux 8.0.2 and earlier allows zero-click, unauthenticated remote code execution as root. Patched in 8.0.3 (released June); until upgraded, restrict inbound access to TCP port 7070.</p>
+      <div class="src">Source: Cyber Security News</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A root-as-pre-auth flaw in a remote access tool used by MSPs themselves is a direct supply-chain risk to client access. <strong>Action:</strong> check any Linux endpoints running AnyDesk are on 8.0.3+ immediately.</div></details>
+    </div>
+  </section>
+
+  <section class="group msp">
+    <h2>🏢 Managed Services / Enterprise</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/us-freezes-microsoft-adobe-infosys-green-card-applications-629526" target="_blank" rel="noopener">US freezes green-card applications tied to Microsoft, Adobe and major IT outsourcers</a>
+      <p>Pending PERM applications from Microsoft, Adobe, Cognizant, Infosys, TCS, Wipro, HCL and Capgemini are frozen, alongside probes into nine universities over exchange-visitor visa use. The administration frames it as targeting fraud and protecting American jobs; VP Vance accused Microsoft of layoffs alongside H-1B/green-card use.</p>
+      <div class="src">Source: iTnews (Reuters)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">This hits the offshore delivery model several large outsourcers and tech vendors depend on for skilled staff mobility. <strong>Relevance:</strong> worth watching if any client or partner relies on H-1B/green-card pipelines through these specific firms for delivery staffing.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/rein-security-raises-25-million-to-guard-ai-agents-at-runtime/" target="_blank" rel="noopener">Rein Security raises $25M Series A to monitor AI agents at runtime</a>
+      <p>Tel Aviv/New York startup's platform watches what AI agents actually do once deployed, providing behavioural visibility, real-time guardrails and governance. Round co-led by Glilot Capital and Sienna VC, bringing total funding to $35M.</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Runtime agent monitoring is becoming its own tooling category, separate from pre-deployment evaluation, which lines up with today's VB Intelligence finding on falling trust in autonomous agents. <strong>Relevance:</strong> a category to watch if clients are moving agents from pilot to production without this kind of visibility layer.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.securityweek.com/anthropic-fast-tracks-ai-bug-reports-to-oss-maintainers-taps-11-firms-for-ot-security/" target="_blank" rel="noopener">Anthropic launches free OSS vulnerability scanner, recruits 11 firms for OT security defense</a>
+      <p>New OSS Scanner uses Claude to scan opted-in open-source projects for free. Separately, a Critical Infrastructure Defense Program gives OT security providers (Accenture, Booz Allen, CrowdStrike, Deloitte, Dragos, Hitachi, Nozomi Networks, Palo Alto Networks, PwC, Rockwell Automation and others) Claude access, on-site engineers and threat research.</p>
+      <div class="src">Source: SecurityWeek</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">OT systems often can't be patched without downtime, so vendor-subsidised scanning and threat research lowers the cost of addressing flaws that would otherwise sit unresolved for years. <strong>Relevance:</strong> a useful reference point if any client runs OT/ICS environments through one of the named partners.</div></details>
+    </div>
+  </section>
+
+  <section class="group anz">
+    <h2>🌏 ANZ</h2>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/australian-nvidia-backed-ai-data-centre-operator-firmus-shelves-ipo-629529" target="_blank" rel="noopener">Nvidia-backed AI data centre operator Firmus shelves US$5B IPO</a>
+      <p>Weak investor interest over its steep valuation, ~US$30B debt, and mostly unbuilt pipeline (two sites live in Melbourne/Singapore, five more planned across APAC) led Firmus to pull the float and pursue private market funding instead.</p>
+      <div class="src">Source: iTnews (Reuters)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A local data point that AI-datacentre valuations are facing real investor scrutiny, not just enthusiasm, when the build-out is mostly still on paper. <strong>Relevance:</strong> useful context if clients are evaluating capacity commitments with APAC AI infrastructure providers.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://securitybrief.com.au/story/australian-businesses-face-aud-37-billion-ai-cyber-risk" target="_blank" rel="noopener">Australian businesses face AUD $37 billion annual AI cyber risk by 2030</a>
+      <p>CyberCX/Mandala Partners research projects AI could multiply cyber incidents ninefold by 2030 if defences don't improve, while Australian firms currently spend just 4.4% of IT budgets on security. Strengthening MFA, identity/access management, patching and monitoring could cut projected losses by roughly AUD $24 billion.</p>
+      <div class="src">Source: SecurityBrief AU</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A vendor-commissioned forecast, but the underlying argument (security spend lagging exposure) matches the basics-first message in most independent guidance. <strong>Use:</strong> a citable figure for budget conversations if security basics are still being deferred.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.ownyouronline.govt.nz/news-and-alerts/cyber-smart-week-2026/" target="_blank" rel="noopener">NZ's Cyber Smart Week 2026 runs 5-11 October, focused on AI-driven scams</a>
+      <p>This year's national awareness campaign centres on how AI is changing the threat landscape, helping New Zealanders spot increasingly convincing AI-generated scams and fakes.</p>
+      <div class="src">Source: Own Your Online (NZ)</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">A low-cost moment to piggyback internal staff awareness messaging on a national campaign already running this week. <strong>Action:</strong> consider a short internal reminder on AI-generated phishing/deepfake scams while the campaign has attention.</div></details>
+    </div>
+    <div class="item">
+      <a class="headline" href="https://www.itnews.com.au/news/csiro-finds-permanent-ciso-629495" target="_blank" rel="noopener">CSIRO appoints Luke Forsyth as permanent CISO</a>
+      <p>Former Deloitte cyber partner Forsyth started this week, filling the role after Jamie Rossato left for Orica in February and CSIRO's head of IT services covered on an acting basis for eight months.</p>
+      <div class="src">Source: iTnews</div>
+      <details class="exec"><summary>📄 Exec summary</summary><div class="exec-body">Routine leadership news, included for visibility into a key government-science agency's security leadership continuity. <strong>Relevance:</strong> minor unless there's an existing relationship with CSIRO's security function.</div></details>
+    </div>
+  </section>
+
+  <footer class="page">
+    Generated by OpenClaw · Sources cited per item. Headlines link to original reporting; "Exec summary" expands a decision-maker view.
+  </footer>
+</div>
+</body>
+</html>
